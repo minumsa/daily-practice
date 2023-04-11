@@ -1,0 +1,6 @@
+.explain-info {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  justify-content: center;
+}

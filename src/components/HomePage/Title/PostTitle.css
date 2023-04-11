@@ -1,0 +1,7 @@
+.post-title {
+  font-size: 19px;
+  margin-top: calc(100% + 65px);
+  transform: rotate(0.25turn);
+  font-weight: 450;
+  white-space: nowrap;
+}

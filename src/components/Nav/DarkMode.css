@@ -1,0 +1,12 @@
+.dark-mode {
+  display: flex;
+  justify-content: center;
+  width: 22px;
+  /* background-color: aquamarine; */
+}
+
+@media (max-width: 550px) {
+  .dark-mode {
+    display: none;
+  }
+}

@@ -1,0 +1,16 @@
+.hamburger {
+  /* background-color: aquamarine; */
+  display: flex;
+  justify-content: center;
+  width: 22px;
+  height: 2.5px;
+  background: black;
+  box-shadow: 0 7px 0 black, 0 14px 0 black;
+  margin-top: 3px;
+}
+
+@media (max-width: 550px) {
+  .hamburger {
+    display: none;
+  }
+}

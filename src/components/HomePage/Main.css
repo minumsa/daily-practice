@@ -1,0 +1,33 @@
+.main-container {
+  display: flex;
+  flex-direction: column;
+  max-height: calc(100%);
+  align-items: center;
+  line-height: 190%;
+  /* background-color: yellow; */
+  justify-content: center;
+}
+
+.content-container {
+  display: flex;
+  flex-direction: row;
+  /* display: flex;
+  align-items: end; */
+  height: calc(100%);
+  margin-top: 30px;
+  margin-bottom: 30px;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+.content-container::-webkit-scrollbar {
+  display: none;
+}
+
+/* .content::-webkit-scrollbar-thumb {
+  background: blue;
+} */
+
+/* a[href] {
+  color: 0.0069c2;
+} */

@@ -1,0 +1,19 @@
+.title-container {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  display: flex;
+  margin-left: 100px;
+  justify-content: start;
+  flex-direction: column;
+  overflow: hidden;
+  width: 60px;
+  /* background-color: lightgreen; */
+}
+
+@media (max-width: 1100px) {
+  .title-container {
+    display: none;
+  }
+}

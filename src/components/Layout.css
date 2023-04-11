@@ -1,0 +1,21 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard.css");
+
+* {
+  font-family: "Pretendard Variable";
+}
+
+.app-container {
+  display: flex;
+  height: 98vh;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 18px;
+}
+
+::selection {
+  color: white;
+  background-color: black;
+  /* text-shadow: 0 0 10px white; */
+}

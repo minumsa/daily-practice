@@ -1,0 +1,29 @@
+.date-created {
+  display: flex;
+  justify-content: center;
+  width: 300px;
+}
+
+.arrow-left,
+.arrow-right {
+  display: flex;
+  justify-content: center;
+  width: 50px;
+}
+
+@media (max-width: 550px) {
+  .date-created {
+    font-size: 19px;
+  }
+
+  .arrow-left,
+  .arrow-right {
+    font-size: 19px;
+  }
+}
+@media (max-width: 470px) {
+  .date-created {
+    font-size: 19px;
+    width: auto;
+  }
+}
