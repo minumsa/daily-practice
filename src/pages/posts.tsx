@@ -1,13 +1,12 @@
 import React, { FC } from "react";
-import PostPage from "../components/views/PostPage/PostPage";
 import Layout from "../components/Layout";
 import "./posts.css";
 import PostInfo from "../components/Nav/PostInfo";
 import Nav from "../components/Nav";
 import HomePage from "../components/HomePage";
-import { PageProps, graphql, Link } from "gatsby";
+import { PageProps, graphql } from "gatsby";
 
-const Post = ({ data }: PageProps<Queries.AllPagesQuery>) => {
+const Posts = ({ data }: PageProps<Queries.AllPagesQuery>) => {
   return (
     <Layout>
       <HomePage content={""} title={""} />
@@ -16,7 +15,7 @@ const Post = ({ data }: PageProps<Queries.AllPagesQuery>) => {
   );
 };
 
-export default Post;
+export default Posts;
 
 export const query = graphql`
   query AllPages {

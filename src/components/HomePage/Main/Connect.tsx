@@ -4,15 +4,14 @@ import "./Connect.css";
 const Connect: FC = () => {
   return (
     <div className="connect-container">
-      <p></p>
-      <p className="connect-title">운영자</p>
-      <p className="connect-content">최유일</p>
+      <div className="connect-title">운영자</div>
+      <div className="connect-content">최유일</div>
       <br />
-      <p className="connect-title">이메일</p>
-      <p>icycyi@naver.com</p>
+      <div className="connect-title">이메일</div>
+      <div>icycyi@naver.com</div>
       <br />
-      <p className="connect-title">SNS</p>
-      <p>인스타그램&nbsp;&nbsp;&nbsp;트위터</p>
+      <div className="connect-title">SNS</div>
+      <div>인스타그램&nbsp;&nbsp;&nbsp;트위터</div>
     </div>
   );
 };

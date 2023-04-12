@@ -1,6 +1,5 @@
 import * as React from "react";
 import { graphql } from "gatsby";
-import PostPage from "../../components/views/PostPage/PostPage";
 import Layout from "../../components/Layout";
 import HomePage from "../../components/HomePage";
 import Nav from "../../components/Nav";
