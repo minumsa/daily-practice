@@ -101,6 +101,7 @@ export const query = graphql`
           frontmatter {
             title
             date(formatString: "DD MMMM, YYYY")
+            page
             slug
           }
           excerpt
