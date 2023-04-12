@@ -1,7 +1,7 @@
 ---
 slug: "/1"
 date: "2022-11-24"
-title: "My first blog post"
+title: "공간의 종류들"
 ---
 
 asdfasdf

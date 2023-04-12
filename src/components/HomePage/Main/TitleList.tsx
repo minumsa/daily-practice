@@ -1,7 +1,8 @@
-import React, { FC } from "react";
+import * as React from "react";
+import { PageProps, graphql, Link } from "gatsby";
 import "./TitleList.css";
 
-const TitleList: FC = () => {
+const TitleList = ({ data }: PageProps<Queries.AllPagesQuery>) => {
   return (
     <div className="list-container">
       <div className="list-text-container">
@@ -9,7 +10,7 @@ const TitleList: FC = () => {
         <div className="list-button">→</div>
       </div>
       <div className="list-text-container">
-        <div className="list-text">그리고 아무도 없었다</div>
+        z<div className="list-text">그리고 아무도 없었다</div>
         <div className="list-button">→</div>
       </div>
       <div className="list-text-container">
@@ -89,3 +90,22 @@ const TitleList: FC = () => {
 };
 
 export default TitleList;
+
+export const query = graphql`
+  query AllPages {
+    allMarkdownRemark {
+      totalCount
+      edges {
+        node {
+          id
+          frontmatter {
+            title
+            date(formatString: "DD MMMM, YYYY")
+            slug
+          }
+          excerpt
+        }
+      }
+    }
+  }
+`;

@@ -1,35 +1,36 @@
 import * as React from "react";
 import { PageProps, graphql, Link } from "gatsby";
-import LandingPage from "../components/views/LandingPage/LandingPage";
 import Layout from "../components/Layout";
-// import "./index.css";
+import "./index.css";
+import HomePage from "../components/HomePage";
+import Nav from "../components/Nav";
+import LandingInfo from "../components/Nav/LandingInfo";
 
-// const Index: React.FC = () => {
-//   return (
-//     <Layout>
-//       <LandingPage />
-//     </Layout>
-//   );
-// };
-
-// export default Index;
-
-const IndexPage = ({ data }: PageProps<Queries.AllPagesQuery>) => {
+const Test = ({ data }: PageProps<Queries.AllPagesQuery>) => {
   return (
-    <div className="index-container">
-      <h2>Posts</h2>
-      <ul>
-        {data.allMarkdownRemark.edges.map(({ node }: any) => (
-          <li key={node.id}>
-            <Link to={"/posts" + node.frontmatter.slug}>{node.frontmatter.title}</Link>
-          </li>
-        ))}
-      </ul>
-    </div>
+    <Layout>
+      <HomePage
+        content={
+          <div className="list-container">
+            <div className="list-text-container">
+              {data.allMarkdownRemark.edges.map(({ node }: any) => (
+                <div className="list-text" key={node.id}>
+                  <Link to={"/posts" + node.frontmatter.slug}>{node.frontmatter.title}</Link>
+                </div>
+              ))}
+
+              <div className="list-button">→</div>
+            </div>
+          </div>
+        }
+        title={""}
+      />
+      <Nav page={""} info={<LandingInfo />} />
+    </Layout>
   );
 };
 
-export default IndexPage;
+export default Test;
 
 export const query = graphql`
   query AllPages {

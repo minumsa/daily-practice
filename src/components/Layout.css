@@ -4,8 +4,11 @@
   font-family: "Pretendard Variable";
 }
 
+body {
+  background-color: #f4f4f4;
+}
+
 .layout-container {
-  background-color: yellow;
   display: flex;
   height: 98vh;
   align-items: center;
