@@ -6,7 +6,7 @@ import HomePage from "../components/HomePage";
 import Nav from "../components/Nav";
 import LandingInfo from "../components/Nav/LandingInfo";
 
-const Test = ({ data }: PageProps<Queries.AllPagesQuery>) => {
+const Index = ({ data }: PageProps<Queries.AllPagesQuery>) => {
   return (
     <Layout>
       <HomePage
@@ -18,7 +18,6 @@ const Test = ({ data }: PageProps<Queries.AllPagesQuery>) => {
                   <Link to={"/posts" + node.frontmatter.slug}>{node.frontmatter.title}</Link>
                 </div>
               ))}
-
               <div className="list-button">→</div>
             </div>
           </div>
@@ -30,7 +29,7 @@ const Test = ({ data }: PageProps<Queries.AllPagesQuery>) => {
   );
 };
 
-export default Test;
+export default Index;
 
 export const query = graphql`
   query AllPages {

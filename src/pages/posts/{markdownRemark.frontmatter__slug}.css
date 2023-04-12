@@ -1,0 +1,29 @@
+.content-text {
+  /* font-size: 1.5vw; */
+  font-size: 20px;
+  font-weight: 360;
+  line-height: 200%;
+  width: 85vw;
+  max-width: 550px;
+  word-break: keep-all;
+}
+
+.content-text p:first-child {
+  /* color: red; */
+  text-indent: 0%;
+}
+
+.content-text p {
+  /* color: blue; */
+  text-indent: 10%;
+  margin: 0;
+}
+
+.post-title {
+  color: red;
+  font-size: 19px;
+  margin-top: calc(100% + 65px);
+  transform: rotate(0.25turn);
+  font-weight: 450;
+  white-space: nowrap;
+}

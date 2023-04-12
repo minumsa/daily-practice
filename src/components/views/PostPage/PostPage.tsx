@@ -6,11 +6,11 @@ import PageNumber from "../../Nav/PageNumber";
 import PostInfo from "../../Nav/PostInfo";
 import PostTitle from "../../HomePage/Title/PostTitle";
 
-const PostPage: FC = () => {
+const PostPage = ({ date }: { date: React.ReactNode }) => {
   return (
     <>
       <HomePage content={<Text />} title={<PostTitle />} />
-      <Nav page={<PageNumber />} info={<PostInfo />} />
+      <Nav page={<PageNumber />} info={<PostInfo date={date} />} />
     </>
   );
 };

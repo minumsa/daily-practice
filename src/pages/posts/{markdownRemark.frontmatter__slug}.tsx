@@ -2,6 +2,9 @@ import * as React from "react";
 import { graphql } from "gatsby";
 import PostPage from "../../components/views/PostPage/PostPage";
 import Layout from "../../components/Layout";
+import HomePage from "../../components/HomePage";
+import Nav from "../../components/Nav";
+import PostInfo from "../../components/Nav/PostInfo";
 
 export default function BlogPostTemplate({
   data, // this prop will be injected by the GraphQL query below.
@@ -14,13 +17,12 @@ export default function BlogPostTemplate({
   //   </Layout>
   // );
   return (
-    <div>
-      <div>
-        <h1>{frontmatter.title}</h1>
-        <h2>{frontmatter.date}</h2>
-        <div dangerouslySetInnerHTML={{ __html: html }} />
-      </div>
-    </div>
+    <Layout>
+      <HomePage content={<div className="content-text" dangerouslySetInnerHTML={{ __html: html }} />} title={frontmatter.title} />
+      <Nav page={""} info={<PostInfo date={frontmatter.date} />} />
+    </Layout>
+
+    // <h2>{frontmatter.date}</h2>
   );
 }
 
