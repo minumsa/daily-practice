@@ -6,9 +6,7 @@ import HomePage from "../../components/HomePage";
 import Nav from "../../components/Nav";
 import PostInfo from "../../components/Nav/PostInfo";
 
-export default function BlogPostTemplate({
-  data, // this prop will be injected by the GraphQL query below.
-}: any) {
+export default function BlogPostTemplate({ data }: any) {
   const { markdownRemark } = data; // data.markdownRemark holds your post data
   const { frontmatter, html } = markdownRemark;
 
@@ -25,7 +23,7 @@ export const pageQuery = graphql`
     markdownRemark(id: { eq: $id }) {
       html
       frontmatter {
-        date(formatString: "MMMM DD, YYYY")
+        date(formatString: "YYYY년 MM월 DD일")
         slug
         title
       }
