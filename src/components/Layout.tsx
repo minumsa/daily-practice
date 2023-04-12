@@ -6,7 +6,7 @@ interface Props {
 }
 
 const Layout: React.FC<Props> = ({ children }) => {
-  return <div className="app-container">{children}</div>;
+  return <div className="layout-container">{children}</div>;
 };
 
 export default Layout;

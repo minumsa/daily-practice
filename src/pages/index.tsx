@@ -2,6 +2,7 @@ import * as React from "react";
 import { PageProps, graphql, Link } from "gatsby";
 import LandingPage from "../components/views/LandingPage/LandingPage";
 import Layout from "../components/Layout";
+// import "./index.css";
 
 // const Index: React.FC = () => {
 //   return (
@@ -15,7 +16,7 @@ import Layout from "../components/Layout";
 
 const IndexPage = ({ data }: PageProps<Queries.AllPagesQuery>) => {
   return (
-    <div>
+    <div className="index-container">
       <h2>Posts</h2>
       <ul>
         {data.allMarkdownRemark.edges.map(({ node }: any) => (
