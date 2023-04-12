@@ -4,7 +4,7 @@
   position: relative;
   padding-top: 22px;
   width: 145px;
-  height: 197px;
+  height: 196px;
   background-color: white;
   bottom: 174px;
   right: 34px;
@@ -16,20 +16,29 @@
 
 .category {
   font-size: 17px;
-  width: 150px;
+  width: 45px;
+  height: 21px;
   margin-left: 29px;
+  margin-right: 55px;
+  padding: 4px 2px 4px 2px;
+}
+
+.special-category {
+  font-size: 17px;
+  width: 60px;
+  height: 21px;
+  margin-left: 29px;
+  margin-right: 55px;
   padding: 4px 2px 4px 2px;
 }
 
 .close {
   font-size: 35px;
-  font-weight: 330;
+  font-weight: 300;
   position: relative;
-  justify-content: center;
-  width: 22px;
-  height: 2.5px;
-  margin-top: 3px;
-  top: 135px;
-  left: 100px;
+  width: 27px;
+  height: 27px;
+  bottom: 38px;
+  left: 97px;
   z-index: 2;
 }

@@ -1,3 +1,8 @@
+.hamburger-container {
+  height: 22.73px;
+  cursor: pointer;
+}
+
 .hamburger {
   /* background-color: aquamarine; */
   display: flex;
