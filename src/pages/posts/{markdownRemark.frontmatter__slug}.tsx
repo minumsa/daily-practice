@@ -30,7 +30,13 @@ export default function BlogPostTemplate({ data }: any) {
             date={frontmatter.date}
             prev={
               frontmatter.slug === "/1" ? (
-                <PrevButton />
+                <div
+                  onClick={() => {
+                    alert("첫 번째 게시물입니다.");
+                  }}
+                >
+                  <PrevButton />
+                </div>
               ) : (
                 <Link to={"/posts" + prevSlug}>
                   <PrevButton />
@@ -39,7 +45,13 @@ export default function BlogPostTemplate({ data }: any) {
             }
             next={
               frontmatter.slug === lastSlug ? (
-                <NextButton />
+                <div
+                  onClick={() => {
+                    alert("마지막 게시물입니다.");
+                  }}
+                >
+                  <NextButton />
+                </div>
               ) : (
                 <Link to={"/posts" + nextSlug}>
                   <NextButton />
