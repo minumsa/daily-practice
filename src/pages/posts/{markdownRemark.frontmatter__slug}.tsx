@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Link, graphql } from "gatsby";
+import { Link, graphql, PageProps } from "gatsby";
 import Layout from "../../components/Layout";
 import HomePage from "../../components/HomePage";
 import Nav from "../../components/Nav";
@@ -18,7 +18,7 @@ export default function BlogPostTemplate({ data }: any) {
   let nextSlug = frontmatter.slug;
   nextSlug = "/" + String(Number(nextSlug.split("/").join("")) + 1);
 
-  console.log(Math.max(frontmatter.slug));
+  let lastSlug = "/" + data.allMarkdownRemark.edges.length;
 
   return (
     <Layout>
@@ -29,14 +29,22 @@ export default function BlogPostTemplate({ data }: any) {
           <PostInfo
             date={frontmatter.date}
             prev={
-              <Link to={"/posts" + prevSlug}>
+              frontmatter.slug === "/1" ? (
                 <PrevButton />
-              </Link>
+              ) : (
+                <Link to={"/posts" + prevSlug}>
+                  <PrevButton />
+                </Link>
+              )
             }
             next={
-              <Link to={"/posts" + nextSlug}>
+              frontmatter.slug === lastSlug ? (
                 <NextButton />
-              </Link>
+              ) : (
+                <Link to={"/posts" + nextSlug}>
+                  <NextButton />
+                </Link>
+              )
             }
           />
         }
@@ -54,6 +62,22 @@ export const pageQuery = graphql`
         slug
         title
         page
+      }
+    }
+
+    allMarkdownRemark {
+      totalCount
+      edges {
+        node {
+          id
+          frontmatter {
+            title
+            date(formatString: "DD MMMM, YYYY")
+            page
+            slug
+          }
+          excerpt
+        }
       }
     }
   }
