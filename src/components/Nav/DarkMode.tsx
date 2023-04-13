@@ -2,8 +2,8 @@ import React, { FC } from "react";
 
 import "./DarkMode.css";
 
-const DarkMode: FC = () => {
-  return <div className="dark-mode">낮</div>;
+const DarkMode = ({ dark }: any) => {
+  return <div className="dark-mode">{dark}</div>;
 };
 
 export default DarkMode;

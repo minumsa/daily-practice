@@ -31,7 +31,7 @@ const Layout: React.FC<Props> = ({ children, page, steve }) => {
       <GlobalStyle />
       <div className="layout-container">
         {children}
-        <Nav page={page} info={steve} />
+        <Nav page={page} info={steve} dark={"💩"} />
       </div>
     </ThemeProvider>
   );
