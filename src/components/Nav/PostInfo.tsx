@@ -1,14 +1,18 @@
 import React, { FC } from "react";
 import "./PostInfo.css";
-import PrevButton from "./PrevButton";
-import NextButton from "./NextButton";
 
-const PostInfo = ({ date }: { date: React.ReactNode }) => {
+interface postInfo {
+  date: React.ReactNode;
+  prev: React.ReactNode;
+  next: React.ReactNode;
+}
+
+const PostInfo = ({ date, prev, next }: postInfo) => {
   return (
     <>
-      <PrevButton />
+      {prev}
       <div className="date-created">작성일: {date}</div>
-      <NextButton />
+      {next}
     </>
   );
 };
