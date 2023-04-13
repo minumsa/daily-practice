@@ -4,7 +4,7 @@ import DarkMode from "./Nav/DarkMode";
 import "./Nav.css";
 
 // Child: React.FC or Child: FC
-const Nav = ({ page, info }: { page: React.ReactNode; info: React.ReactNode }) => {
+const Nav = ({ page, info }: { page: React.ReactNode; info: any }) => {
   return (
     <div className="nav-container">
       <div className="middle">

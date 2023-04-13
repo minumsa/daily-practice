@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Link, graphql, PageProps } from "gatsby";
+import { Link, graphql } from "gatsby";
 import Layout from "../../components/Layout";
 import HomePage from "../../components/HomePage";
 import Nav from "../../components/Nav";
@@ -21,46 +21,46 @@ export default function BlogPostTemplate({ data }: any) {
   let lastSlug = "/" + data.allMarkdownRemark.edges.length;
 
   return (
-    <Layout>
+    <Layout
+      page={<PageNumber page={frontmatter.page} />}
+      steve={
+        <PostInfo
+          date={frontmatter.date}
+          prev={
+            frontmatter.slug === "/1" ? (
+              <div
+                onClick={() => {
+                  alert("첫 번째 게시물입니다.");
+                }}
+              >
+                <PrevButton />
+              </div>
+            ) : (
+              <Link to={"/posts" + prevSlug}>
+                <PrevButton />
+              </Link>
+            )
+          }
+          next={
+            frontmatter.slug === lastSlug ? (
+              <div
+                onClick={() => {
+                  alert("마지막 게시물입니다.");
+                }}
+              >
+                <NextButton />
+              </div>
+            ) : (
+              <Link to={"/posts" + nextSlug}>
+                <NextButton />
+              </Link>
+            )
+          }
+        />
+      }
+    >
       <HomePage content={<div className="content-text" dangerouslySetInnerHTML={{ __html: html }} />} title={frontmatter.title} />
-      <Nav
-        page={<PageNumber page={frontmatter.page} />}
-        info={
-          <PostInfo
-            date={frontmatter.date}
-            prev={
-              frontmatter.slug === "/1" ? (
-                <div
-                  onClick={() => {
-                    alert("첫 번째 게시물입니다.");
-                  }}
-                >
-                  <PrevButton />
-                </div>
-              ) : (
-                <Link to={"/posts" + prevSlug}>
-                  <PrevButton />
-                </Link>
-              )
-            }
-            next={
-              frontmatter.slug === lastSlug ? (
-                <div
-                  onClick={() => {
-                    alert("마지막 게시물입니다.");
-                  }}
-                >
-                  <NextButton />
-                </div>
-              ) : (
-                <Link to={"/posts" + nextSlug}>
-                  <NextButton />
-                </Link>
-              )
-            }
-          />
-        }
-      />
+      {/* <Nav info={"개똥"} /> */}
     </Layout>
   );
 }

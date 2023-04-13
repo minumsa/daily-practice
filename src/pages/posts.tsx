@@ -8,9 +8,9 @@ import { PageProps, graphql } from "gatsby";
 
 const Posts = ({ data }: PageProps<Queries.AllPagesQuery>) => {
   return (
-    <Layout>
+    <Layout page={""} props={<PostInfo date={""} />}>
       <HomePage content={""} title={""} />
-      <Nav page={""} info={<PostInfo date={""} />} />
+      {/* <Nav page={""} info={<PostInfo date={""} />} /> */}
     </Layout>
   );
 };

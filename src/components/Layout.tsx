@@ -3,6 +3,7 @@ import "./Layout.css";
 import styled, { createGlobalStyle, ThemeProvider } from "styled-components";
 import { darkTheme, lightTheme } from "../theme";
 import reset from "styled-reset";
+import Nav from "./Nav";
 
 const GlobalStyle = createGlobalStyle`
   ${reset}  
@@ -18,15 +19,20 @@ const GlobalStyle = createGlobalStyle`
 
 interface Props {
   children: React.ReactNode;
+  page: any;
+  steve: any;
 }
 
-const Layout: React.FC<Props> = ({ children }) => {
+const Layout: React.FC<Props> = ({ children, page, steve }) => {
   const isDarkMode = false;
 
   return (
     <ThemeProvider theme={isDarkMode ? darkTheme : lightTheme}>
       <GlobalStyle />
-      <div className="layout-container">{children}</div>
+      <div className="layout-container">
+        {children}
+        <Nav page={page} info={steve} />
+      </div>
     </ThemeProvider>
   );
 };
