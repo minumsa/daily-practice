@@ -23,3 +23,10 @@ body {
   background-color: black;
   /* text-shadow: 0 0 10px white; */
 }
+
+.mode-button {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
