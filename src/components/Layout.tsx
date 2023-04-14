@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Layout.css";
 import styled, { createGlobalStyle, ThemeProvider } from "styled-components";
 import { darkTheme, lightTheme } from "../theme";
@@ -75,25 +75,34 @@ interface Props {
 }
 
 const Layout: React.FC<Props> = ({ children, page, info }) => {
+  console.log(localStorage.theme);
+
+  const currentTheme = localStorage.getItem("theme") || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+
+  const getTheme = () => {
+    return JSON.parse(localStorage.getItem("theme")) || false;
+  };
+
+  const [theme, setTheme] = useState(getTheme);
+
+  useEffect(() => {
+    localStorage.setItem("theme", JSON.stringify(theme));
+  }, [theme]);
+
   const [buttonText, setButtonText] = useState("낮");
 
   const handleClick = () => {
     setButtonText(state => (state === "낮" ? "밤" : "낮"));
   };
 
-  const [isDarkMode, setIsDarkMode] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(localStorage.theme);
 
   const toggleDarkMode = () => {
     setIsDarkMode(prev => !prev);
   };
 
-  const clickEvent = () => {
-    handleClick;
-    // toggleDarkMode;
-  };
-
   return (
-    <ThemeProvider theme={isDarkMode ? darkTheme : lightTheme}>
+    <ThemeProvider theme={isDarkMode ? lightTheme : darkTheme}>
       <GlobalStyle />
       <div className="layout-container">
         {children}
@@ -106,6 +115,7 @@ const Layout: React.FC<Props> = ({ children, page, info }) => {
               onClick={() => {
                 toggleDarkMode();
                 handleClick();
+                setTheme(!theme);
               }}
             >
               {buttonText}

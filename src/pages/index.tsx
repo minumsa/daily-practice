@@ -7,7 +7,6 @@ import Nav from "../components/Nav";
 import LandingInfo from "../components/Nav/LandingInfo";
 
 const Index = ({ data }: PageProps<Queries.AllPagesQuery>) => {
-  console.log(data.allMarkdownRemark);
   return (
     <Layout page={""} info={<LandingInfo />}>
       <HomePage
