@@ -23,7 +23,7 @@ export default function BlogPostTemplate({ data }: any) {
   return (
     <Layout
       page={<PageNumber page={frontmatter.page} />}
-      steve={
+      info={
         <PostInfo
           date={frontmatter.date}
           prev={

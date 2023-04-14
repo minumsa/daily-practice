@@ -1,13 +1,13 @@
 export const lightTheme = {
   bgColor: "#f4f4f4",
   textColor: "#000000",
-  lineColor: "#ff0b0b",
+  lineColor: "#000000",
 };
 
 export const darkTheme = {
   bgColor: "#282c35",
   textColor: "#fff",
-  lineColor: "#0b3aff",
+  lineColor: "#fff",
 };
 
 export const theme = {

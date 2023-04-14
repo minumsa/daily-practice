@@ -20,10 +20,10 @@ const GlobalStyle = createGlobalStyle`
 interface Props {
   children: React.ReactNode;
   page: any;
-  steve: any;
+  info: any;
 }
 
-const Layout: React.FC<Props> = ({ children, page, steve }) => {
+const Layout: React.FC<Props> = ({ children, page, info }) => {
   const isDarkMode = false;
 
   return (
@@ -31,7 +31,7 @@ const Layout: React.FC<Props> = ({ children, page, steve }) => {
       <GlobalStyle />
       <div className="layout-container">
         {children}
-        <Nav page={page} info={steve} dark={"💩"} />
+        <Nav page={page} info={info} dark={"낮"} />
       </div>
     </ThemeProvider>
   );
