@@ -8,6 +8,7 @@ import Nav from "./Nav";
 export interface ThemeType {
   bgColor: string;
   Color: string;
+  categoryColor: string;
 }
 
 const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
@@ -23,7 +24,7 @@ const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
 
   .list-text {
     color: ${props => props.theme.Color};
-    background-color: ${props => props.theme.bgColor};
+    background-color: ${props => props.theme.categoryColor};
     border: 1px solid ${props => props.theme.Color};
   }
 
@@ -53,7 +54,7 @@ const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
   }
 
   .category-container {
-    background-color: ${props => props.theme.bgColor};
+    background-color: ${props => props.theme.categoryColor};
   }
 
   @media (max-width: 550px) {
