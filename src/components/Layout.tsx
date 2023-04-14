@@ -75,8 +75,6 @@ interface Props {
 }
 
 const Layout: React.FC<Props> = ({ children, page, info }) => {
-  console.log(localStorage.theme);
-
   const currentTheme = localStorage.getItem("theme") || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
 
   const getTheme = () => {
@@ -89,13 +87,7 @@ const Layout: React.FC<Props> = ({ children, page, info }) => {
     localStorage.setItem("theme", JSON.stringify(theme));
   }, [theme]);
 
-  const [buttonText, setButtonText] = useState("낮");
-
-  const handleClick = () => {
-    setButtonText(state => (state === "낮" ? "밤" : "낮"));
-  };
-
-  const [isDarkMode, setIsDarkMode] = useState(localStorage.theme);
+  const [isDarkMode, setIsDarkMode] = useState(getTheme);
 
   const toggleDarkMode = () => {
     setIsDarkMode(prev => !prev);
@@ -114,11 +106,10 @@ const Layout: React.FC<Props> = ({ children, page, info }) => {
               className="mode-button"
               onClick={() => {
                 toggleDarkMode();
-                handleClick();
                 setTheme(!theme);
               }}
             >
-              {buttonText}
+              {isDarkMode ? "낮" : "밤"}
             </div>
           }
         />
