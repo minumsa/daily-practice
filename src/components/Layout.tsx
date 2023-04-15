@@ -3,6 +3,8 @@ import "./Layout.css";
 import styled, { createGlobalStyle, ThemeProvider } from "styled-components";
 import { darkTheme, lightTheme } from "../theme";
 import reset from "styled-reset";
+// @ts-ignore
+import { ThemeToggler } from "gatsby-plugin-dark-mode";
 import Nav from "./Nav";
 
 export interface ThemeType {
@@ -76,46 +78,41 @@ interface Props {
 }
 
 const Layout: React.FC<Props> = ({ children, page, info }) => {
-  const currentTheme = localStorage.getItem("theme") || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
-
-  const getTheme = () => {
-    return JSON.parse(localStorage.getItem("theme")) || false;
-  };
-
-  const [theme, setTheme] = useState(getTheme);
-
-  useEffect(() => {
-    localStorage.setItem("theme", JSON.stringify(theme));
-  }, [theme]);
-
-  const [isDarkMode, setIsDarkMode] = useState(getTheme);
-
-  const toggleDarkMode = () => {
-    setIsDarkMode(prev => !prev);
-  };
-
   return (
-    <ThemeProvider theme={isDarkMode ? lightTheme : darkTheme}>
-      <GlobalStyle />
-      <div className="layout-container">
-        {children}
-        <Nav
-          page={page}
-          info={info}
-          dark={
-            <div
-              className="mode-button"
-              onClick={() => {
-                toggleDarkMode();
-                setTheme(!theme);
-              }}
-            >
-              {isDarkMode ? "낮" : "밤"}
+    <ThemeToggler>
+      {({ theme, toggleTheme }: any) => {
+        // Don't render anything at compile time. Deferring rendering until we
+        // know which theme to use on the client avoids incorrect initial
+        // state being displayed.
+        if (theme == null) {
+          return null;
+        }
+        console.log(theme);
+        const isDarkMode = theme === "dark";
+        return (
+          <ThemeProvider theme={isDarkMode ? darkTheme : lightTheme}>
+            <GlobalStyle />
+            <div className="layout-container">
+              {children}
+              <Nav
+                page={page}
+                info={info}
+                dark={
+                  <div
+                    className="mode-button"
+                    onClick={() => {
+                      toggleTheme(theme === "dark" ? "light" : "dark");
+                    }}
+                  >
+                    {isDarkMode ? "밤" : "낮"}
+                  </div>
+                }
+              />
             </div>
-          }
-        />
-      </div>
-    </ThemeProvider>
+          </ThemeProvider>
+        );
+      }}
+    </ThemeToggler>
   );
 };
 
