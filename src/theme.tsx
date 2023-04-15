@@ -3,6 +3,7 @@ export const lightTheme = {
   textColor: "#000000",
   lineColor: "#000000",
   categoryColor: "#fff",
+  Color: "#000000",
 };
 
 export const darkTheme = {
