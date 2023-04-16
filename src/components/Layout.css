@@ -22,3 +22,9 @@ p::selection {
   -ms-user-select: none;
   user-select: none;
 }
+
+@media (max-width: 550px) {
+  .layout-container {
+    height: 100vh;
+  }
+}

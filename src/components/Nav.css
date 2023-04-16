@@ -59,6 +59,12 @@
   }
 }
 
+@media (max-width: 550px) {
+  .nav-container {
+    height: 100px;
+  }
+}
+
 /* 
 @media (max-width: 950px) {
   .nav-container {
