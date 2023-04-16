@@ -8,8 +8,10 @@ export const lightTheme = {
 
 export const darkTheme = {
   bgColor: "#1e1e1e",
-  Color: "#fff",
+  textColor: "#fff",
+  lineColor: "#fff",
   categoryColor: "#1e1e1e",
+  Color: "#fff",
 };
 
 export const theme = {
