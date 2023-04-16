@@ -74,7 +74,7 @@ const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
       border: 1px solid ${props => props.theme.Color};
     }
 
-    ::selection {
+    p::selection {
       color: ${props => props.theme.categoryColor};
       background-color: ${props => props.theme.Color};
     }

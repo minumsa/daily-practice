@@ -10,7 +10,7 @@
   font-size: 19px;
 }
 
-::selection {
+p::selection {
   color: white;
   background-color: black;
   /* text-shadow: 0 0 10px white; */
