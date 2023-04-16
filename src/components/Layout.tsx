@@ -73,6 +73,7 @@ const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
       background-color: ${props => props.theme.bgColor};
       border: 1px solid ${props => props.theme.Color};
     }
+  }
 
     p::selection {
       color: ${props => props.theme.categoryColor};
