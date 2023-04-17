@@ -5,6 +5,14 @@ page: "7"
 title: "고백이라는 회복"
 ---
 
+<div style="text-align: center;">
+    <div class="post-line" style="display: inline-block; line-height:160%">
+    고백이라는 회복
+    </div>
+</div>
+
+<br>
+
 구독자 질문 : 남이 나의 속마음을 들여다보는 것 같아 글 쓰는 게 두려워요. 읽힐 것을 두려워하지 않고 글을 쓰는 게 어려운 것 같아요. (셈밈)
 
 유계영(이하 유) : 셈밈님의 질문, 글 쓰는 것이 두렵지 않으려면 어떻게 해야 할까요. 읽힐 것을 두려워하지 않고 글쓰기. 어때요?

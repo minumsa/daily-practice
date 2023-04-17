@@ -55,6 +55,10 @@ const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
     border-right: 1.5px solid ${props => props.theme.Color};
   }
 
+  .post-line {
+    border-top: 1.5px solid ${props => props.theme.Color};
+  }
+
   .hamburger {
     background: ${props => props.theme.Color};
     box-shadow: 0 7px 0 ${props => props.theme.Color}, 0 14px 0 ${props => props.theme.Color};
