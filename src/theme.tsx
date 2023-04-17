@@ -4,6 +4,7 @@ export const lightTheme = {
   lineColor: "#000000",
   categoryColor: "#fff",
   Color: "#000000",
+  opacity: "0.92",
 };
 
 export const darkTheme = {
@@ -12,6 +13,7 @@ export const darkTheme = {
   lineColor: "#fff",
   categoryColor: "#1e1e1e",
   Color: "#fff",
+  opacity: "0.87",
 };
 
 export const theme = {

@@ -11,6 +11,7 @@ export interface ThemeType {
   bgColor: string;
   Color: string;
   categoryColor: string;
+  opacity: number;
 }
 
 const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
@@ -82,6 +83,10 @@ const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
     p::selection {
       color: ${props => props.theme.categoryColor};
       background-color: ${props => props.theme.Color};
+    }
+
+    .content-text, .date-created, .line, .mode-button, .button-container, .hamburger-container, .page-container, .title-container, .category, .close {
+      opacity: ${props => props.theme.opacity};
     }
   }
 `;
