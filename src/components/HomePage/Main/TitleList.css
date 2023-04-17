@@ -13,9 +13,7 @@
   display: inline-block;
   padding: 4px 24px 4px 24px;
   margin: 3px 2px 3px 2px;
-  background-color: white;
   border-radius: 17px;
-  border: 1px solid black;
 }
 
 .list-button {
@@ -42,10 +40,6 @@
   .list-text {
     flex-grow: 1;
     text-align: center;
-    margin: 2px 2px 2px 2px;
-    background-color: white;
-    border-radius: 19px;
-    border: 1px solid black;
   }
 
   .list-button {
@@ -53,10 +47,6 @@
     justify-content: center;
     width: 1px;
     padding: 6px 24px 6px 24px;
-    margin: 2px 2px 2px 2px;
-    background-color: white;
-    border-radius: 19px;
-    border: 1px solid black;
   }
 
   /* 
