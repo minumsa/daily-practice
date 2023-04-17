@@ -7,6 +7,7 @@
   max-width: 550px;
   word-break: keep-all;
 }
+
 /* 
 .div {
   line-height: 100%;
@@ -21,6 +22,13 @@
   /* color: blue; */
   text-indent: 10%;
   margin: 0;
+}
+
+@media (max-width: 550px) {
+  .content-text {
+    font-size: 18px;
+    line-height: 190%;
+  }
 }
 
 /* 

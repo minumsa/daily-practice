@@ -28,9 +28,9 @@
   white-space: nowrap;
 }
 
-@media (max-width: 550px) {
+/* @media (max-width: 550px) {
   .content-text {
     font-size: 19px;
     line-height: 190%;
   }
-}
+} */
