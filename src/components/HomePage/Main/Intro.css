@@ -1,7 +1,23 @@
 .intro-container {
   /* font-size: 18px; */
+  display: flex;
+  width: 680px;
   font-size: 18px;
   font-weight: 400;
   line-height: 200%;
   word-break: keep-all;
+}
+
+.test {
+  justify-content: left;
+  width: 360px;
+}
+
+.first-intro {
+  margin-left: 2px;
+  /* margin-bottom: 25px; */
+}
+
+.intro {
+  /* margin-bottom: 25px; */
 }
