@@ -5,9 +5,9 @@
   width: 700px;
 } */
 
-.test {
+/* .test {
   margin-bottom: 1px solid black;
-}
+} */
 
 .list-container {
   font-size: 16px;
@@ -23,10 +23,8 @@
   /* display: block; */
   display: inline-block;
   padding: 4px 24px 4px 24px;
-  margin: 3px 0px 3px 0px;
-  background-color: white;
-  border-radius: 17px;
-  border: 1px solid black;
+  margin: 1px 1px 1px 1px;
+  border-radius: 20px;
   /* text-decoration-line: none;
   color: inherit; */
 }

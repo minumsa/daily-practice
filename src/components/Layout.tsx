@@ -12,6 +12,8 @@ export interface ThemeType {
   Color: string;
   categoryColor: string;
   opacity: number;
+  listBgColor: string;
+  textColor: string;
 }
 
 const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
@@ -31,10 +33,9 @@ const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
   }
 
   .list-text {
-    color: ${props => props.theme.Color};
-    background-color: ${props => props.theme.categoryColor};
-    border: 1px solid ${props => props.theme.Color};
-    opacity: ${props => props.theme.opacity};
+    color: ${props => props.theme.bgColor};
+    background-color: ${props => props.theme.listBgColor};
+    border: 1px solid ${props => props.theme.listBgColor};
   }
 
   .list-button {
@@ -62,13 +63,13 @@ const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
   }
 
   .hamburger {
-    background: ${props => props.theme.Color};
+    background-color: ${props => props.theme.Color};
     box-shadow: 0 7px 0 ${props => props.theme.Color}, 0 14px 0 ${props => props.theme.Color};
   }
 
   .category-container {
-    background-color: ${props => props.theme.categoryColor};
-    opacity: 1;
+    color: ${props => props.theme.bgColor};
+    background-color: ${props => props.theme.listBgColor};
   }
 
   @media (max-width: 550px) {
@@ -87,7 +88,7 @@ const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
       background-color: ${props => props.theme.Color};
     }
 
-    .content-text, .date-created, .line, .mode-button, .button-container, .page-container, .title-container, .close, .info-container, .intro-container, .explain-container, .connect-container, .warp-container, .list-container {
+    .content-text, .date-created, .line, .mode-button, .button-container, .page-container, .title-container, .close, .info-container, .intro-container, .explain-container, .connect-container, .warp-container {
       opacity: ${props => props.theme.opacity};
     }
   }
