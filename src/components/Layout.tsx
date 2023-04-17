@@ -34,6 +34,7 @@ const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
     color: ${props => props.theme.Color};
     background-color: ${props => props.theme.categoryColor};
     border: 1px solid ${props => props.theme.Color};
+    opacity: ${props => props.theme.opacity};
   }
 
   .list-button {
@@ -67,6 +68,7 @@ const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
 
   .category-container {
     background-color: ${props => props.theme.categoryColor};
+    opacity: 1;
   }
 
   @media (max-width: 550px) {
@@ -85,7 +87,7 @@ const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
       background-color: ${props => props.theme.Color};
     }
 
-    .content-text, .date-created, .line, .mode-button, .button-container, .hamburger-container, .page-container, .title-container, .category, .close {
+    .content-text, .date-created, .line, .mode-button, .button-container, .page-container, .title-container, .close, .info-container, .intro-container, .explain-container, .connect-container, .warp-container, .list-container {
       opacity: ${props => props.theme.opacity};
     }
   }

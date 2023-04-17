@@ -13,7 +13,7 @@ export const darkTheme = {
   lineColor: "#fff",
   categoryColor: "#1e1e1e",
   Color: "#fff",
-  opacity: "0.87",
+  opacity: "0.86",
 };
 
 export const theme = {
