@@ -5,8 +5,8 @@
   display: inline-block;
   width: 10px;
   height: 10px;
-  border-top: 1.5px solid black;
-  border-right: 1.5px solid black;
+  /* border-top: 1.5px solid black;
+  border-right: 1.5px solid black; */
   transform: rotate(225deg);
   margin-bottom: 1px;
 }

@@ -16,7 +16,7 @@
 
 @media (max-width: 550px) {
   .date-created {
-    font-size: 19px;
+    font-size: 18px;
   }
 
   /* .arrow-left,
@@ -26,7 +26,7 @@
 }
 @media (max-width: 470px) {
   .date-created {
-    font-size: 19px;
+    font-size: 18px;
     width: auto;
   }
 }

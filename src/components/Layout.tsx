@@ -6,6 +6,7 @@ import reset from "styled-reset";
 // @ts-ignore
 import { ThemeToggler } from "gatsby-plugin-dark-mode";
 import Nav from "./Nav";
+import Category from "./Nav/Category";
 
 export interface ThemeType {
   bgColor: string;
@@ -43,11 +44,6 @@ const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
     border: 1px solid ${props => props.theme.bgColor};
   }
 
-  .hamburger {
-    background: ${props => props.theme.Color};
-    box-shadow: 0 7px 0 ${props => props.theme.Color}, 0 14px 0 ${props => props.theme.Color};
-  }
-
   .prev-button {
     border-top: 1.5px solid ${props => props.theme.Color};
     border-right: 1.5px solid ${props => props.theme.Color};
@@ -62,7 +58,7 @@ const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
     border-top: 1.5px solid ${props => props.theme.Color};
   }
 
-  .hamburger {
+  .hamburger, .hamburger2 {
     background-color: ${props => props.theme.Color};
     box-shadow: 0 7px 0 ${props => props.theme.Color}, 0 14px 0 ${props => props.theme.Color};
   }
@@ -88,7 +84,7 @@ const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
       background-color: ${props => props.theme.Color};
     }
 
-    .content-text, .date-created, .line, .mode-button, .button-container, .page-container, .title-container, .close, .info-container, .intro-container, .explain-container, .connect-container, .warp-container {
+    .content-text, .date-created, .line, .mode-button, .button-container, .page-container, .title-container, .close, .info-container, .intro-container, .explain-container, .connect-container, .warp-container, .top-container {
       opacity: ${props => props.theme.opacity};
     }
   }
@@ -101,6 +97,8 @@ interface Props {
 }
 
 const Layout: React.FC<Props> = ({ children, page, info }) => {
+  const [visible, setVisible] = useState(false);
+
   return (
     <ThemeToggler>
       {({ theme, toggleTheme }: any) => {
@@ -110,12 +108,26 @@ const Layout: React.FC<Props> = ({ children, page, info }) => {
         if (theme == null) {
           return null;
         }
-        console.log(theme);
+        // console.log(theme);
         const isDarkMode = theme === "dark";
         return (
           <ThemeProvider theme={isDarkMode ? darkTheme : lightTheme}>
             <GlobalStyle />
             <div className="layout-container">
+              <div className="top-container">
+                <div className="top-content">
+                  <div
+                    className="hamburger-container2"
+                    onClick={() => {
+                      setVisible(!visible);
+                    }}
+                  >
+                    <div className="hamburger2">{visible ? <Category /> : null}</div>
+                  </div>
+                  <div className="top-title">일상연습</div>
+                  <div className="top-dark">밤</div>
+                </div>
+              </div>
               {children}
               <Nav
                 page={page}

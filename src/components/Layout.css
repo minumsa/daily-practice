@@ -24,8 +24,50 @@ p::selection {
   user-select: none;
 }
 
+.top-container {
+  display: flex;
+  flex-direction: row;
+  display: none;
+}
+
 @media (max-width: 550px) {
   .layout-container {
     height: 100vh;
+    font-size: 18px;
+    font-weight: 300;
+    /* opacity: 0.86; */
+  }
+
+  .top-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 390px;
+    height: 60px;
+  }
+
+  .top-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .top-title {
+    justify-content: center;
+  }
+
+  .hamburger-container2 {
+    justify-content: start;
+    height: 22.73px;
+    cursor: pointer;
+  }
+
+  .hamburger2 {
+    /* background-color: aquamarine; */
+    display: flex;
+    justify-content: center;
+    width: 22px;
+    height: 1.5px;
+    /* margin-top: 4px; */
   }
 }
