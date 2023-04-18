@@ -1,4 +1,4 @@
-import React, { FC, useState } from "react";
+import React, { useState } from "react";
 import "./Top.css";
 import Category from "./Nav/Category";
 import { Link } from "gatsby";

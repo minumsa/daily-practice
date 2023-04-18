@@ -1,0 +1,23 @@
+.mobile-nav-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100px;
+}
+
+.mobile-day-container {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.mobile-day {
+  align-items: end;
+}
+
+.mobile-line {
+  width: 90vw;
+  height: 1px;
+  margin-top: 10px;
+  background-color: black;
+  opacity: 1;
+}

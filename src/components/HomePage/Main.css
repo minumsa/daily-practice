@@ -24,6 +24,11 @@
   display: none;
 }
 
+.content-nav-container {
+  /* display: flex;
+  flex-direction: column; */
+  display: none;
+}
 @media (max-width: 550px) {
   .content-container {
     margin-bottom: 0;
@@ -33,6 +38,10 @@
   .main-container {
     margin-left: 1vw;
     margin-right: 1vw;
+  }
+
+  .content-nav-container {
+    display: flex;
   }
 }
 

@@ -5,6 +5,7 @@ import PostInfo from "../components/Nav/PostInfo";
 import Nav from "../components/Nav";
 import HomePage from "../components/HomePage";
 import { PageProps, graphql } from "gatsby";
+import MobileNav from "../components/Nav/MobileNav";
 
 const Posts = ({ data }: PageProps<Queries.AllPagesQuery>) => {
   return (
