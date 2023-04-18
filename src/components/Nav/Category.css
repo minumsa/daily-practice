@@ -47,13 +47,32 @@
 
 @media (max-width: 550px) {
   .category-container {
-    opacity: 0.5;
-    bottom: 0px;
-    left: 55px;
+    padding-top: 10px;
+    opacity: 1;
+    bottom: 10px;
+    left: 49px;
   }
 
   .close {
-    bottom: 190px;
-    left: 10px;
+    bottom: 188px;
+    left: 12px;
+  }
+
+  .category {
+    font-size: 17px;
+    width: 45px;
+    height: 21px;
+    margin-left: 45px;
+    margin-right: 55px;
+    padding: 4px 2px 4px 2px;
+  }
+
+  .special-category {
+    font-size: 17px;
+    width: 60px;
+    height: 21px;
+    margin-left: 45px;
+    margin-right: 55px;
+    padding: 4px 2px 4px 2px;
   }
 }
