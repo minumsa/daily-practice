@@ -47,32 +47,26 @@
 
 @media (max-width: 550px) {
   .category-container {
-    padding-top: 10px;
+    width: 132px;
+    height: 185px;
+    padding-top: 8px;
     opacity: 1;
-    bottom: 10px;
-    left: 49px;
+    bottom: 13px;
+    left: 40px;
   }
 
   .close {
-    bottom: 188px;
-    left: 12px;
+    bottom: 182px;
+    left: 15px;
   }
 
   .category {
-    font-size: 17px;
-    width: 45px;
-    height: 21px;
-    margin-left: 45px;
+    margin-left: 48px;
     margin-right: 55px;
-    padding: 4px 2px 4px 2px;
   }
 
   .special-category {
-    font-size: 17px;
-    width: 60px;
-    height: 21px;
-    margin-left: 45px;
+    margin-left: 48px;
     margin-right: 55px;
-    padding: 4px 2px 4px 2px;
   }
 }

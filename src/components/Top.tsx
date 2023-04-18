@@ -1,9 +1,10 @@
 import React, { FC, useState } from "react";
 import "./Top.css";
 import Category from "./Nav/Category";
+import { Link } from "gatsby";
 
 // Child: React.FC or Child: FC
-const Top: FC = () => {
+const Top = ({ darkButton }: { darkButton: any }) => {
   const [visible, setVisible] = useState(false);
 
   return (
@@ -17,8 +18,10 @@ const Top: FC = () => {
         >
           <div className="top-hamburger">{visible ? <Category /> : null}</div>
         </div>
-        <div className="top-title">일상연습</div>
-        <div className="top-dark">밤</div>
+        <div className="top-title">
+          <Link to="/">일상연습</Link>
+        </div>
+        <div className="top-dark">{darkButton}</div>
       </div>
     </div>
   );

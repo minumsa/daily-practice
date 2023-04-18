@@ -113,7 +113,18 @@ const Layout: React.FC<Props> = ({ children, page, info }) => {
           <ThemeProvider theme={isDarkMode ? darkTheme : lightTheme}>
             <GlobalStyle />
             <div className="layout-container">
-              <Top />
+              <Top
+                darkButton={
+                  <div
+                    className="mode-button"
+                    onClick={() => {
+                      toggleTheme(theme === "dark" ? "light" : "dark");
+                    }}
+                  >
+                    {isDarkMode ? "밤" : "낮"}
+                  </div>
+                }
+              />
               {children}
               <Nav
                 page={page}
