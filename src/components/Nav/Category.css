@@ -51,14 +51,14 @@
   .category-container {
     width: 130px;
     height: 180px;
-    padding-top: 9px;
+    padding-top: 10px;
     opacity: 1;
     bottom: 13px;
     left: 35px;
   }
 
   .close {
-    bottom: 182px;
+    bottom: 183px;
     left: 14px;
   }
 

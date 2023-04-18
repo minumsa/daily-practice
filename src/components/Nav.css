@@ -61,7 +61,7 @@
 
 @media (max-width: 550px) {
   .nav-container {
-    height: 50px;
+    display: none;
   }
 }
 
