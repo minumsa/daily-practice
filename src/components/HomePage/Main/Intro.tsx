@@ -9,11 +9,7 @@ const Intro: FC = () => {
         <div className="first-intro">1. 글 위에 마우스를 위치시키면 스크롤 할 수 있습니다.</div>
         <div className="intro">
           2. 글의 마지막 문장 우측에는
-          <span className="underline">
-            {" "}
-            <Link to="/">돌아가기</Link>
-          </span>{" "}
-          아이콘<Link to="/">(↵)</Link>이 있습니다. 클릭하면 <span className="underline">메인 화면</span>
+          <span className="underline"> 돌아가기</span> 아이콘<Link to="/">(↵)</Link>이 있습니다. 클릭하면 <span className="underline">메인 화면</span>
           으로 돌아갑니다.
         </div>
         <div className="intro">3. 돌아가기 아이콘이 발견되지 않는다면 아직 남아 있는 글이 있는 것입니다. 더 스크롤 해보세요.</div>
