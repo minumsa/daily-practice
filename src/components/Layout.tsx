@@ -7,6 +7,7 @@ import reset from "styled-reset";
 import { ThemeToggler } from "gatsby-plugin-dark-mode";
 import Nav from "./Nav";
 import Category from "./Nav/Category";
+import Top from "./Top";
 
 export interface ThemeType {
   bgColor: string;
@@ -97,8 +98,6 @@ interface Props {
 }
 
 const Layout: React.FC<Props> = ({ children, page, info }) => {
-  const [visible, setVisible] = useState(false);
-
   return (
     <ThemeToggler>
       {({ theme, toggleTheme }: any) => {
@@ -114,20 +113,7 @@ const Layout: React.FC<Props> = ({ children, page, info }) => {
           <ThemeProvider theme={isDarkMode ? darkTheme : lightTheme}>
             <GlobalStyle />
             <div className="layout-container">
-              <div className="top-container">
-                <div className="top-content">
-                  <div
-                    className="hamburger-container2"
-                    onClick={() => {
-                      setVisible(!visible);
-                    }}
-                  >
-                    <div className="hamburger2">{visible ? <Category /> : null}</div>
-                  </div>
-                  <div className="top-title">일상연습</div>
-                  <div className="top-dark">밤</div>
-                </div>
-              </div>
+              <Top />
               {children}
               <Nav
                 page={page}
