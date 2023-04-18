@@ -8,10 +8,11 @@ const Intro: FC = () => {
       <div className="test">
         <div className="first-intro">1. 글 위에 마우스를 위치시키면 스크롤 할 수 있습니다.</div>
         <div className="intro">
-          2. 글의 마지막 문장 우측에는{" "}
+          2. 글의 마지막 문장 우측에는
           <span className="underline">
+            {" "}
             <Link to="/">돌아가기</Link>
-          </span>
+          </span>{" "}
           아이콘<Link to="/">(↵)</Link>이 있습니다. 클릭하면 <span className="underline">메인 화면</span>
           으로 돌아갑니다.
         </div>
