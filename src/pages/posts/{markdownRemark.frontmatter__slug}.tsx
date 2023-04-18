@@ -8,6 +8,7 @@ import PageNumber from "../../components/Nav/PageNumber";
 import PrevButton from "../../components/Nav/PrevButton";
 import NextButton from "../../components/Nav/NextButton";
 import MobileNav from "../../components/Nav/MobileNav";
+import "./{markdownRemark.frontmatter__slug}.css";
 
 export default function BlogPostTemplate({ data }: any) {
   const { markdownRemark } = data; // data.markdownRemark holds your post data
@@ -60,7 +61,12 @@ export default function BlogPostTemplate({ data }: any) {
         />
       }
     >
-      <HomePage content={<div className="content-text" dangerouslySetInnerHTML={{ __html: html }} />} title={frontmatter.title} day={frontmatter.date} />
+      <HomePage
+        content={<div className="content-text" dangerouslySetInnerHTML={{ __html: html }} />}
+        title={frontmatter.title}
+        day={frontmatter.date}
+        line={<div className="mobile-line"></div>}
+      />
     </Layout>
   );
 }
