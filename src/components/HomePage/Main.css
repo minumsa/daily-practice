@@ -31,7 +31,8 @@
   }
 
   .main-container {
-    margin-left: 1vh;
+    margin-left: 1vw;
+    margin-right: 1vw;
   }
 }
 
