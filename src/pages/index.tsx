@@ -20,7 +20,9 @@ const Index = ({ data }: PageProps<Queries.AllPagesQuery>) => {
                   </div>
                 </Link>
               ))}
-              {/* <div className="list-button">→</div> */}
+              <div className="total-post">
+                총<div className="post-count">{data.allMarkdownRemark.totalCount}개</div>의 글이 있습니다.
+              </div>
             </div>
           </div>
         }
