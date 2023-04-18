@@ -6,7 +6,6 @@
   width: 145px;
   height: 196px;
   /* color: white; */
-  /* background-color: black; */
   bottom: 174px;
   right: 34px;
   border: 1px solid rgb(163, 163, 163);
@@ -23,6 +22,7 @@
   margin-left: 29px;
   margin-right: 55px;
   padding: 4px 2px 4px 2px;
+  opacity: 0.87;
 }
 
 .special-category {
@@ -47,9 +47,9 @@
 
 @media (max-width: 550px) {
   .category-container {
-    width: 132px;
-    height: 185px;
-    padding-top: 8px;
+    width: 130px;
+    height: 180px;
+    padding-top: 9px;
     opacity: 1;
     bottom: 13px;
     left: 40px;
@@ -57,7 +57,7 @@
 
   .close {
     bottom: 182px;
-    left: 15px;
+    left: 14px;
   }
 
   .category {
