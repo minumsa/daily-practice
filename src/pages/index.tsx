@@ -12,6 +12,9 @@ const Index = ({ data }: PageProps<Queries.AllPagesQuery>) => {
       <HomePage
         content={
           <div className="list-container">
+            <div className="total-post">
+              총<div className="post-count">{data.allMarkdownRemark.totalCount}개</div>의 글이 있습니다.
+            </div>
             <div className="list-text-container">
               {data.allMarkdownRemark.edges.map(({ node }: any) => (
                 <Link to={"/posts" + node.frontmatter.slug}>
@@ -20,9 +23,6 @@ const Index = ({ data }: PageProps<Queries.AllPagesQuery>) => {
                   </div>
                 </Link>
               ))}
-              <div className="total-post">
-                총<div className="post-count">{data.allMarkdownRemark.totalCount}개</div>의 글이 있습니다.
-              </div>
             </div>
           </div>
         }
