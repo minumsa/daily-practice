@@ -15,14 +15,12 @@ const Index = ({ data }: PageProps<Queries.AllPagesQuery>) => {
             <div className="list-text-container">
               {data.allMarkdownRemark.edges.map(({ node }: any) => (
                 <Link to={"/posts" + node.frontmatter.slug}>
-                  {/* <div className="test"> */}
                   <div className="list-text" key={node.id}>
                     {node.frontmatter.title}
-                    {/* </div> */}
                   </div>
                 </Link>
               ))}
-              <div className="list-button">→</div>
+              {/* <div className="list-button">→</div> */}
             </div>
           </div>
         }

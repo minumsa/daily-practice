@@ -34,16 +34,16 @@ const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
     background-color: ${props => props.theme.Color};
   }
 
-  .list-text {
-    color: ${props => props.theme.bgColor};
-    background-color: ${props => props.theme.listBgColor};
-    border: 1px solid ${props => props.theme.listBgColor};
-  }
+  // .list-text {
+  //   color: ${props => props.theme.bgColor};
+  //   background-color: ${props => props.theme.listBgColor};
+  //   border: 1px solid ${props => props.theme.listBgColor};
+  // }
 
-  .list-button {
-    background-color: ${props => props.theme.Color};
-    border: 1px solid ${props => props.theme.bgColor};
-  }
+  // .list-button {
+  //   background-color: ${props => props.theme.Color};
+  //   border: 1px solid ${props => props.theme.bgColor};
+  // }
 
   .prev-button {
     border-top: 1.5px solid ${props => props.theme.Color};
@@ -70,14 +70,14 @@ const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
   }
 
   @media (max-width: 550px) {
-    .list-text {
-      background-color: ${props => props.theme.bgColor};
-      border: 1px solid ${props => props.theme.Color};
-    }
-    .list-button {
-      background-color: ${props => props.theme.bgColor};
-      border: 1px solid ${props => props.theme.Color};
-    }
+    // .list-text {
+    //   background-color: ${props => props.theme.bgColor};
+    //   border: 1px solid ${props => props.theme.Color};
+    // }
+    // .list-button {
+    //   background-color: ${props => props.theme.bgColor};
+    //   border: 1px solid ${props => props.theme.Color};
+    // }
   }
 
     p::selection {
