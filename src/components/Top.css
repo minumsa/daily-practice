@@ -1,0 +1,44 @@
+.top-container {
+  display: flex;
+  flex-direction: column;
+  display: none;
+}
+
+@media (max-width: 550px) {
+  .top-container {
+    font-weight: 360;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 390px;
+    height: 60px;
+  }
+
+  .top-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .top-title {
+    justify-content: center;
+  }
+
+  .top-hamburger-container {
+    margin-left: 20px;
+    justify-content: start;
+    height: 22.73px;
+    cursor: pointer;
+  }
+
+  .top-hamburger {
+    display: flex;
+    justify-content: center;
+    width: 22px;
+    height: 1.5px;
+  }
+
+  .top-dark {
+    margin-right: 20px;
+  }
+}

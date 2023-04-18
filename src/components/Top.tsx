@@ -10,12 +10,12 @@ const Top: FC = () => {
     <div className="top-container">
       <div className="top-content">
         <div
-          className="hamburger-container2"
+          className="top-hamburger-container"
           onClick={() => {
             setVisible(!visible);
           }}
         >
-          <div className="hamburger2">{visible ? <Category /> : null}</div>
+          <div className="top-hamburger">{visible ? <Category /> : null}</div>
         </div>
         <div className="top-title">일상연습</div>
         <div className="top-dark">밤</div>

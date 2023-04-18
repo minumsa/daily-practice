@@ -59,7 +59,7 @@ const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
     border-top: 1.5px solid ${props => props.theme.Color};
   }
 
-  .hamburger, .hamburger2 {
+  .hamburger, .top-hamburger {
     background-color: ${props => props.theme.Color};
     box-shadow: 0 7px 0 ${props => props.theme.Color}, 0 14px 0 ${props => props.theme.Color};
   }
