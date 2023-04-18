@@ -44,3 +44,16 @@
   left: 97px;
   z-index: 2;
 }
+
+@media (max-width: 550px) {
+  .category-container {
+    opacity: 0.5;
+    bottom: 0px;
+    left: 55px;
+  }
+
+  .close {
+    bottom: 190px;
+    left: 10px;
+  }
+}
