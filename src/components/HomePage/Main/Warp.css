@@ -9,6 +9,7 @@
 
 @media (max-width: 550px) {
   .warp-container {
+    font-size: 16px;
     margin-top: calc(70%);
     margin-left: 5px;
     width: 350px;
