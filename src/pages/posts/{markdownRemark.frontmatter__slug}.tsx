@@ -14,7 +14,7 @@ export default function BlogPostTemplate({ data }: any) {
   const { markdownRemark } = data; // data.markdownRemark holds your post data
   const { frontmatter, html } = markdownRemark;
 
-  console.log(frontmatter);
+  console.log(data.allMarkdownRemark.edges[String(Number(frontmatter.slug.split("/").join("")) - 1)].node.frontmatter.title); // 이전 글
 
   let prevSlug = frontmatter.slug;
   prevSlug = "/" + String(Number(prevSlug.split("/").join("")) - 1);
@@ -69,16 +69,25 @@ export default function BlogPostTemplate({ data }: any) {
         day={frontmatter.date}
         line={<div className="mobile-line"></div>}
         prev={
-          <div className="prev-box">
-            <div className="prev-post">이전 글</div>
-            <div className="prev-post-title">못생긴 사람들이 자꾸 태어난다</div>
-          </div>
+          <Link to={"/posts" + prevSlug}>
+            <div className="prev-box">
+              <div className="prev-post">이전 글</div>
+              <div className="prev-post-title">
+                {data.allMarkdownRemark.edges[String(Number(frontmatter.slug.split("/").join("")) - 1)].node.frontmatter.title}
+              </div>
+            </div>
+          </Link>
         }
         next={
-          <div className="next-box">
-            <div className="next-post">다음 글</div>
-            <div className="next-post-title">핑크</div>
-          </div>
+          <Link to={"/posts" + nextSlug}>
+            <div className="next-box">
+              <div className="next-post">다음 글</div>
+              <div className="next-post-title">
+                {" "}
+                {data.allMarkdownRemark.edges[String(Number(frontmatter.slug.split("/").join("")) + 1)].node.frontmatter.title}
+              </div>
+            </div>
+          </Link>
         }
       />
     </Layout>
