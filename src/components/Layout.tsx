@@ -37,7 +37,7 @@ const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
   .list-text, .list-button {
     background-color: ${props => props.theme.categoryColor};
     color: ${props => props.theme.Color};
-    border: 0.5px solid ${props => props.theme.Color};
+    border: 1px solid ${props => props.theme.Color};
   }
 
   // .list-button {
