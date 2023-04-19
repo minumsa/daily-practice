@@ -56,7 +56,7 @@ const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
   }
 
   .post-line {
-    border-top: 1.5px solid ${props => props.theme.Color};
+    border-top: 1px solid ${props => props.theme.Color};
   }
 
   .hamburger, .top-hamburger {
