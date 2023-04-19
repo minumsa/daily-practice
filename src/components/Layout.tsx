@@ -16,6 +16,7 @@ export interface ThemeType {
   opacity: number;
   listBgColor: string;
   textColor: string;
+  lineColor: string;
 }
 
 const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
@@ -56,7 +57,7 @@ const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
   }
 
   .post-line {
-    border-top: 1px solid ${props => props.theme.Color};
+    border-top: 1.5px solid ${props => props.theme.Color};
   }
 
   .hamburger, .top-hamburger {
@@ -70,6 +71,10 @@ const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
   }
 
   @media (max-width: 550px) {
+    .post-line {
+      border-top: 1px solid ${props => props.theme.Color};
+    }
+
     // .list-text {
     //   background-color: ${props => props.theme.bgColor};
     //   border: 1px solid ${props => props.theme.Color};
@@ -85,8 +90,12 @@ const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
       background-color: ${props => props.theme.Color};
     }
 
-    .content-text, .date-created, .line, .mode-button, .button-container, .page-container, .title-container, .close, .info-container, .intro-container, .explain-container, .connect-container, .warp-container {
+    .content-text, .date-created, .line, .mode-button, .button-container, .page-container, .title-container, .close, .info-container, .intro-container, .explain-container, .connect-container, .warp-container, .line-color {
       opacity: ${props => props.theme.opacity};
+    }
+
+    .underline {
+      text-decoration: wavy underline ${props => props.theme.lineColor};
     }
   }
 `;
