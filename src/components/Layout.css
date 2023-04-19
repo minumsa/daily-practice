@@ -18,7 +18,7 @@ p::selection {
 
 .mode-button {
   font-size: 20px;
-  font-weight: 450;
+  /* font-weight: 450; */
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
