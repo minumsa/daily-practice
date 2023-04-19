@@ -14,6 +14,8 @@ export default function BlogPostTemplate({ data }: any) {
   const { markdownRemark } = data; // data.markdownRemark holds your post data
   const { frontmatter, html } = markdownRemark;
 
+  console.log(frontmatter);
+
   let prevSlug = frontmatter.slug;
   prevSlug = "/" + String(Number(prevSlug.split("/").join("")) - 1);
 
@@ -66,6 +68,18 @@ export default function BlogPostTemplate({ data }: any) {
         title={frontmatter.title}
         day={frontmatter.date}
         line={<div className="mobile-line"></div>}
+        prev={
+          <div className="prev-box">
+            <div className="prev-post">이전 글</div>
+            <div className="prev-post-title">못생긴 사람들이 자꾸 태어난다</div>
+          </div>
+        }
+        next={
+          <div className="next-box">
+            <div className="next-post">다음 글</div>
+            <div className="next-post-title">핑크</div>
+          </div>
+        }
       />
     </Layout>
   );
