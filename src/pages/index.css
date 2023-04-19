@@ -71,10 +71,10 @@ a {
     flex-grow: 1;
     text-align: center;
     margin: 2px 2px 2px 2px;
-    background-color: white;
-    color: black;
+    /* background-color: white; */
+    /* color: black; */
     border-radius: 19px;
-    border: 1px solid black;
+    /* border: 1px solid black; */
   }
 
   .list-button {

@@ -17,7 +17,7 @@ p::selection {
 }
 
 .mode-button {
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 450;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -31,5 +31,9 @@ p::selection {
     font-size: 18px;
     font-weight: 300;
     /* opacity: 0.86; */
+  }
+
+  .mode-button {
+    font-size: 16px;
   }
 }

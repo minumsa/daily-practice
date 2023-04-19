@@ -34,11 +34,11 @@ const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
     background-color: ${props => props.theme.Color};
   }
 
-  // .list-text {
-  //   color: ${props => props.theme.bgColor};
-  //   background-color: ${props => props.theme.listBgColor};
-  //   border: 1px solid ${props => props.theme.listBgColor};
-  // }
+  .list-text, .list-button {
+    background-color: ${props => props.theme.categoryColor};
+    color: ${props => props.theme.Color};
+    border: 0.5px solid ${props => props.theme.Color};
+  }
 
   // .list-button {
   //   background-color: ${props => props.theme.Color};
