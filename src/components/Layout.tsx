@@ -127,6 +127,21 @@ interface Props {
 }
 
 const Layout: React.FC<Props> = ({ children, page, info }) => {
+  const [position, setPosition] = useState(window.pageYOffset);
+  const [visible, setVisible] = useState(true);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const moving = window.pageYOffset;
+      setVisible(position > moving);
+      setPosition(moving);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [position]);
+
   return (
     <ThemeToggler>
       {({ theme, toggleTheme }: any) => {
@@ -143,6 +158,7 @@ const Layout: React.FC<Props> = ({ children, page, info }) => {
             <GlobalStyle />
             <div className="layout-container">
               <Top
+                visible={visible}
                 darkButton={
                   <div
                     className="mode-button"
