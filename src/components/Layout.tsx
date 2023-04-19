@@ -124,14 +124,14 @@ const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
   }
 `;
 
-interface Props {
+type Props = {
   children: React.ReactNode;
-  page: any;
+  page: string;
   info: any;
-}
+};
 
 const Layout: React.FC<Props> = ({ children, page, info }) => {
-  const [position, setPosition] = useState(window.pageYOffset);
+  const [position, setPosition] = useState(0);
   const [visible, setVisible] = useState(true);
 
   useEffect(() => {
@@ -145,11 +145,9 @@ const Layout: React.FC<Props> = ({ children, page, info }) => {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  });
+  }, [position]);
 
   const cls = visible ? "visible" : "hidden";
-
-  console.log({ cls });
 
   return (
     <ThemeToggler>
