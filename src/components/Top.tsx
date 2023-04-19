@@ -4,11 +4,11 @@ import Category from "./Nav/Category";
 import { Link } from "gatsby";
 
 // Child: React.FC or Child: FC
-const Top = ({ darkButton }: { darkButton: any }) => {
+const Top = ({ darkButton, test }: { darkButton: any; test: any }) => {
   const [visible, setVisible] = useState(false);
 
   return (
-    <div className="top-container">
+    <header className={test}>
       <div className="top-content">
         <div
           className="top-hamburger-container"
@@ -23,7 +23,7 @@ const Top = ({ darkButton }: { darkButton: any }) => {
         </div>
         <div className="top-dark">{darkButton}</div>
       </div>
-    </div>
+    </header>
   );
 };
 

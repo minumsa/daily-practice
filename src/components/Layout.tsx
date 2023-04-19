@@ -117,6 +117,10 @@ const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
     .mode-button {
       opacity: ${props => props.theme.opacity};
     }
+
+    header {
+      background-color: ${props => props.theme.bgColor};
+    }
   }
 `;
 
@@ -132,7 +136,8 @@ const Layout: React.FC<Props> = ({ children, page, info }) => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const moving = window.pageYOffset;
+      let moving = window.pageYOffset;
+
       setVisible(position > moving);
       setPosition(moving);
     };
@@ -140,7 +145,11 @@ const Layout: React.FC<Props> = ({ children, page, info }) => {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, [position]);
+  });
+
+  const cls = visible ? "visible" : "hidden";
+
+  console.log({ cls });
 
   return (
     <ThemeToggler>
@@ -158,7 +167,7 @@ const Layout: React.FC<Props> = ({ children, page, info }) => {
             <GlobalStyle />
             <div className="layout-container">
               <Top
-                visible={visible}
+                test={cls}
                 darkButton={
                   <div
                     className="mode-button"
