@@ -14,7 +14,12 @@ export default function BlogPostTemplate({ data }: any) {
   const { markdownRemark } = data; // data.markdownRemark holds your post data
   const { frontmatter, html } = markdownRemark;
 
-  console.log(data.allMarkdownRemark.edges[String(Number(frontmatter.slug.split("/").join("")) - 1)].node.frontmatter.title); // 이전 글
+  console.log(data.allMarkdownRemark.edges);
+  console.log(data.allMarkdownRemark.edges.length);
+
+  // console.log("이전 글", data.allMarkdownRemark.edges[String(Number(frontmatter.slug.split("/").join("")) - 1)].node.frontmatter.title);
+
+  // console.log("다음 글", data.allMarkdownRemark.edges[String(Number(frontmatter.slug.split("/").join("")) + 1)].node.frontmatter.title);
 
   let prevSlug = frontmatter.slug;
   prevSlug = "/" + String(Number(prevSlug.split("/").join("")) - 1);
@@ -69,25 +74,38 @@ export default function BlogPostTemplate({ data }: any) {
         day={frontmatter.date}
         line={<div className="mobile-line"></div>}
         prev={
-          <Link to={"/posts" + prevSlug}>
+          frontmatter.slug === "/1" ? (
             <div className="prev-box">
               <div className="prev-post">이전 글</div>
-              <div className="prev-post-title">
-                {data.allMarkdownRemark.edges[String(Number(frontmatter.slug.split("/").join("")) - 1)].node.frontmatter.title}
-              </div>
+              <div className="prev-post-title">없음</div>
             </div>
-          </Link>
+          ) : (
+            <Link to={"/posts" + prevSlug}>
+              <div className="prev-box">
+                <div className="prev-post">이전 글</div>
+                <div className="prev-post-title">
+                  {data.allMarkdownRemark.edges[String(Number(frontmatter.slug.split("/").join("")) - 2)].node.frontmatter.title}
+                </div>
+              </div>
+            </Link>
+          )
         }
         next={
-          <Link to={"/posts" + nextSlug}>
+          frontmatter.slug === lastSlug ? (
             <div className="next-box">
               <div className="next-post">다음 글</div>
-              <div className="next-post-title">
-                {" "}
-                {data.allMarkdownRemark.edges[String(Number(frontmatter.slug.split("/").join("")) + 1)].node.frontmatter.title}
-              </div>
+              <div className="next-post-title"> 없음</div>
             </div>
-          </Link>
+          ) : (
+            <Link to={"/posts" + nextSlug}>
+              <div className="next-box">
+                <div className="next-post">다음 글</div>
+                <div className="next-post-title">
+                  {data.allMarkdownRemark.edges[String(Number(frontmatter.slug.split("/").join("")))].node.frontmatter.title}
+                </div>
+              </div>
+            </Link>
+          )
         }
       />
     </Layout>

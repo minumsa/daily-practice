@@ -41,7 +41,7 @@
 
 .prev-box,
 .next-box {
-  width: 280px;
+  width: 320px; /*TODO: 수정 */
   display: flex;
   align-items: center;
 }
