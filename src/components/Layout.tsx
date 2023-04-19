@@ -165,7 +165,7 @@ const Layout: React.FC<Props> = ({ children, page, info }) => {
             <GlobalStyle />
             <div className="layout-container">
               <Top
-                test={cls}
+                test={position > 40 ? cls : ""}
                 darkButton={
                   <div
                     className="mode-button"
