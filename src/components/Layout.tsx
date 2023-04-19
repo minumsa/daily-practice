@@ -89,7 +89,7 @@ const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
       background-color: ${props => props.theme.Color};
     }
 
-    .content-text, .date-created, .line, .button-container, .page-container, .title-container, .close, .info-container, .intro-container, .explain-container, .connect-container, .warp-container, .line-color, .top-container {
+    .content-text, .date-created, .line, .button-container, .page-container, .title-container, .close, .info-container, .intro-container, .explain-container, .connect-container, .warp-container, .line-color {
       opacity: ${props => props.theme.opacity};
     }
 
@@ -108,6 +108,14 @@ const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
     .prev-post-title,
     .next-post-title {
       text-decoration: wavy underline ${props => props.theme.lineColor};
+    }
+
+    .top-title {
+      opacity: ${props => props.theme.opacity};
+    }
+
+    .mode-button {
+      opacity: ${props => props.theme.opacity};
     }
   }
 `;
