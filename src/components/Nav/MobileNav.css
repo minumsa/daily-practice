@@ -19,7 +19,6 @@
   width: 90vw;
   height: 1px;
   margin-top: 10px;
-  background-color: black;
   opacity: 1;
 }
 
@@ -50,15 +49,12 @@
 .next-post {
   display: inline-block;
   font-size: 16px;
-  border: 1px solid black;
   padding: 2px 10px 2px 10px;
   border-radius: 20px;
-  background-color: white;
 }
 
 .prev-post-title,
 .next-post-title {
-  text-decoration: wavy underline black;
   font-size: 16px;
   margin-left: 10px;
 }

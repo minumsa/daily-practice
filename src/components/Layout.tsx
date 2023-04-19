@@ -6,7 +6,6 @@ import reset from "styled-reset";
 // @ts-ignore
 import { ThemeToggler } from "gatsby-plugin-dark-mode";
 import Nav from "./Nav";
-import Category from "./Nav/Category";
 import Top from "./Top";
 
 export interface ThemeType {
@@ -95,6 +94,19 @@ const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
     }
 
     .underline {
+      text-decoration: wavy underline ${props => props.theme.lineColor};
+    }
+
+    .mobile-line {
+      background-color: ${props => props.theme.lineColor};
+    }
+    .prev-post,
+    .next-post {
+      border: 1px solid ${props => props.theme.lineColor};
+      background-color: ${props => props.theme.categoryColor};
+    }
+    .prev-post-title,
+    .next-post-title {
       text-decoration: wavy underline ${props => props.theme.lineColor};
     }
   }
