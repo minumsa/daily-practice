@@ -89,7 +89,7 @@ const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
       background-color: ${props => props.theme.Color};
     }
 
-    .content-text, .date-created, .line, .mode-button, .button-container, .page-container, .title-container, .close, .info-container, .intro-container, .explain-container, .connect-container, .warp-container, .line-color {
+    .content-text, .date-created, .line, .button-container, .page-container, .title-container, .close, .info-container, .intro-container, .explain-container, .connect-container, .warp-container, .line-color, .top-container {
       opacity: ${props => props.theme.opacity};
     }
 
