@@ -9,6 +9,14 @@
   display: none;
 }
 
+.visible {
+  display: none;
+}
+
+.hidden {
+  display: none;
+}
+
 @media (max-width: 550px) {
   header {
     display: flex;
@@ -24,11 +32,13 @@
   }
 
   .visible {
+    display: flex;
     top: 0;
     transition: top 0.4s ease-out;
   }
 
   .hidden {
+    display: flex;
     top: -40px;
     transition: top 0.4s ease-out;
   }

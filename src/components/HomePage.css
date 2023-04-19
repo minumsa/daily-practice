@@ -4,7 +4,6 @@
   display: flex;
   flex-grow: 1;
   flex-direction: column;
-  padding-top: 40px;
 }
 
 .body-container {
@@ -24,6 +23,10 @@
 }
 
 @media (max-width: 550px) {
+  .homepage-container {
+    padding-top: 40px;
+  }
+
   .body-container {
     padding-top: 0;
     height: auto;
