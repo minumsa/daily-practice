@@ -39,8 +39,6 @@ export default function BlogPostTemplate({ data }: BlogPostTemplateProps) {
   const { frontmatter, html } = markdownRemark;
   const { edges: posts }: { edges: Post[] } = data.allMarkdownRemark;
 
-  console.log(posts);
-
   const currentIndex = posts.findIndex((p: Post) => p.node.frontmatter.slug === frontmatter.slug);
 
   const prevPost = currentIndex > 0 ? posts[currentIndex - 1].node : null;
@@ -91,10 +89,11 @@ export default function BlogPostTemplate({ data }: BlogPostTemplateProps) {
               </div>
             </Link>
           ) : (
-            <div className="prev-box">
-              <div className="prev-post">이전 글</div>
-              <div className="prev-post-title">없음</div>
-            </div>
+            ""
+            // <div className="prev-box">
+            //   <div className="prev-post">이전 글</div>
+            //   <div className="prev-post-title">없음</div>
+            // </div>
           )
         }
         next={
@@ -106,10 +105,11 @@ export default function BlogPostTemplate({ data }: BlogPostTemplateProps) {
               </div>
             </Link>
           ) : (
-            <div className="next-box">
-              <div className="next-post">다음 글</div>
-              <div className="next-post-title"> 없음</div>
-            </div>
+            ""
+            // <div className="next-box">
+            //   <div className="next-post">다음 글</div>
+            //   <div className="next-post-title"> 없음</div>
+            // </div>
           )
         }
       />
@@ -122,7 +122,7 @@ export const pageQuery = graphql`
     markdownRemark(id: { eq: $id }) {
       html
       frontmatter {
-        date(formatString: "YYYY년 MM월 DD일")
+        date(formatString: "YYYY년 M월 D일")
         slug
         title
         page
