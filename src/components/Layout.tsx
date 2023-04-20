@@ -65,8 +65,10 @@ const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
   }
 
   .category-container {
-    color: ${props => props.theme.bgColor};
-    background-color: ${props => props.theme.listBgColor};
+    color: ${props => props.theme.listBgColor};
+    background-color: ${props => props.theme.categoryColor};
+    border: 1px solid ${props => props.theme.listBgColor};
+    box-shadow: 2px 2px 5px ${props => props.theme.listBgColor};
   }
 
   @media (max-width: 550px) {
@@ -89,7 +91,7 @@ const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
       background-color: ${props => props.theme.Color};
     }
 
-    .content-text, .date-created, .line, .button-container, .page-container, .title-container, .close, .info-container, .intro-container, .explain-container, .connect-container, .warp-container, .line-color {
+    .content-text, .date-created, .line, .button-container, .page-container, .title-container, .info-container, .intro-container, .explain-container, .connect-container, .warp-container, .line-color {
       opacity: ${props => props.theme.opacity};
     }
 
