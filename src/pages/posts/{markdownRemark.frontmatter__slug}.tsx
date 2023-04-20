@@ -2,32 +2,49 @@ import * as React from "react";
 import { Link, graphql } from "gatsby";
 import Layout from "../../components/Layout";
 import HomePage from "../../components/HomePage";
-import Nav from "../../components/Nav";
 import PostInfo from "../../components/Nav/PostInfo";
 import PageNumber from "../../components/Nav/PageNumber";
 import PrevButton from "../../components/Nav/PrevButton";
 import NextButton from "../../components/Nav/NextButton";
-import MobileNav from "../../components/Nav/MobileNav";
 import "./{markdownRemark.frontmatter__slug}.css";
 
-export default function BlogPostTemplate({ data }: any) {
-  const { markdownRemark } = data; // data.markdownRemark holds your post data
+interface Post {
+  node: {
+    frontmatter: {
+      slug: string;
+      title: string;
+    };
+  };
+}
+
+interface BlogPostTemplateProps {
+  data: {
+    markdownRemark: {
+      html: string;
+      frontmatter: {
+        date: string;
+        slug: string;
+        title: string;
+        page: number;
+      };
+    };
+    allMarkdownRemark: {
+      edges: Post[];
+    };
+  };
+}
+
+export default function BlogPostTemplate({ data }: BlogPostTemplateProps) {
+  const { markdownRemark } = data;
   const { frontmatter, html } = markdownRemark;
+  const { edges: posts }: { edges: Post[] } = data.allMarkdownRemark;
 
-  console.log(data.allMarkdownRemark.edges);
-  console.log(data.allMarkdownRemark.edges.length);
+  console.log(posts);
 
-  // console.log("이전 글", data.allMarkdownRemark.edges[String(Number(frontmatter.slug.split("/").join("")) - 1)].node.frontmatter.title);
+  const currentIndex = posts.findIndex((p: Post) => p.node.frontmatter.slug === frontmatter.slug);
 
-  // console.log("다음 글", data.allMarkdownRemark.edges[String(Number(frontmatter.slug.split("/").join("")) + 1)].node.frontmatter.title);
-
-  let prevSlug = frontmatter.slug;
-  prevSlug = "/" + String(Number(prevSlug.split("/").join("")) - 1);
-
-  let nextSlug = frontmatter.slug;
-  nextSlug = "/" + String(Number(nextSlug.split("/").join("")) + 1);
-
-  let lastSlug = "/" + data.allMarkdownRemark.edges.length;
+  const prevPost = currentIndex > 0 ? posts[currentIndex - 1].node : null;
+  const nextPost = currentIndex < posts.length - 1 ? posts[currentIndex + 1].node : null;
 
   return (
     <Layout
@@ -36,33 +53,25 @@ export default function BlogPostTemplate({ data }: any) {
         <PostInfo
           date={frontmatter.date}
           prev={
-            frontmatter.slug === "/1" ? (
-              <div
-                onClick={() => {
-                  alert("첫 번째 게시물입니다.");
-                }}
-              >
-                <PrevButton />
-              </div>
-            ) : (
-              <Link to={"/posts" + prevSlug}>
+            prevPost ? (
+              <Link to={"/posts" + prevPost.frontmatter.slug}>
                 <PrevButton />
               </Link>
+            ) : (
+              <div onClick={() => alert("첫 번째 게시물입니다.")}>
+                <PrevButton />
+              </div>
             )
           }
           next={
-            frontmatter.slug === lastSlug ? (
-              <div
-                onClick={() => {
-                  alert("마지막 게시물입니다.");
-                }}
-              >
-                <NextButton />
-              </div>
-            ) : (
-              <Link to={"/posts" + nextSlug}>
+            nextPost ? (
+              <Link to={"/posts" + nextPost.frontmatter.slug}>
                 <NextButton />
               </Link>
+            ) : (
+              <div onClick={() => alert("마지막 게시물입니다.")}>
+                <NextButton />
+              </div>
             )
           }
         />
@@ -74,37 +83,33 @@ export default function BlogPostTemplate({ data }: any) {
         day={frontmatter.date}
         line={<div className="mobile-line"></div>}
         prev={
-          frontmatter.slug === "/1" ? (
+          prevPost ? (
+            <Link to={"/posts" + prevPost.frontmatter.slug}>
+              <div className="prev-box">
+                <div className="prev-post">이전 글</div>
+                <div className="prev-post-title">{prevPost.frontmatter.title}</div>
+              </div>
+            </Link>
+          ) : (
             <div className="prev-box">
               <div className="prev-post">이전 글</div>
               <div className="prev-post-title">없음</div>
             </div>
-          ) : (
-            <Link to={"/posts" + prevSlug}>
-              <div className="prev-box">
-                <div className="prev-post">이전 글</div>
-                <div className="prev-post-title">
-                  {data.allMarkdownRemark.edges[String(Number(frontmatter.slug.split("/").join("")) - 2)].node.frontmatter.title}
-                </div>
-              </div>
-            </Link>
           )
         }
         next={
-          frontmatter.slug === lastSlug ? (
+          nextPost ? (
+            <Link to={"/posts" + nextPost.frontmatter.slug}>
+              <div className="next-box">
+                <div className="next-post">다음 글</div>
+                <div className="next-post-title">{nextPost.frontmatter.title}</div>
+              </div>
+            </Link>
+          ) : (
             <div className="next-box">
               <div className="next-post">다음 글</div>
               <div className="next-post-title"> 없음</div>
             </div>
-          ) : (
-            <Link to={"/posts" + nextSlug}>
-              <div className="next-box">
-                <div className="next-post">다음 글</div>
-                <div className="next-post-title">
-                  {data.allMarkdownRemark.edges[String(Number(frontmatter.slug.split("/").join("")))].node.frontmatter.title}
-                </div>
-              </div>
-            </Link>
           )
         }
       />
@@ -125,7 +130,6 @@ export const pageQuery = graphql`
     }
 
     allMarkdownRemark {
-      totalCount
       edges {
         node {
           id
@@ -135,7 +139,6 @@ export const pageQuery = graphql`
             page
             slug
           }
-          excerpt
         }
       }
     }
