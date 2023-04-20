@@ -44,7 +44,7 @@ export default function BlogPostTemplate({ data }: BlogPostTemplateProps) {
   const nextPost = currentIndex < posts.length - 1 ? posts[currentIndex + 1].node : null;
 
   const PrevComponent = prevPost ? (
-    <Link to={`/posts${prevPost.frontmatter.slug}`}>
+    <Link to={"/posts" + prevPost.frontmatter.slug}>
       <PrevButton />
     </Link>
   ) : (
@@ -54,7 +54,7 @@ export default function BlogPostTemplate({ data }: BlogPostTemplateProps) {
   );
 
   const NextComponent = nextPost ? (
-    <Link to={`/posts${nextPost.frontmatter.slug}`}>
+    <Link to={"/posts" + nextPost.frontmatter.slug}>
       <NextButton />
     </Link>
   ) : (
@@ -64,7 +64,7 @@ export default function BlogPostTemplate({ data }: BlogPostTemplateProps) {
   );
 
   const PrevPost = prevPost ? (
-    <Link to={`/posts${prevPost.frontmatter.slug}`}>
+    <Link to={"/posts" + prevPost.frontmatter.slug}>
       <div className="prev-box">
         <div className="prev-post">이전 글</div>
         <div className="prev-post-title">{prevPost.frontmatter.title}</div>
@@ -73,7 +73,7 @@ export default function BlogPostTemplate({ data }: BlogPostTemplateProps) {
   ) : null;
 
   const NextPost = nextPost ? (
-    <Link to={`/posts${nextPost.frontmatter.slug}`}>
+    <Link to={"/posts" + nextPost.frontmatter.slug}>
       <div className="next-box">
         <div className="next-post">다음 글</div>
         <div className="next-post-title">{nextPost.frontmatter.title}</div>
