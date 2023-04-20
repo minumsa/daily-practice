@@ -68,7 +68,7 @@ const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
     color: ${props => props.theme.listBgColor};
     background-color: ${props => props.theme.categoryColor};
     border: 1px solid ${props => props.theme.listBgColor};
-    box-shadow: 2px 2px 5px ${props => props.theme.listBgColor};
+    box-shadow: 1px 1px 5px ${props => props.theme.listBgColor};
   }
 
   @media (max-width: 550px) {
