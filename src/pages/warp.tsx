@@ -6,26 +6,14 @@ import { PageProps, graphql } from "gatsby";
 
 const WarpPage = ({ data }: PageProps<Queries.AllPagesQuery>) => {
   const [timer, setTimer] = useState<number>(0);
-  const [randomPage, setRandomPage] = useState<number>(0);
 
   useEffect(() => {
-    const totalPages = data.allMarkdownRemark.totalCount;
-    const currentPage = parseInt(new URL(window.location.href).pathname.split("/").pop() as string) || 0;
-
-    console.log(currentPage);
-
-    let newRandomPage: number;
-    let attempts = 0;
-    do {
-      newRandomPage = Math.floor(Math.random() * totalPages) + 1;
-      attempts++;
-    } while (newRandomPage === currentPage && attempts < 10);
+    const totalPageCount = data.allMarkdownRemark.totalCount;
+    const randomPage = Math.floor(Math.random() * (totalPageCount - 1)) + 1;
 
     const newTimer = window.setTimeout(() => {
-      window.location.href = `/posts/${newRandomPage}`;
+      window.location.href = `/posts/${randomPage}`;
     }, 1000);
-
-    setRandomPage(newRandomPage);
     setTimer(newTimer);
 
     return () => {
