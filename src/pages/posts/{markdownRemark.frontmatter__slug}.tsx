@@ -37,7 +37,10 @@ interface BlogPostTemplateProps {
 export default function BlogPostTemplate({ data }: BlogPostTemplateProps) {
   const { markdownRemark } = data;
   const { frontmatter, html } = markdownRemark;
-  const { edges: posts }: { edges: Post[] } = data.allMarkdownRemark;
+  let { edges: posts }: { edges: Post[] } = data.allMarkdownRemark;
+
+  // allMarkdownRemark 배열을 page를 기준으로 오름차순 정렬합니다.
+  posts = posts.sort((a, b) => a.node.frontmatter.page - b.node.frontmatter.page);
 
   const currentIndex = posts.findIndex((p: Post) => p.node.frontmatter.slug === frontmatter.slug);
 
