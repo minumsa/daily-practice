@@ -25,7 +25,7 @@ interface BlogPostTemplateProps {
         date: string;
         slug: string;
         title: string;
-        page: number;
+        page: any;
       };
     };
     allMarkdownRemark: {
@@ -35,86 +35,61 @@ interface BlogPostTemplateProps {
 }
 
 export default function BlogPostTemplate({ data }: BlogPostTemplateProps) {
-  const { markdownRemark } = data;
+  const { markdownRemark, allMarkdownRemark } = data;
   const { frontmatter, html } = markdownRemark;
-  let { edges: posts }: { edges: Post[] } = data.allMarkdownRemark;
-
-  // allMarkdownRemark 배열을 page를 기준으로 오름차순 정렬합니다.
-  posts = posts.sort((a, b) => a.node.frontmatter.page - b.node.frontmatter.page);
-
+  const posts = allMarkdownRemark.edges.sort((a, b) => a.node.frontmatter.page - b.node.frontmatter.page);
   const currentIndex = posts.findIndex((p: Post) => p.node.frontmatter.slug === frontmatter.slug);
 
   const prevPost = currentIndex > 0 ? posts[currentIndex - 1].node : null;
   const nextPost = currentIndex < posts.length - 1 ? posts[currentIndex + 1].node : null;
 
+  const PrevComponent = prevPost ? (
+    <Link to={`/posts${prevPost.frontmatter.slug}`}>
+      <PrevButton />
+    </Link>
+  ) : (
+    <div onClick={() => alert("첫 번째 게시물입니다.")}>
+      <PrevButton />
+    </div>
+  );
+
+  const NextComponent = nextPost ? (
+    <Link to={`/posts${nextPost.frontmatter.slug}`}>
+      <NextButton />
+    </Link>
+  ) : (
+    <div onClick={() => alert("마지막 게시물입니다.")}>
+      <NextButton />
+    </div>
+  );
+
+  const PrevPost = prevPost ? (
+    <Link to={`/posts${prevPost.frontmatter.slug}`}>
+      <div className="prev-box">
+        <div className="prev-post">이전 글</div>
+        <div className="prev-post-title">{prevPost.frontmatter.title}</div>
+      </div>
+    </Link>
+  ) : null;
+
+  const NextPost = nextPost ? (
+    <Link to={`/posts${nextPost.frontmatter.slug}`}>
+      <div className="next-box">
+        <div className="next-post">다음 글</div>
+        <div className="next-post-title">{nextPost.frontmatter.title}</div>
+      </div>
+    </Link>
+  ) : null;
+
   return (
-    <Layout
-      page={<PageNumber page={frontmatter.page} />}
-      info={
-        <PostInfo
-          date={frontmatter.date}
-          prev={
-            prevPost ? (
-              <Link to={"/posts" + prevPost.frontmatter.slug}>
-                <PrevButton />
-              </Link>
-            ) : (
-              <div onClick={() => alert("첫 번째 게시물입니다.")}>
-                <PrevButton />
-              </div>
-            )
-          }
-          next={
-            nextPost ? (
-              <Link to={"/posts" + nextPost.frontmatter.slug}>
-                <NextButton />
-              </Link>
-            ) : (
-              <div onClick={() => alert("마지막 게시물입니다.")}>
-                <NextButton />
-              </div>
-            )
-          }
-        />
-      }
-    >
+    <Layout page={<PageNumber page={frontmatter.page} />} info={<PostInfo date={frontmatter.date} prev={PrevComponent} next={NextComponent} />}>
       <HomePage
         content={<div className="content-text" dangerouslySetInnerHTML={{ __html: html }} />}
         title={frontmatter.title}
         day={frontmatter.date}
         line={<div className="mobile-line"></div>}
-        prev={
-          prevPost ? (
-            <Link to={"/posts" + prevPost.frontmatter.slug}>
-              <div className="prev-box">
-                <div className="prev-post">이전 글</div>
-                <div className="prev-post-title">{prevPost.frontmatter.title}</div>
-              </div>
-            </Link>
-          ) : (
-            ""
-            // <div className="prev-box">
-            //   <div className="prev-post">이전 글</div>
-            //   <div className="prev-post-title">없음</div>
-            // </div>
-          )
-        }
-        next={
-          nextPost ? (
-            <Link to={"/posts" + nextPost.frontmatter.slug}>
-              <div className="next-box">
-                <div className="next-post">다음 글</div>
-                <div className="next-post-title">{nextPost.frontmatter.title}</div>
-              </div>
-            </Link>
-          ) : (
-            ""
-            // <div className="next-box">
-            //   <div className="next-post">다음 글</div>
-            //   <div className="next-post-title"> 없음</div>
-            // </div>
-          )
-        }
+        prev={PrevPost}
+        next={NextPost}
       />
     </Layout>
   );

@@ -127,7 +127,7 @@ const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
 
 type Props = {
   children: React.ReactNode;
-  page: string;
+  page: any;
   info: any;
 };
 
