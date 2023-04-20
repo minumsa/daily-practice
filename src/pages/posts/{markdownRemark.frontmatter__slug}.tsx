@@ -65,17 +65,17 @@ export default function BlogPostTemplate({ data }: BlogPostTemplateProps) {
 
   const PrevPost = prevPost ? (
     <div className="prev-box">
+      <div className="prev-post">이전 글</div>
       <Link to={"/posts" + prevPost.frontmatter.slug}>
-        <div className="prev-post">이전 글</div>
-        <div className="prev-post-title">{prevPost.frontmatter.title}</div>
+        <div className="prev-post-title">{prevPost.frontmatter.title}</div>{" "}
       </Link>
     </div>
   ) : null;
 
   const NextPost = nextPost ? (
     <div className="next-box">
+      <div className="next-post">다음 글</div>
       <Link to={"/posts" + nextPost.frontmatter.slug}>
-        <div className="next-post">다음 글</div>
         <div className="next-post-title">{nextPost.frontmatter.title}</div>
       </Link>
     </div>
