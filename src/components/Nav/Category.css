@@ -48,6 +48,10 @@
 }
 
 @media (max-width: 550px) {
+  header {
+    display: flex;
+  }
+
   .category-container {
     width: 130px;
     height: 177px;

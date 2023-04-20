@@ -119,6 +119,7 @@ const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
     }
 
     header {
+      display: flex;
       background-color: ${props => props.theme.bgColor};
     }
   }
