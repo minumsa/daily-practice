@@ -6,8 +6,6 @@ import HomePage from "../components/HomePage";
 import LandingInfo from "../components/Nav/LandingInfo";
 
 const Index = ({ data }: PageProps<Queries.AllPagesQuery>) => {
-  const sortedEdges = data.allMarkdownRemark.edges.sort((a, b) => a.node.frontmatter.slug.localeCompare(b.node.frontmatter.slug)).reverse();
-
   return (
     <Layout page={""} info={<LandingInfo />}>
       <HomePage
@@ -17,13 +15,21 @@ const Index = ({ data }: PageProps<Queries.AllPagesQuery>) => {
               총 <span className="post-count">{data.allMarkdownRemark.totalCount}개</span>의 글이 있습니다.
             </div>
             <div className="list-text-container">
-              {data.allMarkdownRemark.edges.map(({ node }: any) => (
-                <Link to={"/posts" + node.frontmatter.slug}>
-                  <div className="list-text" key={node.id}>
-                    {node.frontmatter.title}
-                  </div>
-                </Link>
-              ))}
+              {data.allMarkdownRemark.edges
+                .map(({ node }: any) => ({
+                  ...node.frontmatter,
+                  id: node.id,
+                  excerpt: node.excerpt,
+                  page: parseInt(node.frontmatter.page),
+                }))
+                .sort((a, b) => b.page - a.page)
+                .map((frontmatter: any) => (
+                  <Link to={"/posts" + frontmatter.slug}>
+                    <div className="list-text" key={frontmatter.id}>
+                      {frontmatter.title}
+                    </div>
+                  </Link>
+                ))}
             </div>
           </div>
         }
