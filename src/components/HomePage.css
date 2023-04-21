@@ -24,7 +24,7 @@
 
 @media (max-width: 950px) {
   .body-container {
-    height: calc(100%);
+    height: calc(100% - 10px);
   }
 }
 
