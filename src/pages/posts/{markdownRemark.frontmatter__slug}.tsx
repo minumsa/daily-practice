@@ -70,23 +70,23 @@ export default function BlogPostTemplate({ data }: BlogPostTemplateProps) {
     </div>
   );
 
-  const PrevPost = prevPost && (
-    <Link to={`/posts${prevPost.frontmatter.slug}`}>
-      <div className="prev-box">
-        <div className="prev-post">이전 글</div>
-        <div className="prev-post-title">{prevPost.frontmatter.title}</div>
-      </div>
-    </Link>
-  );
+  // const PrevPost = prevPost && (
+  //   <Link to={`/posts${prevPost.frontmatter.slug}`}>
+  //     <div className="prev-box">
+  //       <div className="prev-post">이전 글</div>
+  //       <div className="prev-post-title">{prevPost.frontmatter.title}</div>
+  //     </div>
+  //   </Link>
+  // );
 
-  const NextPost = nextPost && (
-    <Link to={`/posts${nextPost.frontmatter.slug}`}>
-      <div className="next-box">
-        <div className="next-post">다음 글</div>
-        <div className="next-post-title">{nextPost.frontmatter.title}</div>
-      </div>
-    </Link>
-  );
+  // const NextPost = nextPost && (
+  //   <Link to={`/posts${nextPost.frontmatter.slug}`}>
+  //     <div className="next-box">
+  //       <div className="next-post">다음 글</div>
+  //       <div className="next-post-title">{nextPost.frontmatter.title}</div>
+  //     </div>
+  //   </Link>
+  // );
 
   return (
     <Layout page={<PageNumber page={frontmatter.page} />} info={<PostInfo date={frontmatter.date} prev={PrevComponent} next={NextComponent} />}>
@@ -95,8 +95,26 @@ export default function BlogPostTemplate({ data }: BlogPostTemplateProps) {
         title={frontmatter.title}
         day={frontmatter.date}
         line={<div className="mobile-line"></div>}
-        prev={PrevPost}
-        next={NextPost}
+        prev={
+          prevPost && (
+            <Link to={`/posts${prevPost.frontmatter.slug}`}>
+              <div className="prev-box">
+                <div className="prev-post">이전 글</div>
+                <div className="prev-post-title">{prevPost.frontmatter.title}</div>
+              </div>
+            </Link>
+          )
+        }
+        next={
+          nextPost && (
+            <Link to={`/posts${nextPost.frontmatter.slug}`}>
+              <div className="next-box">
+                <div className="next-post">다음 글</div>
+                <div className="next-post-title">{nextPost.frontmatter.title}</div>
+              </div>
+            </Link>
+          )
+        }
       />
     </Layout>
   );
