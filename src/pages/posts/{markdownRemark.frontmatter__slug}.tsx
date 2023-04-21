@@ -40,8 +40,15 @@ export default function BlogPostTemplate({ data }: BlogPostTemplateProps) {
   const posts = allMarkdownRemark.edges.sort((a, b) => a.node.frontmatter.page - b.node.frontmatter.page);
   const currentIndex = posts.findIndex((p: Post) => p.node.frontmatter.slug === frontmatter.slug);
 
-  const prevPost = currentIndex > 0 ? posts[currentIndex - 1].node : null;
-  const nextPost = currentIndex < posts.length - 1 ? posts[currentIndex + 1].node : null;
+  const [prevPost, nextPost] = (() => {
+    if (currentIndex === 0) {
+      return [null, posts[currentIndex + 1].node];
+    } else if (currentIndex === posts.length - 1) {
+      return [posts[currentIndex - 1].node, null];
+    } else {
+      return [posts[currentIndex - 1].node, posts[currentIndex + 1].node];
+    }
+  })();
 
   const PrevComponent = prevPost ? (
     <Link to={"/posts" + prevPost.frontmatter.slug}>
@@ -64,21 +71,21 @@ export default function BlogPostTemplate({ data }: BlogPostTemplateProps) {
   );
 
   const PrevPost = prevPost && (
-    <div className="prev-box">
-      <div className="prev-post">이전 글</div>
-      <Link to={`/posts${prevPost.frontmatter.slug}`}>
+    <Link to={`/posts${prevPost.frontmatter.slug}`}>
+      <div className="prev-box">
+        <div className="prev-post">이전 글</div>
         <div className="prev-post-title">{prevPost.frontmatter.title}</div>
-      </Link>
-    </div>
+      </div>
+    </Link>
   );
 
   const NextPost = nextPost && (
-    <div className="next-box">
-      <div className="next-post">다음 글</div>
-      <Link to={`/posts${nextPost.frontmatter.slug}`}>
+    <Link to={`/posts${nextPost.frontmatter.slug}`}>
+      <div className="next-box">
+        <div className="next-post">다음 글</div>
         <div className="next-post-title">{nextPost.frontmatter.title}</div>
-      </Link>
-    </div>
+      </div>
+    </Link>
   );
 
   return (

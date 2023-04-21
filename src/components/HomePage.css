@@ -22,6 +22,12 @@
   }
 }
 
+@media (max-width: 950px) {
+  .body-container {
+    height: calc(100%);
+  }
+}
+
 @media (max-width: 550px) {
   .homepage-container {
     padding-top: 40px;

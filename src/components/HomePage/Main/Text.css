@@ -25,13 +25,13 @@
     display: block;
   }
 } */
-/* 
+
 @media (max-width: 950px) {
   .content-text {
-    width: 470px;
+    font-size: 20px;
   }
 }
-
+/* 
 @media (max-width: 830px) {
   .content-text {
     width: 440px;
@@ -54,4 +54,4 @@
   .content-text {
     font-size: 22px;
   }
-} */
+}  */

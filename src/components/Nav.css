@@ -55,8 +55,9 @@
 
 @media (max-width: 950px) {
   .nav-container {
-    width: 85vw;
-    max-width: 560px;
+    width: 86vw;
+    height: 70px;
+    /* max-width: 560px; */
   }
 }
 
