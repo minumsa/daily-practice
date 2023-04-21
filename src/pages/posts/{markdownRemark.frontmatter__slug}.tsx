@@ -13,6 +13,7 @@ interface Post {
     frontmatter: {
       slug: string;
       title: string;
+      page: number;
     };
   };
 }
@@ -38,6 +39,7 @@ export default function BlogPostTemplate({ data }: BlogPostTemplateProps) {
   const { markdownRemark, allMarkdownRemark } = data;
   const { frontmatter, html } = markdownRemark;
   const posts = allMarkdownRemark.edges.sort((a, b) => a.node.frontmatter.page - b.node.frontmatter.page);
+
   const currentIndex = posts.findIndex((p: Post) => p.node.frontmatter.slug === frontmatter.slug);
 
   const prevPost = currentIndex === 0 ? null : posts[currentIndex - 1].node;
