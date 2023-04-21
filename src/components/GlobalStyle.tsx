@@ -15,6 +15,7 @@ const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
       @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/variable/pretendardvariable.css");
 
       body {
+        margin: 0;
         background-color: ${bgColor};
         color: ${textColor};
         font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI",
