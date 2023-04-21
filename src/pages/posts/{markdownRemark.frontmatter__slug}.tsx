@@ -40,15 +40,8 @@ export default function BlogPostTemplate({ data }: BlogPostTemplateProps) {
   const posts = allMarkdownRemark.edges.sort((a, b) => a.node.frontmatter.page - b.node.frontmatter.page);
   const currentIndex = posts.findIndex((p: Post) => p.node.frontmatter.slug === frontmatter.slug);
 
-  const [prevPost, nextPost] = (() => {
-    if (currentIndex === 0) {
-      return [null, posts[currentIndex + 1].node];
-    } else if (currentIndex === posts.length - 1) {
-      return [posts[currentIndex - 1].node, null];
-    } else {
-      return [posts[currentIndex - 1].node, posts[currentIndex + 1].node];
-    }
-  })();
+  const prevPost = currentIndex === 0 ? null : posts[currentIndex - 1].node;
+  const nextPost = currentIndex === posts.length - 1 ? null : posts[currentIndex + 1].node;
 
   const PrevComponent = prevPost ? (
     <Link to={"/posts" + prevPost.frontmatter.slug}>
@@ -70,23 +63,23 @@ export default function BlogPostTemplate({ data }: BlogPostTemplateProps) {
     </div>
   );
 
-  // const PrevPost = prevPost && (
-  //   <Link to={`/posts${prevPost.frontmatter.slug}`}>
-  //     <div className="prev-box">
-  //       <div className="prev-post">이전 글</div>
-  //       <div className="prev-post-title">{prevPost.frontmatter.title}</div>
-  //     </div>
-  //   </Link>
-  // );
+  const PrevPost = prevPost && (
+    <Link to={`/posts${prevPost.frontmatter.slug}`}>
+      <div className="prev-box">
+        <div className="prev-post">이전 글</div>
+        <div className="prev-post-title">{prevPost.frontmatter.title}</div>
+      </div>
+    </Link>
+  );
 
-  // const NextPost = nextPost && (
-  //   <Link to={`/posts${nextPost.frontmatter.slug}`}>
-  //     <div className="next-box">
-  //       <div className="next-post">다음 글</div>
-  //       <div className="next-post-title">{nextPost.frontmatter.title}</div>
-  //     </div>
-  //   </Link>
-  // );
+  const NextPost = nextPost && (
+    <Link to={`/posts${nextPost.frontmatter.slug}`}>
+      <div className="next-box">
+        <div className="next-post">다음 글</div>
+        <div className="next-post-title">{nextPost.frontmatter.title}</div>
+      </div>
+    </Link>
+  );
 
   return (
     <Layout page={<PageNumber page={frontmatter.page} />} info={<PostInfo date={frontmatter.date} prev={PrevComponent} next={NextComponent} />}>
@@ -95,26 +88,8 @@ export default function BlogPostTemplate({ data }: BlogPostTemplateProps) {
         title={frontmatter.title}
         day={frontmatter.date}
         line={<div className="mobile-line"></div>}
-        prev={
-          prevPost && (
-            <Link to={`/posts${prevPost.frontmatter.slug}`}>
-              <div className="prev-box">
-                <div className="prev-post">이전 글</div>
-                <div className="prev-post-title">{prevPost.frontmatter.title}</div>
-              </div>
-            </Link>
-          )
-        }
-        next={
-          nextPost && (
-            <Link to={`/posts${nextPost.frontmatter.slug}`}>
-              <div className="next-box">
-                <div className="next-post">다음 글</div>
-                <div className="next-post-title">{nextPost.frontmatter.title}</div>
-              </div>
-            </Link>
-          )
-        }
+        prev={PrevPost}
+        next={NextPost}
       />
     </Layout>
   );
