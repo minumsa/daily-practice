@@ -1,22 +1,45 @@
+const bgColor = {
+  light: "#f4f4f4",
+  dark: "#1e1e1e",
+};
+
+const categoryColor = {
+  light: "#fff",
+  dark: "#1e1e1e",
+};
+
+const opacity = {
+  light: 0.92,
+  dark: 0.86,
+};
+
+const listBgColor = {
+  light: "#252525",
+  dark: "#fff",
+};
+
+const textColor = {
+  light: "#000000",
+  dark: "#fff",
+};
+
 export const lightTheme = {
-  bgColor: "#f4f4f4",
-  lineColor: "#000000",
-  categoryColor: "#fff",
-  Color: "#000000",
-  opacity: "0.92",
-  listBgColor: "#252525",
+  bgColor: bgColor.light,
+  categoryColor: categoryColor.light,
+  textColor: textColor.light,
+  opacity: opacity.light,
+  listBgColor: listBgColor.light,
 };
 
 export const darkTheme = {
-  bgColor: "#1e1e1e",
-  lineColor: "#fff",
-  categoryColor: "#1e1e1e",
-  Color: "#fff",
-  opacity: "0.86",
-  listBgColor: "#fff",
+  bgColor: bgColor.dark,
+  categoryColor: categoryColor.dark,
+  textColor: textColor.dark,
+  opacity: opacity.dark,
+  listBgColor: listBgColor.dark,
 };
 
-export const theme = {
+const theme = {
   lightTheme,
   darkTheme,
 };
