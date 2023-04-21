@@ -10,13 +10,14 @@ interface homepage {
   line: any;
   prev: any;
   next: any;
+  middle: any;
 }
 
-const HomePage = ({ content, title, day, line, prev, next }: homepage) => {
+const HomePage = ({ content, title, day, line, prev, next, middle }: homepage) => {
   return (
     <div className="homepage-container">
       <div className="body-container">
-        <Main content={content} day={day} line={line} prev={prev} next={next} />
+        <Main content={content} day={day} line={line} prev={prev} next={next} middle={middle} />
         <Title title={title} />
       </div>
     </div>

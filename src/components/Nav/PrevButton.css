@@ -8,5 +8,11 @@
   /* border-top: 1.5px solid black;
   border-right: 1.5px solid black; */
   transform: rotate(225deg);
-  margin-bottom: 1px;
+  /* margin-bottom: 1px; */
+}
+
+@media (max-width: 550px) {
+  .prev-button {
+    margin-left: 10px;
+  }
 }

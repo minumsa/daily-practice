@@ -66,31 +66,52 @@ export default function BlogPostTemplate({ data }: BlogPostTemplateProps) {
   );
 
   const PrevPost = prevPost ? (
-    <a href={"/posts" + prevPost.frontmatter.slug}>
-      <div className="prev-box">
-        <div className="prev-post">이전 글</div>
-        <div className="prev-post-title">{prevPost.frontmatter.title}</div>
-      </div>
-    </a>
-  ) : null;
+    <Link to={"/posts" + prevPost.frontmatter.slug}>
+      <PrevButton />
+    </Link>
+  ) : (
+    <div onClick={() => alert("첫 번째 게시물입니다.")}>
+      <PrevButton />
+    </div>
+  );
+
+  // const PrevPost = prevPost ? (
+  //   <Link to={"/posts" + prevPost.frontmatter.slug}>
+  //     <div className="prev-box">
+  //       <div className="prev-post">이전 글</div>
+  //       <div className="prev-post-title">{prevPost.frontmatter.title}</div>
+  //     </div>
+  //   </Link>
+  // ) : null;
 
   const NextPost = nextPost ? (
-    <a href={"/posts" + nextPost.frontmatter.slug}>
-      <div className="next-box">
-        <div className="next-post">다음 글</div>
-        <div className="next-post-title">{nextPost.frontmatter.title}</div>
-      </div>
-    </a>
-  ) : null;
+    <Link to={"/posts" + nextPost.frontmatter.slug}>
+      <NextButton />
+    </Link>
+  ) : (
+    <div onClick={() => alert("마지막 게시물입니다.")}>
+      <NextButton />
+    </div>
+  );
+
+  // const NextPost = nextPost ? (
+  //   <Link to={"/posts" + nextPost.frontmatter.slug}>
+  //     <div className="next-box">
+  //       <div className="next-post">다음 글</div>
+  //       <div className="next-post-title">{nextPost.frontmatter.title}</div>
+  //     </div>
+  //   </Link>
+  // ) : null;
 
   return (
     <Layout page={<PageNumber page={frontmatter.page} />} info={<PostInfo date={frontmatter.date} prev={PrevComponent} next={NextComponent} />}>
       <HomePage
         content={<div className="content-text" dangerouslySetInnerHTML={{ __html: html }} />}
         title={frontmatter.title}
-        day={frontmatter.date}
+        day={null}
         line={<div className="mobile-line"></div>}
         prev={PrevPost}
+        middle={<div className="mobile-middle">작성일: {frontmatter.date}</div>}
         next={NextPost}
       />
     </Layout>

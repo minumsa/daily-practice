@@ -116,6 +116,10 @@ const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
         display: flex;
         background-color: ${bgColor};
       }
+
+      .mobile-middle {
+        font-size: 16px;
+      }
     `;
   }}
 `;
