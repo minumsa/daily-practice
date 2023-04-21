@@ -70,9 +70,7 @@ export default function BlogPostTemplate({ data }: BlogPostTemplateProps) {
         <div className="prev-post-title">{prevPost.frontmatter.title}</div>
       </div>
     </Link>
-  ) : (
-    ""
-  );
+  ) : null;
 
   const NextPost = nextPost ? (
     <Link to={"/posts" + nextPost.frontmatter.slug}>
@@ -81,9 +79,7 @@ export default function BlogPostTemplate({ data }: BlogPostTemplateProps) {
         <div className="next-post-title">{nextPost.frontmatter.title}</div>
       </div>
     </Link>
-  ) : (
-    ""
-  );
+  ) : null;
 
   return (
     <Layout page={<PageNumber page={frontmatter.page} />} info={<PostInfo date={frontmatter.date} prev={PrevComponent} next={NextComponent} />}>
