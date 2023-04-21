@@ -36,11 +36,13 @@ const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
       .prev-button {
         border-top: 1.5px solid ${textColor};
         border-right: 1.5px solid ${textColor};
+        opacity: ${opacity};
       }
 
       .next-button {
         border-top: 1.5px solid ${textColor};
         border-right: 1.5px solid ${textColor};
+        opacity: ${opacity};
       }
 
       .post-line {
@@ -51,6 +53,7 @@ const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
       .top-hamburger {
         background-color: ${textColor};
         box-shadow: 0 7px 0 ${textColor}, 0 14px 0 ${textColor};
+        // opacity: ${opacity};
       }
 
       .category-container {
@@ -92,6 +95,7 @@ const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
 
       .mobile-line {
         background-color: ${textColor};
+        opacity: ${opacity};
       }
 
       .prev-post,
@@ -105,10 +109,12 @@ const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
       }
 
       .top-title {
+        color: ${textColor};
         opacity: ${opacity};
       }
 
       .mode-button {
+        color: ${textColor};
         opacity: ${opacity};
       }
 
@@ -119,6 +125,8 @@ const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
 
       .mobile-middle {
         font-size: 16px;
+        color: ${textColor};
+        opacity: ${opacity};
       }
     `;
   }}
