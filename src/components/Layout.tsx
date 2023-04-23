@@ -15,6 +15,25 @@ type Props = {
 };
 
 const Layout: React.FC<Props> = ({ children, page, info }) => {
+  return (
+    <ThemeToggler>
+      {({ theme, toggleTheme }: any) => {
+        if (theme == null) {
+          return null;
+        }
+        const isDarkMode = theme === "dark";
+        return (
+          <Test page={page} info={info}>
+            {" "}
+            {children}{" "}
+          </Test>
+        );
+      }}
+    </ThemeToggler>
+  );
+};
+
+const Test: React.FC<Props> = ({ children, page, info }) => {
   const [position, setPosition] = useState(0);
   const [visible, setVisible] = useState(true);
 
@@ -32,51 +51,44 @@ const Layout: React.FC<Props> = ({ children, page, info }) => {
   }, [position]);
 
   const cls = visible ? "visible" : "hidden";
+  const isDarkMode = false;
+  const theme = "dark";
+  const toggleTheme = (str: string) => {};
 
   return (
-    <ThemeToggler>
-      {({ theme, toggleTheme }: any) => {
-        if (theme == null) {
-          return null;
-        }
-        const isDarkMode = theme === "dark";
-        return (
-          <ThemeProvider theme={isDarkMode ? darkTheme : lightTheme}>
-            <GlobalStyle />
-            <div className="layout-container">
-              <Top
-                test={position > 50 ? cls : null}
-                darkButton={
-                  <div
-                    className="mode-button"
-                    onClick={() => {
-                      toggleTheme(theme === "dark" ? "light" : "dark");
-                    }}
-                  >
-                    {isDarkMode ? "밤" : "낮"}
-                  </div>
-                }
-              />
-              {children}
-              <Nav
-                page={page}
-                info={info}
-                dark={
-                  <div
-                    className="mode-button"
-                    onClick={() => {
-                      toggleTheme(theme === "dark" ? "light" : "dark");
-                    }}
-                  >
-                    {isDarkMode ? "밤" : "낮"}
-                  </div>
-                }
-              />
+    <ThemeProvider theme={isDarkMode ? darkTheme : lightTheme}>
+      <GlobalStyle />
+      <div className="layout-container">
+        <Top
+          test={position > 50 ? cls : "visible"}
+          darkButton={
+            <div
+              className="mode-button"
+              onClick={() => {
+                toggleTheme(theme === "dark" ? "light" : "dark");
+              }}
+            >
+              {isDarkMode ? "밤" : "낮"}
             </div>
-          </ThemeProvider>
-        );
-      }}
-    </ThemeToggler>
+          }
+        />
+        {children}
+        <Nav
+          page={page}
+          info={info}
+          dark={
+            <div
+              className="mode-button"
+              onClick={() => {
+                toggleTheme(theme === "dark" ? "light" : "dark");
+              }}
+            >
+              {isDarkMode ? "밤" : "낮"}
+            </div>
+          }
+        />
+      </div>
+    </ThemeProvider>
   );
 };
 
