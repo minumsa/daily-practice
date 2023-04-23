@@ -5,11 +5,11 @@
   position: relative;
   padding-top: 15px;
   padding-bottom: 3px;
-  width: 145px;
+  width: 130px;
   height: 153px;
   /* color: white; */
   bottom: 140px;
-  right: 34px;
+  right: 42px;
   border-radius: 12px;
   /* border-radius: 0px; */
   /* text-align: left; */
@@ -55,24 +55,24 @@
 @media (max-width: 1160px) {
   .category-container {
     /* bottom: 145px; */
-    left: 29px;
+    left: 32px;
   }
 
   .category {
-    margin-left: 75px;
+    margin-left: 67px;
   }
 
   .category-1 {
-    margin-left: 90px;
+    margin-left: 82px;
   }
 
   .category-2 {
-    margin-left: 44px;
+    margin-left: 36px;
   }
 
   .close {
     bottom: 37px;
-    left: 33px;
+    left: 23px;
   }
 }
 
