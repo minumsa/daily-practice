@@ -21,19 +21,26 @@ const Layout: React.FC<Props> = ({ children, page, info }) => {
         if (theme == null) {
           return null;
         }
-        const isDarkMode = theme === "dark";
         return (
-          <Test page={page} info={info}>
+          <LayoutInternal page={page} info={info} theme={theme} toggleTheme={toggleTheme}>
             {" "}
             {children}{" "}
-          </Test>
+          </LayoutInternal>
         );
       }}
     </ThemeToggler>
   );
 };
 
-const Test: React.FC<Props> = ({ children, page, info }) => {
+type LayoutInternalProps = {
+  children: React.ReactNode;
+  page: any;
+  info: any;
+  theme: any;
+  toggleTheme: any;
+};
+
+const LayoutInternal: React.FC<LayoutInternalProps> = ({ children, page, info, theme, toggleTheme }) => {
   const [position, setPosition] = useState(0);
   const [visible, setVisible] = useState(true);
 
@@ -51,9 +58,7 @@ const Test: React.FC<Props> = ({ children, page, info }) => {
   }, [position]);
 
   const cls = visible ? "visible" : "hidden";
-  const isDarkMode = false;
-  const theme = "dark";
-  const toggleTheme = (str: string) => {};
+  const isDarkMode = theme === "dark";
 
   return (
     <ThemeProvider theme={isDarkMode ? darkTheme : lightTheme}>
