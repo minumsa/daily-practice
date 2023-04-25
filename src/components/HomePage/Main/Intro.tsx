@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import "./Intro.scss";
+import "./Intro.css";
 import { Link } from "gatsby";
 
 const Intro: FC = () => {

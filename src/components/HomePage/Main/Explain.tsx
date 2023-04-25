@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import "./Explain.scss";
+import "./Explain.css";
 
 const Explain: FC = () => {
   return (

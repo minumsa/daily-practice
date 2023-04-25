@@ -1,6 +1,6 @@
 import * as React from "react";
 import { PageProps, graphql, Link } from "gatsby";
-import "./TitleList.scss";
+import "./TitleList.css";
 
 const TitleList = ({ data }: PageProps<Queries.AllPagesQuery>) => {
   return (

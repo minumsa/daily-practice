@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import "./Warp.scss";
+import "./Warp.css";
 
 const Warp: FC = () => {
   return (
