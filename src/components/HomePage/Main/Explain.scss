@@ -1,0 +1,11 @@
+.explain-container {
+  width: 290px;
+  margin-left: 10px;
+  font-size: 18px;
+  font-weight: 400;
+  word-break: keep-all;
+
+  @media (max-width: 550px) {
+    font-size: 16px;
+  }
+}

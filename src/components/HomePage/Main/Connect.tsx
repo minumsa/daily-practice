@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import "./Connect.css";
+import "./Connect.scss";
 
 const Connect: FC = () => {
   return (

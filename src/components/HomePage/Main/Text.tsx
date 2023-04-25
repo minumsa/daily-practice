@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import "./Text.css";
+import "./Text.scss";
 
 const Content: FC = () => {
   return (

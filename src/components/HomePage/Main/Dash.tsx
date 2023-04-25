@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import "./Dash.css";
+import "./Dash.scss";
 
 const Dash: FC = () => {
   return (
