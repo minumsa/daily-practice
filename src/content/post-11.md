@@ -2,12 +2,12 @@
 slug: "/11"
 date: "2023-04-28"
 page: "11"
-title: "소리"
+title: "소리를 들었다"
 ---
 
 <div style="text-align: center;">
     <div class="post-line" style="display: inline-block; line-height:160%">
-    소리
+    소리를 들었다
     </div>
 </div>
 
