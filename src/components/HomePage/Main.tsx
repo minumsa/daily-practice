@@ -1,6 +1,6 @@
 import React from "react";
 import Dash from "./Main/Dash";
-import "./Main.scss";
+import "./Main.css";
 import MobileNav from "../Nav/MobileNav";
 
 interface MainProps {
