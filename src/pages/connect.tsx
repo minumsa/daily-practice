@@ -7,8 +7,8 @@ import "./connect.css";
 
 const ConnectPage: FC = () => {
   return (
-    <Layout page={""} info={<ConnectInfo />}>
-      <HomePage content={<Connect />} title={""} />
+    <Layout info={<ConnectInfo />}>
+      <HomePage content={<Connect />} />
     </Layout>
   );
 };

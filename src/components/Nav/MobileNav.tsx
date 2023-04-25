@@ -2,11 +2,11 @@ import React from "react";
 import "./MobileNav.css";
 
 interface MobileNavProps {
-  day: string;
-  line: React.ReactNode;
-  prev: React.ReactNode;
-  next: React.ReactNode;
-  middle: React.ReactNode;
+  day?: string;
+  line?: React.ReactNode;
+  prev?: React.ReactNode;
+  next?: React.ReactNode;
+  middle?: React.ReactNode;
 }
 
 const MobileNav = ({ day, line, prev, next, middle }: MobileNavProps) => {

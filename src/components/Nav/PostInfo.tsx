@@ -2,9 +2,9 @@ import React, { FC } from "react";
 import "./PostInfo.css";
 
 interface postInfo {
-  date: React.ReactNode;
-  prev: React.ReactNode;
-  next: React.ReactNode;
+  date?: React.ReactNode;
+  prev?: React.ReactNode;
+  next?: React.ReactNode;
 }
 
 const PostInfo = ({ date, prev, next }: postInfo) => {

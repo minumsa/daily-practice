@@ -4,12 +4,12 @@ import "./Main.css";
 import MobileNav from "../Nav/MobileNav";
 
 interface MainProps {
-  content: React.ReactNode;
-  day: string;
-  line: React.ReactNode;
-  prev: React.ReactNode;
-  next: React.ReactNode;
-  middle: React.ReactNode;
+  content?: React.ReactNode;
+  day?: string;
+  line?: React.ReactNode;
+  prev?: React.ReactNode;
+  next?: React.ReactNode;
+  middle?: React.ReactNode;
 }
 
 const Main = ({ content, ...props }: MainProps) => {

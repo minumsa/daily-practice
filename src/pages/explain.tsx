@@ -6,7 +6,7 @@ import Layout from "../components/Layout";
 
 const ExplainPage: FC = () => {
   return (
-    <Layout page={""} info={<ExplainInfo />}>
+    <Layout info={<ExplainInfo />}>
       <HomePage content={<Explain />} title={"최유일"} />
     </Layout>
   );

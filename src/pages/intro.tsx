@@ -6,8 +6,8 @@ import Layout from "../components/Layout";
 
 const IntroPage: FC = () => {
   return (
-    <Layout page={""} info={<IntroInfo />}>
-      <HomePage content={<Intro />} title={""} />
+    <Layout info={<IntroInfo />}>
+      <HomePage content={<Intro />} />
     </Layout>
   );
 };

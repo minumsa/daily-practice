@@ -4,12 +4,17 @@ import Warp from "../components/HomePage/Main/Warp";
 import Layout from "../components/Layout";
 import { PageProps, graphql } from "gatsby";
 
+interface WarpPageProps extends PageProps<Queries.AllPagesQuery> {
+  page: string;
+  info: string;
+}
+
 // 페이지 총 수를 받아서 무작위 페이지 번호를 반환하는 함수
 const getRandomPage = (totalCount: number) => {
   return Math.floor(Math.random() * (totalCount - 1)) + 1;
 };
 
-const WarpPage = ({ data }: PageProps<Queries.AllPagesQuery>) => {
+const WarpPage = ({ data, page, info }: WarpPageProps) => {
   useEffect(() => {
     // 페이지 수 가져오기
     const totalPageCount = data.allMarkdownRemark.totalCount;
@@ -39,8 +44,8 @@ const WarpPage = ({ data }: PageProps<Queries.AllPagesQuery>) => {
 
   return (
     // Layout 컴포넌트를 사용하여 페이지 구성
-    <Layout page={""} info={""}>
-      <HomePage content={<Warp />} title={""} />
+    <Layout page={page} info={info}>
+      <HomePage content={<Warp />} />
     </Layout>
   );
 };

@@ -16,7 +16,7 @@ const Index = ({ data }: PageProps<Queries.AllPagesQuery>) => {
   const sortedPosts = [...posts].sort((a, b) => b.page - a.page);
 
   return (
-    <Layout page={""} info={<LandingInfo />}>
+    <Layout info={<LandingInfo />}>
       <HomePage
         content={
           <div className="list-container">
@@ -32,7 +32,6 @@ const Index = ({ data }: PageProps<Queries.AllPagesQuery>) => {
             </div>
           </div>
         }
-        title={""}
       />
     </Layout>
   );

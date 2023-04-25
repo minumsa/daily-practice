@@ -7,7 +7,6 @@ import PageNumber from "../../components/Nav/PageNumber";
 import PrevButton from "../../components/Nav/PrevButton";
 import NextButton from "../../components/Nav/NextButton";
 import "./{markdownRemark.frontmatter__slug}.css";
-import { ReactElement } from "react";
 
 interface Post {
   node: {
@@ -91,7 +90,6 @@ export default function BlogPostTemplate({ data }: BlogPostTemplateProps) {
       <HomePage
         content={<div className="content-text" dangerouslySetInnerHTML={{ __html: html }} />}
         title={frontmatter.title}
-        day={""}
         line={<div className="mobile-line"></div>}
         prev={PrevPost}
         middle={<div className="mobile-middle">작성일: {frontmatter.date}</div>}
