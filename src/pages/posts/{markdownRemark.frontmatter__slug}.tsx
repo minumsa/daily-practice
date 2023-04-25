@@ -6,7 +6,6 @@ import PostInfo from "../../components/Nav/PostInfo";
 import PageNumber from "../../components/Nav/PageNumber";
 import PrevButton from "../../components/Nav/PrevButton";
 import NextButton from "../../components/Nav/NextButton";
-import "./{markdownRemark.frontmatter__slug}.css";
 
 interface Post {
   node: {
