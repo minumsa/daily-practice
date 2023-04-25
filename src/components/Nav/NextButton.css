@@ -1,9 +1,9 @@
 .next-button {
-  justify-content: center;
-  content: "";
   display: inline-block;
+  justify-content: center;
   width: 10px;
   height: 10px;
-  transform: rotate(45deg);
   margin-bottom: 1px;
+  transform: rotate(45deg);
+  content: "";
 }

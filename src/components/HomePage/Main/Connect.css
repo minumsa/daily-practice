@@ -1,11 +1,11 @@
 .connect-container {
   display: flex;
   flex-direction: column;
-  font-size: 18px;
+  padding-top: 50px;
   font-weight: 400;
+  font-size: 18px;
   line-height: 170%;
   text-align: center;
-  padding-top: 50px;
 }
 
 .connect-title {

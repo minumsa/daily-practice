@@ -1,17 +1,17 @@
 .warp-container {
-  font-weight: 400;
   width: 520px;
-  word-break: keep-all;
-  text-align: center;
   margin-top: calc(50%);
+  font-weight: 400;
   font-size: 18px;
+  text-align: center;
+  word-break: keep-all;
 }
 
 @media (max-width: 550px) {
   .warp-container {
-    font-size: 16px;
+    width: 350px;
     margin-top: calc(70%);
     margin-left: 5px;
-    width: 350px;
+    font-size: 16px;
   }
 }

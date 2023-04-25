@@ -1,9 +1,9 @@
 .content-text {
-  font-size: 21px;
-  font-weight: 360;
-  line-height: 200%;
   width: 85vw;
   max-width: 550px;
+  font-weight: 360;
+  font-size: 21px;
+  line-height: 200%;
   word-break: keep-all;
 }
 
@@ -12,15 +12,15 @@
 }
 
 .content-text p {
-  text-indent: 10%;
   margin: 0;
+  text-indent: 10%;
 }
 
 @media (max-width: 550px) {
   .content-text {
     width: 85vw;
+    font-weight: 400;
     font-size: 16px;
     line-height: 210%;
-    font-weight: 400;
   }
 }

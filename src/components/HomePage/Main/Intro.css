@@ -1,11 +1,11 @@
 .intro-container {
   display: flex;
+  justify-content: center;
   width: 680px;
-  font-size: 18px;
   font-weight: 400;
+  font-size: 18px;
   line-height: 200%;
   word-break: keep-all;
-  justify-content: center;
 }
 
 .test {
@@ -18,8 +18,8 @@
 
 @media (max-width: 550px) {
   .intro-container {
-    font-size: 16px;
-    margin-left: 5px;
     width: 300px;
+    margin-left: 5px;
+    font-size: 16px;
   }
 }

@@ -1,10 +1,10 @@
 .main-container {
   display: flex;
   flex-direction: column;
-  max-height: calc(100%);
   align-items: center;
-  line-height: 190%;
   justify-content: center;
+  max-height: calc(100%);
+  line-height: 190%;
 }
 
 .content-container {
@@ -26,13 +26,13 @@
 }
 @media (max-width: 550px) {
   .content-container {
-    margin-bottom: 0;
     margin-top: 10px;
+    margin-bottom: 0;
   }
 
   .main-container {
-    margin-left: 1vw;
     margin-right: 1vw;
+    margin-left: 1vw;
   }
 
   .content-nav-container {
