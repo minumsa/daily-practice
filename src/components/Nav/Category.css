@@ -7,14 +7,10 @@
   padding-bottom: 3px;
   width: 130px;
   height: 153px;
-  /* color: white; */
   bottom: 140px;
   right: 42px;
   border-radius: 12px;
-  /* border-radius: 0px; */
-  /* text-align: left; */
   z-index: 1;
-  /* opacity: 0.2; */
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -54,7 +50,6 @@
 
 @media (max-width: 1160px) {
   .category-container {
-    /* bottom: 145px; */
     left: 32px;
   }
 

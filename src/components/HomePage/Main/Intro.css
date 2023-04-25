@@ -1,5 +1,4 @@
 .intro-container {
-  /* font-size: 18px; */
   display: flex;
   width: 680px;
   font-size: 18px;
@@ -15,17 +14,11 @@
 
 .first-intro {
   margin-left: 2px;
-  /* margin-bottom: 25px; */
-}
-
-.intro {
-  /* margin-bottom: 25px; */
 }
 
 @media (max-width: 550px) {
   .intro-container {
     font-size: 16px;
-    /* margin-top: calc(5%); */
     margin-left: 5px;
     width: 300px;
   }

@@ -4,8 +4,6 @@
   display: flex;
   height: 100vh;
   align-items: center;
-  /* align-content: center; */
-  /* justify-content: center; */
   flex-direction: column;
   font-size: 19px;
 }
@@ -13,12 +11,10 @@
 p::selection {
   color: white;
   background-color: black;
-  /* text-shadow: 0 0 10px white; */
 }
 
 .mode-button {
   font-size: 20px;
-  /* font-weight: 450; */
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -29,7 +25,6 @@ p::selection {
   .layout-container {
     font-size: 18px;
     font-weight: 400;
-    /* opacity: 0.86; */
   }
 
   .mode-button {

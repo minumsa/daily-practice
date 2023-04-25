@@ -1,12 +1,9 @@
 .next-button {
-  /* font-weight: 350; */
   justify-content: center;
   content: "";
   display: inline-block;
   width: 10px;
   height: 10px;
-  /* border-top: 1.5px solid black;
-  border-right: 1.5px solid black; */
   transform: rotate(45deg);
   margin-bottom: 1px;
 }

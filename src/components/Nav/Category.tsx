@@ -17,9 +17,6 @@ const Category: FC = () => {
       <Link to="/connect">
         <div className="category">연결 </div>
       </Link>
-      {/* <Link to="/search">
-        <div className="category">검색 </div>
-      </Link> */}
       <Link to="/warp">
         <div className="category">워프 </div>
       </Link>

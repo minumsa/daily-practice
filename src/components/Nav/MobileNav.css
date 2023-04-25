@@ -27,7 +27,6 @@
 
 .prev-container {
   display: flex;
-  /* margin-bottom: 3px; */
 }
 
 .next-container {
@@ -36,16 +35,9 @@
 
 .next-prev-container {
   display: flex;
-  /* flex-direction: column; */
   justify-content: space-between;
   align-items: center;
   padding: 15px 0 15px 0;
-}
-
-@media (max-width: 550px) {
-  .button-container {
-    /* padding-top: 40px; */
-  }
 }
 
 .prev-box,
@@ -68,7 +60,3 @@
   font-size: 16px;
   margin-left: 10px;
 }
-
-/* .test {
-
-} */

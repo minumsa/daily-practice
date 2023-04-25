@@ -7,7 +7,6 @@ const NextButton: FC = () => {
     <>
       <div className="button-container">
         <div className="next-button"></div>
-        {/* <div className="new-next-button">→</div> */}
       </div>
     </>
   );

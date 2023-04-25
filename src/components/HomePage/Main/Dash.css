@@ -8,7 +8,6 @@
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  /* background-color: #fed2ff; */
 }
 
 .line {
@@ -27,34 +26,3 @@
     display: none;
   }
 }
-
-/* 
-@media (max-width: 950px) {
-  .dash-container {
-    width: 760px;
-  }
-}
-
-@media (max-width: 830px) {
-  .dash-container {
-    width: 650px;
-  }
-}
-
-@media (max-width: 700px) {
-  .dash-container {
-    width: 550px;
-  }
-}
-
-@media (max-width: 600px) {
-  .dash-container {
-    width: 500px;
-  }
-}
-
-@media (max-width: 550px) {
-  .dash-container {
-    display: none;
-  }
-} */
