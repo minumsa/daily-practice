@@ -40,7 +40,7 @@ const WarpPage = ({ data }: PageProps<Queries.AllPagesQuery>) => {
   return (
     // Layout 컴포넌트를 사용하여 페이지 구성
     <Layout page={""} info={""}>
-      <HomePage content={<Warp />} title={""} {...props} />
+      <HomePage content={<Warp />} title={""} />
     </Layout>
   );
 };
