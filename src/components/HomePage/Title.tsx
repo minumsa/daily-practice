@@ -1,5 +1,5 @@
 import React from "react";
-import "./Title.css";
+import "./Title.scss";
 import WebTitle from "./Title/WebTitle";
 import PostTitle from "./Title/PostTitle";
 
