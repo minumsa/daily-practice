@@ -1,15 +1,15 @@
 import React from "react";
 import "./MobileNav.css";
 
-interface mobileNav {
-  day: any;
-  line: any;
-  prev: any;
-  next: any;
-  middle: any;
+interface MobileNavProps {
+  day: string;
+  line: React.ReactNode;
+  prev: React.ReactNode;
+  next: React.ReactNode;
+  middle: React.ReactNode;
 }
 
-const MobileNav = ({ day, line, prev, next, middle }: mobileNav) => {
+const MobileNav = ({ day, line, prev, next, middle }: MobileNavProps) => {
   return (
     <>
       <div className="mobile-nav-container">

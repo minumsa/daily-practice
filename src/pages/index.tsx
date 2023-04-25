@@ -1,11 +1,20 @@
-import * as React from "react";
-import { PageProps, graphql, Link } from "gatsby";
-import Layout from "../components/Layout";
-import "./index.css";
+import React from "react";
+import { graphql, Link, PageProps } from "gatsby";
 import HomePage from "../components/HomePage";
+import Layout from "../components/Layout";
 import LandingInfo from "../components/Nav/LandingInfo";
+import "./index.css";
 
 const Index = ({ data }: PageProps<Queries.AllPagesQuery>) => {
+  const posts = data.allMarkdownRemark.edges.map(({ node }) => ({
+    ...node.frontmatter!,
+    id: node.id,
+    excerpt: node.excerpt,
+    page: Number(node.frontmatter!.page), // node.frontmatter가 null일 가능성을 무시
+  }));
+
+  const sortedPosts = [...posts].sort((a, b) => b.page - a.page);
+
   return (
     <Layout page={""} info={<LandingInfo />}>
       <HomePage
@@ -15,21 +24,11 @@ const Index = ({ data }: PageProps<Queries.AllPagesQuery>) => {
               총 <span className="post-count">{data.allMarkdownRemark.totalCount}개</span>의 글이 있습니다.
             </div>
             <div className="list-text-container">
-              {data.allMarkdownRemark.edges
-                .map(({ node }: any) => ({
-                  ...node.frontmatter,
-                  id: node.id,
-                  excerpt: node.excerpt,
-                  page: parseInt(node.frontmatter.page),
-                }))
-                .sort((a, b) => b.page - a.page)
-                .map((frontmatter: any) => (
-                  <Link to={"/posts" + frontmatter.slug}>
-                    <div className="list-text" key={frontmatter.id}>
-                      {frontmatter.title}
-                    </div>
-                  </Link>
-                ))}
+              {sortedPosts.map(post => (
+                <Link to={`/posts${post.slug}`} key={post.id}>
+                  <div className="list-text">{post.title}</div>
+                </Link>
+              ))}
             </div>
           </div>
         }

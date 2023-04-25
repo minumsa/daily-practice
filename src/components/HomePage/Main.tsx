@@ -3,22 +3,22 @@ import Dash from "./Main/Dash";
 import "./Main.css";
 import MobileNav from "../Nav/MobileNav";
 
-interface main {
-  content: any;
-  day: any;
-  line: any;
-  prev: any;
-  next: any;
-  middle: any;
+interface MainProps {
+  content: React.ReactNode;
+  day: string;
+  line: React.ReactNode;
+  prev: React.ReactNode;
+  next: React.ReactNode;
+  middle: React.ReactNode;
 }
 
-const Main = ({ content, day, line, prev, next, middle }: main) => {
+const Main = ({ content, ...props }: MainProps) => {
   return (
     <div className="main-container">
       <Dash />
       <div className="content-container">{content}</div>
       <div className="content-nav-container">
-        <MobileNav day={day} line={line} prev={prev} next={next} middle={middle} />
+        <MobileNav {...props} />
       </div>
       <Dash />
     </div>

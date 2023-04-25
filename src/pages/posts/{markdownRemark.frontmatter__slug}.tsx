@@ -7,6 +7,7 @@ import PageNumber from "../../components/Nav/PageNumber";
 import PrevButton from "../../components/Nav/PrevButton";
 import NextButton from "../../components/Nav/NextButton";
 import "./{markdownRemark.frontmatter__slug}.css";
+import { ReactElement } from "react";
 
 interface Post {
   node: {
@@ -75,15 +76,6 @@ export default function BlogPostTemplate({ data }: BlogPostTemplateProps) {
     </div>
   );
 
-  // const PrevPost = prevPost ? (
-  //   <Link to={"/posts" + prevPost.frontmatter.slug}>
-  //     <div className="prev-box">
-  //       <div className="prev-post">이전 글</div>
-  //       <div className="prev-post-title">{prevPost.frontmatter.title}</div>
-  //     </div>
-  //   </Link>
-  // ) : null;
-
   const NextPost = nextPost ? (
     <Link to={"/posts" + nextPost.frontmatter.slug}>
       <NextButton />
@@ -94,21 +86,12 @@ export default function BlogPostTemplate({ data }: BlogPostTemplateProps) {
     </div>
   );
 
-  // const NextPost = nextPost ? (
-  //   <Link to={"/posts" + nextPost.frontmatter.slug}>
-  //     <div className="next-box">
-  //       <div className="next-post">다음 글</div>
-  //       <div className="next-post-title">{nextPost.frontmatter.title}</div>
-  //     </div>
-  //   </Link>
-  // ) : null;
-
   return (
     <Layout page={<PageNumber page={frontmatter.page} />} info={<PostInfo date={frontmatter.date} prev={PrevComponent} next={NextComponent} />}>
       <HomePage
         content={<div className="content-text" dangerouslySetInnerHTML={{ __html: html }} />}
         title={frontmatter.title}
-        day={null}
+        day={""}
         line={<div className="mobile-line"></div>}
         prev={PrevPost}
         middle={<div className="mobile-middle">작성일: {frontmatter.date}</div>}

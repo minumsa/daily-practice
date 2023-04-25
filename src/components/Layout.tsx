@@ -10,14 +10,14 @@ import { lightTheme, darkTheme } from "../theme";
 
 type Props = {
   children: React.ReactNode;
-  page: any;
-  info: any;
+  page?: React.ReactNode;
+  info?: React.ReactNode;
 };
 
 const Layout: React.FC<Props> = ({ children, page, info }) => {
   return (
     <ThemeToggler>
-      {({ theme, toggleTheme }: any) => {
+      {({ theme, toggleTheme }: { theme: string | null; toggleTheme: (theme?: string) => void }) => {
         if (theme == null) {
           return null;
         }
@@ -34,10 +34,10 @@ const Layout: React.FC<Props> = ({ children, page, info }) => {
 
 type LayoutInternalProps = {
   children: React.ReactNode;
-  page: any;
-  info: any;
-  theme: any;
-  toggleTheme: any;
+  page?: React.ReactNode;
+  info?: React.ReactNode;
+  theme: string;
+  toggleTheme: (theme: string) => void;
 };
 
 const LayoutInternal: React.FC<LayoutInternalProps> = ({ children, page, info, theme, toggleTheme }) => {
