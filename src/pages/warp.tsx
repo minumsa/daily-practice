@@ -1,3 +1,4 @@
+import SEO from "../SEO";
 import HomePage from "../components/HomePage";
 import Warp from "../components/HomePage/Main/Warp";
 import Layout from "../components/Layout";
@@ -45,6 +46,7 @@ const WarpPage = ({ data, page, info }: WarpPageProps) => {
   return (
     // Layout 컴포넌트를 사용하여 페이지 구성
     <Layout page={page} info={info}>
+      <SEO title={"일상연습"} />
       <HomePage content={<Warp />} />
     </Layout>
   );

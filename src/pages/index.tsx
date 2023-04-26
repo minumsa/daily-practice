@@ -1,3 +1,4 @@
+import SEO from "../SEO";
 import HomePage from "../components/HomePage";
 import Layout from "../components/Layout";
 import LandingInfo from "../components/Nav/LandingInfo";
@@ -17,6 +18,7 @@ const Index = ({ data }: PageProps<Queries.AllPagesQuery>) => {
 
   return (
     <Layout info={<LandingInfo />}>
+      <SEO title={"일상연습"} />
       <HomePage
         content={
           <div className="list-container">
@@ -54,6 +56,12 @@ export const query = graphql`
           }
           excerpt
         }
+      }
+    }
+
+    site {
+      siteMetadata {
+        title
       }
     }
   }
