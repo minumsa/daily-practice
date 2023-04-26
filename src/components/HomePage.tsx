@@ -1,5 +1,5 @@
 import React from "react";
-import Main from "./HomePage/Main";
+import Main  from "./HomePage/Main";
 import Title from "./HomePage/Title";
 import "./HomePage.css";
 

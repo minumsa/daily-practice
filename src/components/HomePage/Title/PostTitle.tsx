@@ -1,7 +1,7 @@
-import React, { FC } from "react";
+import React from "react";
 import "./PostTitle.css";
 
-const PostTitle = ({ title }: { title: React.ReactNode }) => {
+const PostTitle = ({ title }: { title?: React.ReactNode }) => {
   return <div className="post-title">{title}</div>;
 };
 

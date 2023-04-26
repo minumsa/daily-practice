@@ -1,7 +1,7 @@
-import React from "react";
-import "./Title.css";
-import WebTitle from "./Title/WebTitle";
+import React     from "react";
+import WebTitle  from "./Title/WebTitle";
 import PostTitle from "./Title/PostTitle";
+import "./Title.css";
 
 const Title = ({ title }: { title: React.ReactNode }) => {
   return (
