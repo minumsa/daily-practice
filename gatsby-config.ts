@@ -21,6 +21,7 @@ const config: GatsbyConfig = {
     },
     `gatsby-transformer-remark`,
     "gatsby-plugin-dark-mode",
+    `gatsby-plugin-react-helmet`,
   ],
 };
 
