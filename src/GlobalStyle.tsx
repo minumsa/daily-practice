@@ -63,6 +63,30 @@ const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
         box-shadow: 1px 1px 5px ${listBgColor};
       }
 
+      .content-text {
+        width: 85vw;
+        max-width: 550px;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 200%;
+        word-break: keep-all;
+      }
+      
+      .content-text p:first-child {
+        text-indent: 0%;
+      }
+      
+      .content-text p {
+        margin: 0;
+        text-indent: 10%;
+      }
+
+      @media (max-width: 950px) {
+        .content-text {
+          font-size: 20px;
+        }
+      }
+
       @media (max-width: 550px) {
         .post-line {
           border-top: 1px solid ${textColor};
