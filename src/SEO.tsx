@@ -3,10 +3,14 @@ import { useStaticQuery, graphql } from "gatsby";
 import React from "react";
 import { Helmet } from "react-helmet";
 
-export default function SEO() {
+interface SEOProps {
+  title: string;
+}
+
+const SEO = ({ title }: SEOProps) => {
   return (
     <Helmet
-      title="I am a page title"
+      title={title}
       meta={[
         {
           property: `og:title`,
@@ -19,4 +23,6 @@ export default function SEO() {
       ]}
     />
   );
-}
+};
+
+export default SEO;
