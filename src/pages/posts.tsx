@@ -1,11 +1,9 @@
-import React, { FC } from "react";
-import Layout from "../components/Layout";
-import "./posts.css";
-import PostInfo from "../components/Nav/PostInfo";
 import HomePage from "../components/HomePage";
-import { PageProps, graphql } from "gatsby";
+import Layout from "../components/Layout";
+import PostInfo from "../components/Nav/PostInfo";
+import React, { FC } from "react";
 
-const Posts = ({ data }: PageProps<Queries.AllPagesQuery>) => {
+const Posts: FC = () => {
   return (
     <Layout info={<PostInfo />}>
       <HomePage />
@@ -14,23 +12,3 @@ const Posts = ({ data }: PageProps<Queries.AllPagesQuery>) => {
 };
 
 export default Posts;
-
-export const query = graphql`
-  query AllPages {
-    allMarkdownRemark {
-      totalCount
-      edges {
-        node {
-          id
-          frontmatter {
-            title
-            date(formatString: "DD MMMM, YYYY")
-            page
-            slug
-          }
-          excerpt
-        }
-      }
-    }
-  }
-`;

@@ -1,13 +1,13 @@
-import React, { FC } from "react";
 import HomePage from "../components/HomePage";
 import Explain from "../components/HomePage/Main/Explain";
-import ExplainInfo from "../components/Nav/ExplainInfo";
 import Layout from "../components/Layout";
+import ExplainInfo from "../components/Nav/ExplainInfo";
+import React, { FC } from "react";
 
 const ExplainPage: FC = () => {
   return (
     <Layout info={<ExplainInfo />}>
-      <HomePage content={<Explain />} title={"최유일"} />
+      <HomePage content={<Explain />} title={null} />
     </Layout>
   );
 };

@@ -65,10 +65,10 @@ const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
 
       .content-text {
         width: 85vw;
-        max-width: 550px;
+        max-width: 530px;
         font-weight: 400;
         font-size: 20px;
-        line-height: 200%;
+        line-height: 210%;
         word-break: keep-all;
       }
       
@@ -88,6 +88,13 @@ const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
       }
 
       @media (max-width: 550px) {
+        .content-text {
+          width: 85vw;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 210%;
+        }
+
         .post-line {
           border-top: 1px solid ${textColor};
         }

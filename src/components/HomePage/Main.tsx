@@ -1,7 +1,7 @@
-import React     from "react";
-import Dash      from "./Main/Dash";
-import MobileNav from "../Nav/MobileNav";
+import MobileNav from "../MobileUI/MobileNav";
 import "./Main.css";
+import Dash from "./Main/Dash";
+import React from "react";
 
 interface MainProps {
   content?: React.ReactNode;

@@ -1,9 +1,9 @@
-import React from "react";
-import { graphql, Link, PageProps } from "gatsby";
 import HomePage from "../components/HomePage";
 import Layout from "../components/Layout";
 import LandingInfo from "../components/Nav/LandingInfo";
 import "./index.css";
+import { graphql, Link, PageProps } from "gatsby";
+import React from "react";
 
 const Index = ({ data }: PageProps<Queries.AllPagesQuery>) => {
   const posts = data.allMarkdownRemark.edges.map(({ node }) => ({

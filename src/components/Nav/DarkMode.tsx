@@ -1,8 +1,7 @@
-import React, { FC } from "react";
-
 import "./DarkMode.css";
+import React from "react";
 
-const DarkMode = ({ dark }: any) => {
+const DarkMode = ({ dark }: { dark: React.ReactNode }) => {
   return <div className="dark-mode">{dark}</div>;
 };
 

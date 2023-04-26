@@ -1,5 +1,5 @@
-import React, { FC } from "react";
 import "./PostInfo.css";
+import React from "react";
 
 interface postInfo {
   date?: React.ReactNode;

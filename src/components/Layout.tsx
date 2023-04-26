@@ -1,8 +1,8 @@
 import GlobalStyle from "../GlobalStyle";
 import { lightTheme, darkTheme } from "../theme";
 import "./Layout.css";
+import Top from "./MobileUI/Top";
 import Nav from "./Nav";
-import Top from "./Top";
 // @ts-ignore
 import { ThemeToggler } from "gatsby-plugin-dark-mode";
 import React, { useEffect, useState } from "react";

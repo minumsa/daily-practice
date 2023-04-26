@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from "react";
 import HomePage from "../components/HomePage";
 import Warp from "../components/HomePage/Main/Warp";
 import Layout from "../components/Layout";
 import { PageProps, graphql } from "gatsby";
+import React, { useEffect } from "react";
 
 interface WarpPageProps extends PageProps<Queries.AllPagesQuery> {
   page: string;

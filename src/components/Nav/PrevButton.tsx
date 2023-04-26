@@ -1,5 +1,5 @@
-import React, { FC } from "react";
 import "./PrevButton.css";
+import React, { FC } from "react";
 
 const PrevButton: FC = () => {
   return (

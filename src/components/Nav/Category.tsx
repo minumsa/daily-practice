@@ -1,6 +1,6 @@
-import React, { FC } from "react";
 import "./Category.css";
 import { Link } from "gatsby";
+import React, { FC } from "react";
 
 const Category: FC = () => {
   return (

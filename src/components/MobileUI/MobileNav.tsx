@@ -1,5 +1,5 @@
-import React from "react";
 import "./MobileNav.css";
+import React from "react";
 
 interface MobileNavProps {
   day?: string;

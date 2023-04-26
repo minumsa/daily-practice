@@ -1,11 +1,11 @@
-import * as React from "react";
-import { Link, graphql } from "gatsby";
-import Layout from "../../components/Layout";
 import HomePage from "../../components/HomePage";
-import PostInfo from "../../components/Nav/PostInfo";
-import PageNumber from "../../components/Nav/PageNumber";
-import PrevButton from "../../components/Nav/PrevButton";
+import Layout from "../../components/Layout";
 import NextButton from "../../components/Nav/NextButton";
+import PageNumber from "../../components/Nav/PageNumber";
+import PostInfo from "../../components/Nav/PostInfo";
+import PrevButton from "../../components/Nav/PrevButton";
+import { Link, graphql } from "gatsby";
+import * as React from "react";
 
 interface Post {
   node: {
