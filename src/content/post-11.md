@@ -3,6 +3,7 @@ slug: "/11"
 date: "2023-04-28"
 page: "11"
 title: "소리를 들었다"
+description: "잠들기 전 어떤 소리를 들었다. 높고 날카로운 음이 희미하게 반복되는, 몸이 긴 동물의 울음 소리 같은 소리였다."
 ---
 
 <div style="text-align: center;">

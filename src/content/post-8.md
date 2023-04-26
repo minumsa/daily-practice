@@ -3,6 +3,7 @@ slug: "/8"
 date: "2019-05-01"
 page: "8"
 title: "헝거"
+description: "나는 내 인생으로 돌아가고 싶지 않았다. 돌아갈 수 없었다. 그래서 돌아가지 않았다."
 ---
 
 <div style="text-align: center;">

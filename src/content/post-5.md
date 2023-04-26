@@ -3,6 +3,7 @@ slug: "/5"
 date: "2019-01-23"
 page: "5"
 title: "핑크"
+description: "핑크에 대해 쓴다. 핑크에 대해 쓰고 싶기 때문이다. 무언가에 몰두하여 글을 쓰고 싶다고 생각했고 그런 생각을 하자마자 핑크가 떠올랐다."
 ---
 
 <div style="text-align: center;">

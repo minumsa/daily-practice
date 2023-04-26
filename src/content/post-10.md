@@ -3,6 +3,7 @@ slug: "/10"
 date: "2020-10-11"
 page: "10"
 title: "다른 사람이 되는 꿈"
+description: "어제는 사료를 포대에 넣고 묶는데 콧속이 매웠다. 아침에 자전거 타고 공릉천을 달릴 땐 콧물이 나서 계속 훌쩍였다."
 ---
 
 <div style="text-align: center;">

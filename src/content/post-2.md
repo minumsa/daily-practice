@@ -3,6 +3,7 @@ slug: "/2"
 date: "2022-03-11"
 page: "2"
 title: "구글 신은 알고 있다"
+description: "우리는 다음 달에나 만날 생각이었다. 윤이 이사를 앞두고 있었기 때문에 그 일이 좀 마무리된 후에나 보자고 했던 것이다."
 ---
 
 <div style="text-align: center;">

@@ -3,6 +3,7 @@ slug: "/12"
 date: "2022-08-21"
 page: "12"
 title: "마음의 여행"
+description: "나는 사주풀이도 그렇고 애니어그램, MBTI에 공통적으로 등장하는 단어가 마음이다."
 ---
 
 <div style="text-align: center;">

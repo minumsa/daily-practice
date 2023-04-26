@@ -3,6 +3,7 @@ slug: "/9"
 date: "2015-09-09"
 page: "9"
 title: "안에 싸도 돼요?"
+description: "‘안에 싸도 돼요?’라는 세션 제목을 처음 들었을 때, 이 세션에 꼭 참가하고 싶다고 생각했습니다."
 ---
 
 <div style="text-align: center;">

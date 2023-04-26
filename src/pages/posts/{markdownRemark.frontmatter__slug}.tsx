@@ -27,6 +27,7 @@ interface BlogPostTemplateProps {
         slug: string;
         title: string;
         page: any;
+        description: string;
       };
     };
     allMarkdownRemark: {
@@ -44,6 +45,8 @@ export default function BlogPostTemplate({ data }: BlogPostTemplateProps) {
 
   const prevPost = currentIndex === 0 ? null : posts[currentIndex - 1].node;
   const nextPost = currentIndex === posts.length - 1 ? null : posts[currentIndex + 1].node;
+
+  console.log(<div className="content-text" />);
 
   const PrevComponent = prevPost ? (
     <Link to={"/posts" + prevPost.frontmatter.slug}>
@@ -93,6 +96,7 @@ export default function BlogPostTemplate({ data }: BlogPostTemplateProps) {
         ogTitle={`${frontmatter.title} — 일상연습`}
         ogType={"article"}
         ogUrl={"https://14461.gatsbyjs.io/posts" + frontmatter.slug}
+        ogText={frontmatter.description}
       />
       <Layout page={<PageNumber page={frontmatter.page} />} info={<PostInfo date={frontmatter.date} prev={PrevComponent} next={NextComponent} />}>
         <HomePage
@@ -117,6 +121,7 @@ export const pageQuery = graphql`
         slug
         title
         page
+        description
       }
     }
 

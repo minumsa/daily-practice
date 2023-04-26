@@ -3,6 +3,7 @@ slug: "/14"
 date: "2020-08-07"
 page: "14"
 title: "사진첩을 돌아보다"
+description: "4년의 시간이 지난 현재는 나에게 너무 혹독하다. 나는 여전히 지난 사랑으로 인해 하루를 겨우 버티는 기분이다."
 ---
 
 <div style="text-align: center;">
