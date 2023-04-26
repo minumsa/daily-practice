@@ -7,10 +7,12 @@ import React, { FC } from "react";
 
 const ExplainPage: FC = () => {
   return (
-    <Layout info={<ExplainInfo />}>
-      <SEO title={"일상연습"} />
-      <HomePage content={<Explain />} title={null} />
-    </Layout>
+    <>
+      <SEO title={`일상연습`} ogTitle={`소개 — 일상연습`} ogType={"website"} ogUrl={"https://14461.gatsbyjs.io/explain/"} />
+      <Layout info={<ExplainInfo />}>
+        <HomePage content={<Explain />} title={null} />
+      </Layout>
+    </>
   );
 };
 

@@ -7,10 +7,12 @@ import React, { FC } from "react";
 
 const IntroPage: FC = () => {
   return (
-    <Layout info={<IntroInfo />}>
-      <SEO title={"일상연습"} />
-      <HomePage content={<Intro />} />
-    </Layout>
+    <>
+      <SEO title={`일상연습`} ogTitle={`일러두기 — 일상연습`} ogType={"website"} ogUrl={"https://14461.gatsbyjs.io/intro/"} />
+      <Layout info={<IntroInfo />}>
+        <HomePage content={<Intro />} />
+      </Layout>
+    </>
   );
 };
 

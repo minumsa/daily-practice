@@ -7,10 +7,12 @@ import React, { FC } from "react";
 
 const ConnectPage: FC = () => {
   return (
-    <Layout info={<ConnectInfo />}>
-      <SEO title={"일상연습"} />
-      <HomePage content={<Connect />} />
-    </Layout>
+    <>
+      <SEO title={`일상연습`} ogTitle={`연결 — 일상연습`} ogType={"website"} ogUrl={"https://14461.gatsbyjs.io/connect/"} />
+      <Layout info={<ConnectInfo />}>
+        <HomePage content={<Connect />} />
+      </Layout>
+    </>
   );
 };
 

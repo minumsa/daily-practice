@@ -2,11 +2,11 @@ import React from "react";
 import { Helmet } from "react-helmet";
 
 interface SEOProps {
-  title: string;
-  ogTitle: string;
-  ogType: string;
-  ogUrl: string;
-  ogText: string;
+  title?: string;
+  ogTitle?: string;
+  ogType?: string;
+  ogUrl?: string;
+  ogText?: string;
 }
 
 const SEO = ({ title, ogTitle, ogType, ogUrl, ogText }: SEOProps) => {

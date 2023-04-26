@@ -17,25 +17,27 @@ const Index = ({ data }: PageProps<Queries.AllPagesQuery>) => {
   const sortedPosts = [...posts].sort((a, b) => b.page - a.page);
 
   return (
-    <Layout info={<LandingInfo />}>
-      <SEO title={"일상연습"} />
-      <HomePage
-        content={
-          <div className="list-container">
-            <div className="total-post">
-              총 <span className="post-count">{data.allMarkdownRemark.totalCount}개</span>의 글이 있습니다.
+    <>
+      <SEO title={`일상연습`} ogTitle={`소개 — 일상연습`} ogType={"website"} ogUrl={"https://14461.gatsbyjs.io/explain/"} />
+      <Layout info={<LandingInfo />}>
+        <HomePage
+          content={
+            <div className="list-container">
+              <div className="total-post">
+                총 <span className="post-count">{data.allMarkdownRemark.totalCount}개</span>의 글이 있습니다.
+              </div>
+              <div className="list-text-container">
+                {sortedPosts.map(post => (
+                  <Link to={`/posts${post.slug}`} key={post.id}>
+                    <div className="list-text">{post.title}</div>
+                  </Link>
+                ))}
+              </div>
             </div>
-            <div className="list-text-container">
-              {sortedPosts.map(post => (
-                <Link to={`/posts${post.slug}`} key={post.id}>
-                  <div className="list-text">{post.title}</div>
-                </Link>
-              ))}
-            </div>
-          </div>
-        }
-      />
-    </Layout>
+          }
+        />
+      </Layout>
+    </>
   );
 };
 
