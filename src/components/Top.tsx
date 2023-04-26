@@ -1,7 +1,7 @@
-import React, { useState } from "react";
-import "./Top.css";
 import Category from "./Nav/Category";
+import "./Top.css";
 import { Link } from "gatsby";
+import React, { useState } from "react";
 
 interface TopProps {
   darkButton?: React.ReactNode;

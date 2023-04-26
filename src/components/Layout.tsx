@@ -1,12 +1,12 @@
-import React, { useEffect, useState }               from "react";
+import GlobalStyle from "../GlobalStyle";
+import { lightTheme, darkTheme } from "../theme";
 import "./Layout.css";
-import styled, { createGlobalStyle, ThemeProvider } from "styled-components";
+import Nav from "./Nav";
+import Top from "./Top";
 // @ts-ignore
-import { ThemeToggler }                             from "gatsby-plugin-dark-mode";
-import Nav                                          from "./Nav";
-import Top                                          from "./Top";
-import GlobalStyle                                  from "../GlobalStyle";
-import { lightTheme, darkTheme }                    from "../theme";
+import { ThemeToggler } from "gatsby-plugin-dark-mode";
+import React, { useEffect, useState } from "react";
+import styled, { ThemeProvider } from "styled-components";
 
 type Props = {
   children: React.ReactNode;

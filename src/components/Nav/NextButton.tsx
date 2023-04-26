@@ -1,6 +1,5 @@
-import React, { FC } from "react";
 import "./NextButton.css";
-import "../Nav/arrow-right.svg";
+import React, { FC } from "react";
 
 const NextButton: FC = () => {
   return (

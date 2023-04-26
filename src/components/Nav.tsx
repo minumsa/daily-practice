@@ -1,7 +1,7 @@
-import React from "react";
-import Menu from "./Nav/Menu";
-import DarkMode from "./Nav/DarkMode";
 import "./Nav.css";
+import DarkMode from "./Nav/DarkMode";
+import Menu from "./Nav/Menu";
+import React from "react";
 
 interface NavProps {
   page: React.ReactNode;

@@ -1,7 +1,7 @@
-import React from "react";
-import Main  from "./HomePage/Main";
-import Title from "./HomePage/Title";
 import "./HomePage.css";
+import Main from "./HomePage/Main";
+import Title from "./HomePage/Title";
+import React from "react";
 
 interface HomePageProps {
   content?: React.ReactNode;
