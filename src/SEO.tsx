@@ -3,16 +3,17 @@ import { Helmet } from "react-helmet";
 
 interface SEOProps {
   title: string;
+  ogTitle: string;
 }
 
-const SEO = ({ title }: SEOProps) => {
+const SEO = ({ title, ogTitle }: SEOProps) => {
   return (
     <Helmet
       title={title}
       meta={[
         {
           property: `og:title`,
-          content: "I am a title Open Graph protocol will pick up and display",
+          content: ogTitle,
         },
         {
           property: `og:type`,

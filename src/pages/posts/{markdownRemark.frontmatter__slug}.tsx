@@ -87,7 +87,7 @@ export default function BlogPostTemplate({ data }: BlogPostTemplateProps) {
 
   return (
     <Layout page={<PageNumber page={frontmatter.page} />} info={<PostInfo date={frontmatter.date} prev={PrevComponent} next={NextComponent} />}>
-      <SEO title={frontmatter.title} />
+      <SEO title={`${frontmatter.title} — 일상연습`} ogTitle={`${frontmatter.title} — 일상연습`} />
       <HomePage
         content={<div className="content-text" dangerouslySetInnerHTML={{ __html: html }} />}
         title={frontmatter.title}
