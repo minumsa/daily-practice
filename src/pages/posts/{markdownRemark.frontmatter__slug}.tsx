@@ -92,7 +92,6 @@ export default function BlogPostTemplate({ data }: BlogPostTemplateProps) {
     <>
       <SEO
         title={`${frontmatter.title} — 일상연습`}
-        ogSiteName={`일상연습`}
         ogTitle={`${frontmatter.title} — 일상연습`}
         ogType={"article"}
         ogUrl={"https://14461.gatsbyjs.io/posts" + frontmatter.slug}
