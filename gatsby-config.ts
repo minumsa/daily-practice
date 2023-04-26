@@ -19,6 +19,12 @@ const config: GatsbyConfig = {
       },
       __key: "pages",
     },
+    {
+      resolve: "gatsby-plugin-manifest",
+      options: {
+        icon: "./src/images/logo.png",
+      },
+    },
     `gatsby-transformer-remark`,
     "gatsby-plugin-dark-mode",
     `gatsby-plugin-react-helmet`,
