@@ -1,4 +1,4 @@
-import { useStaticQuery, graphql } from "gatsby";
+import "./img2321.png";
 import React from "react";
 import { Helmet } from "react-helmet";
 
@@ -8,10 +8,9 @@ interface SEOProps {
   ogSiteName: string;
   ogType: string;
   ogUrl: string;
-  ogImage: any;
 }
 
-const SEO = ({ title, ogTitle, ogSiteName, ogType, ogUrl, ogImage }: SEOProps) => {
+const SEO = ({ title, ogTitle, ogSiteName, ogType, ogUrl }: SEOProps) => {
   return (
     <Helmet
       title={title}
@@ -34,7 +33,7 @@ const SEO = ({ title, ogTitle, ogSiteName, ogType, ogUrl, ogImage }: SEOProps) =
         },
         {
           property: `og:image`,
-          content: ogImage,
+          content: "img2321.png",
         },
         {
           property: `og:image:width`,

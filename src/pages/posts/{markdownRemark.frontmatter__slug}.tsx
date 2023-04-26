@@ -93,7 +93,6 @@ export default function BlogPostTemplate({ data }: BlogPostTemplateProps) {
         ogTitle={`${frontmatter.title} — 일상연습`}
         ogType={"article"}
         ogUrl={"https://14461.gatsbyjs.io/posts" + frontmatter.slug}
-        ogImage={"https://gwenzhir.kim/wp-content/uploads/99C5A029-E4BD-483D-B629-5E77D84A40A4.jpg"}
       />
       <Layout page={<PageNumber page={frontmatter.page} />} info={<PostInfo date={frontmatter.date} prev={PrevComponent} next={NextComponent} />}>
         <HomePage
