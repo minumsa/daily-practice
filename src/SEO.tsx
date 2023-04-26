@@ -1,4 +1,3 @@
-import "./img2321.png";
 import React from "react";
 import { Helmet } from "react-helmet";
 
@@ -34,7 +33,7 @@ const SEO = ({ title, ogTitle, ogSiteName, ogType, ogUrl, ogText }: SEOProps) =>
         },
         {
           property: `og:image`,
-          content: "img2321.png",
+          content: "https://ibb.co/F6bxvdX",
         },
         {
           property: `og:image:width`,
