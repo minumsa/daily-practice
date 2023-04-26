@@ -86,7 +86,7 @@ export default function BlogPostTemplate({ data }: BlogPostTemplateProps) {
   );
 
   return (
-    <Layout page={<PageNumber page={frontmatter.page} />} info={<PostInfo date={frontmatter.date} prev={PrevComponent} next={NextComponent} />}>
+    <>
       <SEO
         title={`${frontmatter.title} — 일상연습`}
         ogSiteName={`일상연습`}
@@ -94,15 +94,17 @@ export default function BlogPostTemplate({ data }: BlogPostTemplateProps) {
         ogType={"article"}
         ogUrl={"https://14461.gatsbyjs.io/posts" + frontmatter.slug}
       />
-      <HomePage
-        content={<div className="content-text" dangerouslySetInnerHTML={{ __html: html }} />}
-        title={frontmatter.title}
-        line={<div className="mobile-line"></div>}
-        prev={PrevPost}
-        middle={<div className="mobile-middle">작성일: {frontmatter.date}</div>}
-        next={NextPost}
-      />
-    </Layout>
+      <Layout page={<PageNumber page={frontmatter.page} />} info={<PostInfo date={frontmatter.date} prev={PrevComponent} next={NextComponent} />}>
+        <HomePage
+          content={<div className="content-text" dangerouslySetInnerHTML={{ __html: html }} />}
+          title={frontmatter.title}
+          line={<div className="mobile-line"></div>}
+          prev={PrevPost}
+          middle={<div className="mobile-middle">작성일: {frontmatter.date}</div>}
+          next={NextPost}
+        />
+      </Layout>
+    </>
   );
 }
 
