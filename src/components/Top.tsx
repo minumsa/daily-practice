@@ -3,19 +3,22 @@ import "./Top.css";
 import Category from "./Nav/Category";
 import { Link } from "gatsby";
 
-// Child: React.FC or Child: FC
-const Top = ({ darkButton, test }: { darkButton: any; test: any }) => {
+interface TopProps {
+  darkButton?: React.ReactNode;
+  header?: string;
+}
+
+const Top = ({ darkButton, header }: TopProps) => {
   const [visible, setVisible] = useState(false);
 
+  const handleHamburgerClick = () => {
+    setVisible(!visible);
+  };
+
   return (
-    <header className={test}>
+    <header className={header}>
       <div className="top-content">
-        <div
-          className="top-hamburger-container"
-          onClick={() => {
-            setVisible(!visible);
-          }}
-        >
+        <div className="top-hamburger-container" onClick={handleHamburgerClick}>
           <div className="top-hamburger">{visible ? <Category /> : null}</div>
         </div>
         <div className="top-title">

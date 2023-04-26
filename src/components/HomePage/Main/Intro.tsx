@@ -5,7 +5,7 @@ import { Link } from "gatsby";
 const Intro: FC = () => {
   return (
     <div className="intro-container">
-      <div className="test">
+      <div className="intro-body">
         <div className="first-intro">1. 글 위에 마우스를 위치시키면 스크롤 할 수 있습니다.</div>
         <div className="intro">
           2. 글의 마지막 문장 우측에는

@@ -5,7 +5,7 @@ import styled, { createGlobalStyle, ThemeProvider } from "styled-components";
 import { ThemeToggler } from "gatsby-plugin-dark-mode";
 import Nav from "./Nav";
 import Top from "./Top";
-import GlobalStyle from "./GlobalStyle";
+import GlobalStyle from "../GlobalStyle";
 import { lightTheme, darkTheme } from "../theme";
 
 type Props = {
@@ -65,7 +65,7 @@ const LayoutInternal: React.FC<LayoutInternalProps> = ({ children, page, info, t
       <GlobalStyle />
       <div className="layout-container">
         <Top
-          test={position > 50 ? cls : "visible"}
+          header={position > 50 ? cls : "visible"}
           darkButton={
             <div
               className="mode-button"
