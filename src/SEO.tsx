@@ -32,7 +32,7 @@ const SEO = ({ title, ogTitle, ogType, ogUrl, ogText }: SEOProps) => {
         },
         {
           property: `og:image`,
-          content: "https://ibb.co/F6bxvdX.png",
+          content: "https://i.ibb.co/CB51dS6/img2321.png",
         },
         {
           property: `og:image:width`,
