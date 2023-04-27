@@ -22,14 +22,7 @@ const config: GatsbyConfig = {
     {
       resolve: "gatsby-plugin-manifest",
       options: {
-        name: "일상연습",
-        short_name: "일상연습",
-        start_url: "/",
-        background_color: "#f4f4f4",
-        theme_color: "#000000",
-        display: "standalone",
         icon: "./src/images/logo.png",
-        include_favicon: false,
       },
     },
     "gatsby-transformer-remark",
