@@ -18,7 +18,15 @@ const Index = ({ data }: PageProps<Queries.AllPagesQuery>) => {
 
   return (
     <>
-      <SEO title={`일상연습`} ogTitle={`소개 — 일상연습`} ogType={"website"} ogUrl={"https://14461.gatsbyjs.io/explain/"} />
+      <SEO
+        title={"일상연습"}
+        ogTitle={"소개 — 일상연습"}
+        ogType={"website"}
+        ogUrl={"https://14461.gatsbyjs.io/explain/"}
+        ogText={
+          "이 사이트는 개인적인 글을 아카이빙하는 공간이다. 사이트 이름이 『일상연습』인 이유는 이곳에 주로 일기 형식의 에세이들을 올릴 계획이기 때문이다. 물질적으로 책에 가까운 사이트를 만들기 위해 노력했다."
+        }
+      />
       <Layout info={<LandingInfo />}>
         <HomePage
           content={
