@@ -1,6 +1,6 @@
 #### ✅ 프로젝트 사이트
 
-<a href="https://14461.gatsbyjs.io/">`홈페이지`로 이동하기</a>
+<a href="https://14461.gatsbyjs.io/">`홈페이지`로 이동</a>
 
 #### ✅ 프로젝트 소개
 
