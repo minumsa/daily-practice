@@ -24,6 +24,7 @@ const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
 
       .line {
         background-color: ${textColor};
+        opacity: ${opacity};
       }
 
       .list-text,
@@ -70,6 +71,7 @@ const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
         font-size: 20px;
         line-height: 210%;
         word-break: keep-all;
+        opacity: ${opacity};
       }
       
       .content-text p:first-child {
@@ -105,9 +107,7 @@ const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
         background-color: ${textColor};
       }
 
-      .content-text,
       .date-created,
-      .line,
       .button-container,
       .page-container,
       .title-container,

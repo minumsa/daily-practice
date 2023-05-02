@@ -39,17 +39,20 @@ interface BlogPostTemplateProps {
 export default function BlogPostTemplate({ data }: BlogPostTemplateProps) {
   const { markdownRemark, allMarkdownRemark } = data;
   const { frontmatter, html } = markdownRemark;
+
+  // 모든 포스트를 페이지 번호를 기준으로 정렬한다.
   const posts = allMarkdownRemark.edges.sort((a, b) => a.node.frontmatter.page - b.node.frontmatter.page);
 
+  // 현재 포스트의 인덱스를 찾는다.
   const currentIndex = posts.findIndex((p: Post) => p.node.frontmatter.slug === frontmatter.slug);
 
-  const prevPost = currentIndex === 0 ? null : posts[currentIndex - 1].node;
-  const nextPost = currentIndex === posts.length - 1 ? null : posts[currentIndex + 1].node;
+  // 이전 인덱스와 다음 인덱스를 찾는다.
+  const prevIndex = currentIndex === 0 ? null : posts[currentIndex - 1].node;
+  const nextIndex = currentIndex === posts.length - 1 ? null : posts[currentIndex + 1].node;
 
-  console.log(<div className="content-text" />);
-
-  const PrevComponent = prevPost ? (
-    <Link to={"/posts" + prevPost.frontmatter.slug}>
+  // 이전 포스트와 다음 포스트를 보여주는 컴포넌트를 생성한다.
+  const PrevPost = prevIndex ? (
+    <Link to={"/posts" + prevIndex.frontmatter.slug}>
       <PrevButton />
     </Link>
   ) : (
@@ -58,28 +61,8 @@ export default function BlogPostTemplate({ data }: BlogPostTemplateProps) {
     </div>
   );
 
-  const NextComponent = nextPost ? (
-    <Link to={"/posts" + nextPost.frontmatter.slug}>
-      <NextButton />
-    </Link>
-  ) : (
-    <div onClick={() => alert("마지막 게시물입니다.")}>
-      <NextButton />
-    </div>
-  );
-
-  const PrevPost = prevPost ? (
-    <Link to={"/posts" + prevPost.frontmatter.slug}>
-      <PrevButton />
-    </Link>
-  ) : (
-    <div onClick={() => alert("첫 번째 게시물입니다.")}>
-      <PrevButton />
-    </div>
-  );
-
-  const NextPost = nextPost ? (
-    <Link to={"/posts" + nextPost.frontmatter.slug}>
+  const NextPost = nextIndex ? (
+    <Link to={"/posts" + nextIndex.frontmatter.slug}>
       <NextButton />
     </Link>
   ) : (
@@ -97,7 +80,7 @@ export default function BlogPostTemplate({ data }: BlogPostTemplateProps) {
         ogUrl={"https://14461.gatsbyjs.io/posts" + frontmatter.slug}
         ogText={frontmatter.description}
       />
-      <Layout page={<PageNumber page={frontmatter.page} />} info={<PostInfo date={frontmatter.date} prev={PrevComponent} next={NextComponent} />}>
+      <Layout page={<PageNumber page={frontmatter.page} />} info={<PostInfo date={frontmatter.date} prev={PrevPost} next={NextPost} />}>
         <HomePage
           content={<div className="content-text" dangerouslySetInnerHTML={{ __html: html }} />}
           title={frontmatter.title}
