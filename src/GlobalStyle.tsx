@@ -18,13 +18,21 @@ const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
         margin: 0;
         background-color: ${bgColor};
         color: ${textColor};
-        font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI",
-          "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+        font-family: "Pretendard Variable", Pretendard, -apple-system,
+          BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI",
+          "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic",
+          "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
       }
 
       .line {
         background-color: ${textColor};
         opacity: ${opacity};
+      }
+
+      .list-text:hover {
+        border: 1px dashed ${textColor};
+        border-radius: 0;
+        font-weight: 700;
       }
 
       .list-text,
@@ -73,11 +81,11 @@ const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
         word-break: keep-all;
         opacity: ${opacity};
       }
-      
+
       .content-text p:first-child {
         text-indent: 0%;
       }
-      
+
       .content-text p {
         margin: 0;
         text-indent: 10%;
