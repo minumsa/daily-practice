@@ -18,10 +18,9 @@ const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
         margin: 0;
         background-color: ${bgColor};
         color: ${textColor};
-        font-family: "Pretendard Variable", Pretendard, -apple-system,
-          BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI",
-          "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic",
-          "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+        font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui,
+          Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR",
+          "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
       }
 
       .line {
@@ -31,8 +30,10 @@ const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
 
       .list-text:hover {
         border: 1px dashed ${textColor};
+        color: #ffffff;
+        background-color: #000000;
         border-radius: 0;
-        font-weight: 700;
+        font-weight: 600;
       }
 
       .list-text,

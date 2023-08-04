@@ -1,7 +1,7 @@
 .list-container {
   width: 700px;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 18px;
 }
 
 .list-text-container {
@@ -10,13 +10,18 @@
 
 .list-text {
   display: inline-block;
-  margin: 1px 1px 1px 1px;
-  padding: 4px 24px 4px 24px;
-  border-radius: 20px;
+  margin: 3px 1px;
+  padding: 1px 8px;
+  border-radius: 100px;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+}
+
+.list-sup {
+  line-height: 0;
+  margin-left: 3px;
 }
 
 a {

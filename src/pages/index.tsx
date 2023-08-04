@@ -32,12 +32,16 @@ const Index = ({ data }: PageProps<Queries.AllPagesQuery>) => {
           content={
             <div className="list-container">
               <div className="total-post">
-                총 <span className="post-count">{data.allMarkdownRemark.totalCount}개</span>의 글이 있습니다.
+                총 <span className="post-count">{data.allMarkdownRemark.totalCount}개</span>의 글이
+                있습니다.
               </div>
               <div className="list-text-container">
                 {sortedPosts.map(post => (
                   <Link to={`/posts${post.slug}`} key={post.id}>
-                    <div className="list-text">{post.title}</div>
+                    <div className="list-text">
+                      <span>{post.title}</span>
+                      <sup className="list-sup">{post.page}</sup>
+                    </div>
                   </Link>
                 ))}
               </div>
