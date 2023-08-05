@@ -39,7 +39,7 @@ const Index = ({ data }: PageProps<Queries.AllPagesQuery>) => {
                 {sortedPosts.map(post => (
                   <Link to={`/posts${post.slug}`} key={post.id}>
                     <div className="list-text">
-                      <span>{post.title}</span>
+                      <span style={{ display: "inline-block" }}>{post.title}</span>
                       <sup className="list-sup">{post.page}</sup>
                     </div>
                   </Link>

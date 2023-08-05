@@ -102,7 +102,7 @@ const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
         .content-text {
           width: 85vw;
           font-weight: 400;
-          font-size: 16px;
+          font-size: 18px;
           line-height: 210%;
         }
 
@@ -164,7 +164,7 @@ const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
       }
 
       .mobile-middle {
-        font-size: 16px;
+        font-size: 18px;
         color: ${textColor};
         opacity: ${opacity};
       }
