@@ -83,11 +83,11 @@ const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
         opacity: ${opacity};
       }
 
-      .content-text p:first-child {
-        text-indent: 0%;
+      p:first-of-type {
+        text-indent: 0;
       }
 
-      .content-text p {
+      p {
         margin: 0;
         text-indent: 10%;
       }
