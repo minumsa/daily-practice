@@ -6,19 +6,21 @@ const Category: FC = () => {
   return (
     <div className="category-container">
       <Link to="/">
-        <div className="category-1">홈 </div>
+        <div className="category-home">
+          <div className="category-home-text">홈</div>
+        </div>
       </Link>
       <Link to="/intro">
-        <div className="category-2">일러두기</div>
+        <div className="category-notice">일러두기</div>
       </Link>
       <Link to="/explain">
-        <div className="category">소개</div>
+        <div className="category category-introduce">소개</div>
       </Link>
       <Link to="/connect">
-        <div className="category">연결 </div>
+        <div className="category category-connect">연결 </div>
       </Link>
       <Link to="/warp">
-        <div className="category">워프 </div>
+        <div className="category category-warp">워프 </div>
       </Link>
       <div className="close">×</div>
     </div>

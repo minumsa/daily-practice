@@ -69,8 +69,9 @@ const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
       .category-container {
         color: ${listBgColor};
         background-color: ${categoryColor};
-        border: 1px solid ${listBgColor};
-        box-shadow: 1px 1px 5px ${listBgColor};
+        // border: 1px solid ${listBgColor};
+        // box-shadow: 1px 1px 5px ${listBgColor};
+        box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.5);
       }
 
       .content-text {
