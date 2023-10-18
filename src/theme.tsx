@@ -23,12 +23,18 @@ const textColor = {
   dark: "#fff",
 };
 
+const hamburgerColor = {
+  light: "rgb(244, 244, 244)",
+  dark: "rgb(30, 30, 30)",
+};
+
 export const lightTheme = {
   bgColor: bgColor.light,
   categoryColor: categoryColor.light,
   textColor: textColor.light,
   opacity: opacity.light,
   listBgColor: listBgColor.light,
+  hamburgerColor: hamburgerColor.light,
 };
 
 export const darkTheme = {
@@ -37,6 +43,7 @@ export const darkTheme = {
   textColor: textColor.dark,
   opacity: opacity.dark,
   listBgColor: listBgColor.dark,
+  hamburgerColor: hamburgerColor.dark,
 };
 
 const theme = {

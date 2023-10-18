@@ -6,11 +6,12 @@ interface ThemeType {
   categoryColor: string;
   listBgColor: string;
   opacity: number;
+  hamburgerColor: string;
 }
 
 const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
   ${({ theme }) => {
-    const { bgColor, textColor, categoryColor, listBgColor, opacity } = theme;
+    const { bgColor, textColor, categoryColor, listBgColor, opacity, hamburgerColor } = theme;
     return css`
       @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/variable/pretendardvariable.css");
 
@@ -68,10 +69,11 @@ const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
 
       .category-container {
         color: ${listBgColor};
-        background-color: ${categoryColor};
-        // border: 1px solid ${listBgColor};
+        background-color: ${hamburgerColor};
+        border: 1px solid ${listBgColor};
+        border-radius: 12px;
         // box-shadow: 1px 1px 5px ${listBgColor};
-        box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.5);
+        // box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.5);
       }
 
       .content-text {
