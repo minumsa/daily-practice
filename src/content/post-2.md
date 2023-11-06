@@ -14,7 +14,8 @@ description: "셈밈님의 질문, 글 쓰는 것이 두렵지 않으려면 어�
 
 #
 
-<img src="/53912_1653971788.jpg" width="100%" height="auto" />
+<img src="/src/static/53912_1653971788.jpg" alt="confess" width="100%" height="auto" />
+<img src="/53912_1653971788.jpg" alt="confess" width="100%" height="auto" />
 <br><br>
 구독자 질문 : 남이 나의 속마음을 들여다보는 것 같아 글 쓰는 게 두려워요. 읽힐 것을 두려워하지 않고 글을 쓰는 게 어려운 것 같아요. (셈밈)
 <br><br>
