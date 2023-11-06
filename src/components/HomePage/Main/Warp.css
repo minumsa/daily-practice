@@ -1,6 +1,10 @@
 .warp-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 520px;
-  margin-top: calc(50%);
+  height: 100%;
   font-weight: 400;
   font-size: 18px;
   text-align: center;
@@ -10,8 +14,6 @@
 @media (max-width: 550px) {
   .warp-container {
     width: 350px;
-    margin-top: calc(70%);
-    margin-left: 5px;
     font-size: 16px;
   }
 }
