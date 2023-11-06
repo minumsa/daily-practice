@@ -32,10 +32,10 @@ const WarpPage = ({ data, page, info }: WarpPageProps) => {
     // 새로운 랜덤 페이지 번호를 sessionStorage에 저장
     sessionStorage.setItem("randomPage", randomPage.toString());
 
-    // 1초 후 랜덤 페이지로 이동
+    // 1.5초 후 랜덤 페이지로 이동
     const newTimer = window.setTimeout(() => {
       window.location.href = `/posts/${randomPage}`;
-    }, 1000000);
+    }, 1500);
 
     // 언마운트 될 때 타이머 제거
     return () => {
