@@ -17,10 +17,10 @@ const Category: FC = () => {
         <div className="category category-introduce">소개</div>
       </Link>
       <Link to="/connect">
-        <div className="category category-connect">연결 </div>
+        <div className="category category-connect">연결</div>
       </Link>
       <Link to="/warp">
-        <div className="category category-warp">워프 </div>
+        <div className="category category-warp">워프</div>
       </Link>
       <div className="close">×</div>
     </div>
