@@ -17,7 +17,7 @@ const MobileNav = ({ day, line, prev, next, middle }: MobileNavProps) => {
           <div className="mobile-day">{day}</div>
         </div>
         <div>{line}</div>
-        <div className="next-prev-container">
+        <div className="page-nav-container">
           <div className="prev-container">{prev}</div>
           <div className="mobile-middle">{middle}</div>
           <div className="next-container">{next}</div>

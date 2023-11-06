@@ -33,11 +33,11 @@
   display: flex;
 }
 
-.next-prev-container {
+.page-nav-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 15px 0 15px 0;
+  padding: 15px 0;
 }
 
 .prev-box,
@@ -59,4 +59,10 @@
 .next-post-title {
   margin-left: 10px;
   font-size: 16px;
+}
+
+@media (max-width: 550px) {
+  .page-nav-container {
+    padding: 20px 0;
+  }
 }
