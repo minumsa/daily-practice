@@ -35,7 +35,7 @@ const WarpPage = ({ data, page, info }: WarpPageProps) => {
     // 1초 후 랜덤 페이지로 이동
     const newTimer = window.setTimeout(() => {
       window.location.href = `/posts/${randomPage}`;
-    }, 1000);
+    }, 1000000);
 
     // 언마운트 될 때 타이머 제거
     return () => {
@@ -46,7 +46,12 @@ const WarpPage = ({ data, page, info }: WarpPageProps) => {
   return (
     // Layout 컴포넌트를 사용하여 페이지 구성
     <>
-      <SEO title={`일상연습`} ogTitle={`워프 — 일상연습`} ogType={"website"} ogUrl={"https://14461.gatsbyjs.io/warp/"} />
+      <SEO
+        title={`일상연습`}
+        ogTitle={`워프 — 일상연습`}
+        ogType={"website"}
+        ogUrl={"https://14461.gatsbyjs.io/warp/"}
+      />
       <Layout page={page} info={info}>
         <HomePage content={<Warp />} />
       </Layout>
