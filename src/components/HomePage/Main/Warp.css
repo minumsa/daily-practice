@@ -3,12 +3,9 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 520px;
   height: 100%;
   font-weight: 400;
-  font-size: 1.15rem;
-  text-align: center;
-  word-break: keep-all;
+  font-size: 1.2rem;
 }
 
 @media (max-width: 550px) {

@@ -1,4 +1,4 @@
-.connect-container {
+.contact-container {
   display: flex;
   flex-direction: column;
   padding-top: 50px;
@@ -8,20 +8,13 @@
   text-align: center;
 }
 
-.connect-title {
+.contact-title {
   text-decoration: underline;
-}
-
-.connect-gap {
-  height: 2rem;
-}
-
-.connect-sns {
-  display: inline-block;
+  margin-top: 1.5rem;
 }
 
 @media (max-width: 550px) {
-  .connect-container {
+  .contact-container {
     font-size: 16px;
     font-size: 1.1rem;
   }

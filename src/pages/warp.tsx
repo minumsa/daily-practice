@@ -32,19 +32,16 @@ const WarpPage = ({ data, page, info }: WarpPageProps) => {
     // 새로운 랜덤 페이지 번호를 sessionStorage에 저장
     sessionStorage.setItem("randomPage", randomPage.toString());
 
-    // 1.5초 후 랜덤 페이지로 이동
     const newTimer = window.setTimeout(() => {
       window.location.href = `/posts/${randomPage}`;
     }, 1500);
 
-    // 언마운트 될 때 타이머 제거
     return () => {
       clearTimeout(newTimer);
     };
   }, []);
 
   return (
-    // Layout 컴포넌트를 사용하여 페이지 구성
     <>
       <SEO
         title={`일상연습`}
@@ -59,7 +56,6 @@ const WarpPage = ({ data, page, info }: WarpPageProps) => {
   );
 };
 
-// GraphQL 쿼리를 사용하여 모든 페이지 정보 가져오기
 export const query = graphql`
   query AllPages {
     allMarkdownRemark {

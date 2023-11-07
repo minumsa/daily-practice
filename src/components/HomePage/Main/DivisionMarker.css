@@ -1,4 +1,4 @@
-.dash-container {
+.division-container {
   display: flex;
   justify-content: space-between;
   width: 850px;
@@ -10,19 +10,19 @@
   user-select: none;
 }
 
-.line {
+.marker {
   width: 22px;
   height: 1.5px;
 }
 
 @media (max-width: 1100px) {
-  .dash-container {
+  .division-container {
     width: 890px;
   }
 }
 
 @media (max-width: 950px) {
-  .dash-container {
+  .division-container {
     display: none;
   }
 }

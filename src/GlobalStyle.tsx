@@ -24,7 +24,7 @@ const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
           "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
       }
 
-      .line {
+      .marker {
         background-color: ${textColor};
         opacity: ${opacity};
       }
@@ -118,9 +118,9 @@ const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
       .page-container,
       .title-container,
       .info-container,
-      .intro-container,
-      .explain-container,
-      .connect-container,
+      .explanation-container,
+      .introduction-container,
+      .contact-container,
       .warp-container,
       .line-color {
         opacity: ${opacity};

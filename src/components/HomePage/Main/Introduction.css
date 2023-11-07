@@ -1,11 +1,11 @@
-.explain-container {
+.introduction-container {
   width: 290px;
   font-size: 1.15rem;
   word-break: keep-all;
 }
 
 @media (max-width: 550px) {
-  .explain-container {
+  .introduction-container {
     font-size: 1.1rem;
   }
 }

@@ -1,0 +1,25 @@
+.explanation-container {
+  display: flex;
+  justify-content: center;
+  width: 400px;
+  font-size: 1.15rem;
+  text-align: justify;
+}
+
+.explanation {
+  width: 400px;
+  font-size: 1.15rem;
+}
+
+.highlighted-text {
+  font-weight: 500;
+  color: rgb(244, 244, 244);
+  background-color: #000;
+}
+
+@media (max-width: 550px) {
+  .explanation {
+    width: 80%;
+    font-size: 1.1rem;
+  }
+}

@@ -10,10 +10,10 @@ const Category: FC = () => {
           <div className="category-home-text">홈</div>
         </div>
       </Link>
-      <Link to="/intro">
+      <Link to="/explanation">
         <div className="category-notice">일러두기</div>
       </Link>
-      <Link to="/explain">
+      <Link to="/introduction">
         <div className="category category-introduce">소개</div>
       </Link>
       <Link to="/connect">

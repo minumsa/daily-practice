@@ -1,6 +1,6 @@
 import MobileFooterNav from "../MobileUI/MobileFooterNav";
 import "./Main.css";
-import Dash from "./Main/Dash";
+import DivisionMarker from "./Main/DivisionMarker";
 import React from "react";
 
 interface MainProps {
@@ -15,12 +15,12 @@ interface MainProps {
 const Main = ({ content, ...props }: MainProps) => {
   return (
     <div className="main-container">
-      <Dash />
+      <DivisionMarker />
       <div className="content-container">{content}</div>
       <div className="content-nav-container">
         <MobileFooterNav {...props} />
       </div>
-      <Dash />
+      <DivisionMarker />
     </div>
   );
 };
