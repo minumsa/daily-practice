@@ -1,6 +1,6 @@
 import "./Nav.css";
 import DarkMode from "./Nav/DarkMode";
-import Menu from "./Nav/Hamburger";
+import Hamburger from "./Nav/Hamburger";
 import React from "react";
 
 interface NavProps {
@@ -13,11 +13,11 @@ const Nav = ({ page, info, dark }: NavProps) => {
   return (
     <div className="nav-container">
       <div className="middle">
-        <Menu />
+        <Hamburger />
         <div className="info-container">{info}</div>
         <DarkMode dark={dark} />
       </div>
-      <div className="blank"></div>
+      <div className="blank-space" />
       <div className="page-number">{page}</div>
     </div>
   );

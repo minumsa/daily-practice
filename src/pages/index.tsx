@@ -5,7 +5,7 @@ import "./index.css";
 import { graphql, Link, PageProps } from "gatsby";
 import React from "react";
 
-const Index = ({ data }: PageProps<Queries.AllPagesQuery>) => {
+const Page = ({ data }: PageProps<Queries.AllPagesQuery>) => {
   const posts = data.allMarkdownRemark.edges.map(({ node }) => ({
     ...node.frontmatter!,
     id: node.id,
@@ -52,7 +52,7 @@ const Index = ({ data }: PageProps<Queries.AllPagesQuery>) => {
   );
 };
 
-export default Index;
+export default Page;
 
 export const query = graphql`
   query AllPages {

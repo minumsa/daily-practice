@@ -13,7 +13,7 @@
   flex-grow: 1;
 }
 
-.blank {
+.blank-space {
   width: 100px;
 }
 
@@ -41,7 +41,7 @@
     margin-left: 0;
   }
 
-  .blank {
+  .blank-space {
     display: none;
   }
 

@@ -7,6 +7,7 @@ import PostInfo from "../../components/Nav/PostInfo";
 import PrevButton from "../../components/Nav/PrevButton";
 import { Link, graphql } from "gatsby";
 import * as React from "react";
+import "./{markdownRemark.frontmatter__slug}.css";
 
 interface Post {
   node: {
@@ -40,19 +41,19 @@ export default function BlogPostTemplate({ data }: BlogPostTemplateProps) {
   const { markdownRemark, allMarkdownRemark } = data;
   const { frontmatter, html } = markdownRemark;
 
-  // 모든 포스트를 페이지 번호를 기준으로 정렬한다.
+  // 모든 포스트를 페이지 번호를 기준으로 정렬
   const posts = allMarkdownRemark.edges.sort(
     (a, b) => a.node.frontmatter.page - b.node.frontmatter.page
   );
 
-  // 현재 포스트의 인덱스를 찾는다.
+  // 현재 포스트의 인덱스를 찾음
   const currentIndex = posts.findIndex((p: Post) => p.node.frontmatter.slug === frontmatter.slug);
 
-  // 이전 인덱스와 다음 인덱스를 찾는다.
+  // 이전 인덱스와 다음 인덱스를 찾음
   const prevIndex = currentIndex === 0 ? null : posts[currentIndex - 1].node;
   const nextIndex = currentIndex === posts.length - 1 ? null : posts[currentIndex + 1].node;
 
-  // 이전 포스트와 다음 포스트를 보여주는 컴포넌트를 생성한다.
+  // 이전 포스트와 다음 포스트를 보여주는 컴포넌트를 생성
   const PrevPost = prevIndex ? (
     <Link to={"/posts" + prevIndex.frontmatter.slug}>
       <PrevButton />

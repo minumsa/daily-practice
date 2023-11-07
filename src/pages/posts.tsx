@@ -3,7 +3,7 @@ import Layout from "../components/Layout";
 import PostInfo from "../components/Nav/PostInfo";
 import React, { FC } from "react";
 
-const Posts: FC = () => {
+const Page: FC = () => {
   return (
     <Layout info={<PostInfo />}>
       <HomePage />
@@ -11,4 +11,4 @@ const Posts: FC = () => {
   );
 };
 
-export default Posts;
+export default Page;

@@ -8,8 +8,8 @@ const ConnectPage: FC = () => {
   return (
     <>
       <SEO
-        title={`일상연습`}
-        ogTitle={`연결 — 일상연습`}
+        title={"일상연습"}
+        ogTitle={"연결 — 일상연습"}
         ogType={"website"}
         ogUrl={"https://14461.gatsbyjs.io/connect/"}
       />

@@ -4,12 +4,12 @@ import Explanation from "../components/HomePage/Main/Explanation";
 import Layout from "../components/Layout";
 import React, { FC } from "react";
 
-const ExplanationPage: FC = () => {
+const Page: FC = () => {
   return (
     <>
       <SEO
-        title={`일상연습`}
-        ogTitle={`일러두기 — 일상연습`}
+        title={"일상연습"}
+        ogTitle={"일러두기 — 일상연습"}
         ogType={"website"}
         ogUrl={"https://14461.gatsbyjs.io/explanation/"}
       />
@@ -20,4 +20,4 @@ const ExplanationPage: FC = () => {
   );
 };
 
-export default ExplanationPage;
+export default Page;

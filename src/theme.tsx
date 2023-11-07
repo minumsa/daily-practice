@@ -19,7 +19,7 @@ const listBgColor = {
 };
 
 const textColor = {
-  light: "#000000",
+  light: "#000",
   dark: "#fff",
 };
 

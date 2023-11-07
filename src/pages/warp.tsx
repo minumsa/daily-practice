@@ -11,7 +11,7 @@ interface WarpPageProps extends PageProps<Queries.AllPagesQuery> {
   info: string;
 }
 
-const WarpPage = ({ data, page, info }: WarpPageProps) => {
+const Page = ({ data, page, info }: WarpPageProps) => {
   useEffect(() => {
     // 페이지 수 가져오기
     const totalPageCount = data.allMarkdownRemark.totalCount;
@@ -72,4 +72,4 @@ export const query = graphql`
   }
 `;
 
-export default WarpPage;
+export default Page;

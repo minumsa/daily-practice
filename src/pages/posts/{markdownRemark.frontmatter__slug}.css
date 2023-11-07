@@ -1,0 +1,26 @@
+.content-text {
+  width: 85vw;
+  max-width: 530px;
+  font-weight: 400;
+  font-size: 1.25rem;
+  line-height: 210%;
+  word-break: keep-all;
+}
+
+@media (max-width: 550px) {
+  .content-text {
+    width: 94%;
+    font-weight: 400;
+    font-size: 1.1rem;
+    line-height: 210%;
+  }
+
+  .footer-line {
+    width: 95%;
+    height: 1px;
+  }
+
+  .mobile-post-date {
+    font-size: 1.1rem;
+  }
+}

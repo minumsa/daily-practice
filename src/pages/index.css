@@ -19,6 +19,11 @@
   user-select: none;
 }
 
+.list-text:hover {
+  border-radius: 0;
+  font-weight: 600;
+}
+
 .list-sup {
   line-height: 0;
   margin-left: 3px;

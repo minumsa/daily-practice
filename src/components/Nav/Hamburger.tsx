@@ -2,7 +2,7 @@ import Category from "./Category";
 import "./Hamburger.css";
 import React, { FC, useState } from "react";
 
-const Menu: FC = () => {
+const Hamburger: FC = () => {
   const [showCategory, setShowCategory] = useState(false);
 
   return (
@@ -15,4 +15,4 @@ const Menu: FC = () => {
   );
 };
 
-export default Menu;
+export default Hamburger;
