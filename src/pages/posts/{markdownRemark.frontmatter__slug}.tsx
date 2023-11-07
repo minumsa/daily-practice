@@ -41,7 +41,9 @@ export default function BlogPostTemplate({ data }: BlogPostTemplateProps) {
   const { frontmatter, html } = markdownRemark;
 
   // 모든 포스트를 페이지 번호를 기준으로 정렬한다.
-  const posts = allMarkdownRemark.edges.sort((a, b) => a.node.frontmatter.page - b.node.frontmatter.page);
+  const posts = allMarkdownRemark.edges.sort(
+    (a, b) => a.node.frontmatter.page - b.node.frontmatter.page
+  );
 
   // 현재 포스트의 인덱스를 찾는다.
   const currentIndex = posts.findIndex((p: Post) => p.node.frontmatter.slug === frontmatter.slug);
@@ -80,13 +82,16 @@ export default function BlogPostTemplate({ data }: BlogPostTemplateProps) {
         ogUrl={"https://14461.gatsbyjs.io/posts" + frontmatter.slug}
         ogText={frontmatter.description}
       />
-      <Layout page={<PageNumber page={frontmatter.page} />} info={<PostInfo date={frontmatter.date} prev={PrevPost} next={NextPost} />}>
+      <Layout
+        page={<PageNumber page={frontmatter.page} />}
+        info={<PostInfo date={frontmatter.date} prev={PrevPost} next={NextPost} />}
+      >
         <HomePage
           content={<div className="content-text" dangerouslySetInnerHTML={{ __html: html }} />}
           title={frontmatter.title}
           line={<div className="mobile-line"></div>}
           prev={PrevPost}
-          middle={<div className="mobile-middle">작성일: {frontmatter.date}</div>}
+          middle={<div className="mobile-post-date">작성일: {frontmatter.date}</div>}
           next={NextPost}
         />
       </Layout>

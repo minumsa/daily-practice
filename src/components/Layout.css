@@ -3,7 +3,7 @@
   flex-direction: column;
   align-items: center;
   height: 100vh;
-  font-size: 19px;
+  font-size: 1.25rem;
 }
 
 p::selection {
@@ -12,7 +12,7 @@ p::selection {
 }
 
 .mode-button {
-  font-size: 20px;
+  font-size: 1.25rem;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -22,11 +22,11 @@ p::selection {
 @media (max-width: 550px) {
   .layout-container {
     font-weight: 400;
-    font-size: 18px;
+    font-size: 1.1rem;
   }
 
   .mode-button {
-    font-size: 18px;
+    font-size: 1.1rem;
   }
 
   a span {

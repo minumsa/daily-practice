@@ -3,7 +3,7 @@
   justify-content: center;
   width: 300px;
   margin-right: 10px;
-  font-size: 20px;
+  font-size: 1.25rem;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -17,13 +17,13 @@
 
 @media (max-width: 550px) {
   .date-created {
-    font-size: 18px;
+    font-size: 1.1rem;
   }
 }
 
 @media (max-width: 470px) {
   .date-created {
     width: auto;
-    font-size: 18px;
+    font-size: 1.1rem;
   }
 }

@@ -1,7 +1,7 @@
 .list-container {
   width: 700px;
   font-weight: 400;
-  font-size: 18px;
+  font-size: 1.1rem;
 }
 
 .list-text-container {
@@ -11,7 +11,7 @@
 .list-text {
   display: inline-block;
   margin: 3px 1px;
-  padding: 1px 8px;
+  padding: 1.5px 8px;
   border-radius: 100px;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -62,7 +62,7 @@ a {
   }
 
   .list-sup {
-    display: none;
+    margin-top: 12px;
   }
 
   .list-button {

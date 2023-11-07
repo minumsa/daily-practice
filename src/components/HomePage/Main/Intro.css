@@ -9,13 +9,13 @@
   justify-content: center;
   width: 680px;
   font-weight: 400;
-  font-size: 18px;
+  font-size: 1.15rem;
   line-height: 200%;
   word-break: keep-all;
 }
 
 .intro-body {
-  width: 360px;
+  width: 400px;
 }
 
 .first-intro {
@@ -26,5 +26,6 @@
   .intro-container {
     width: 300px;
     margin-left: 5px;
+    font-size: 1.1rem;
   }
 }

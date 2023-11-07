@@ -1,4 +1,4 @@
-import MobileNav from "../MobileUI/MobileNav";
+import MobileFooterNav from "../MobileUI/MobileFooterNav";
 import "./Main.css";
 import Dash from "./Main/Dash";
 import React from "react";
@@ -18,7 +18,7 @@ const Main = ({ content, ...props }: MainProps) => {
       <Dash />
       <div className="content-container">{content}</div>
       <div className="content-nav-container">
-        <MobileNav {...props} />
+        <MobileFooterNav {...props} />
       </div>
       <Dash />
     </div>

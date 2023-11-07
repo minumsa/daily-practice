@@ -80,7 +80,7 @@ const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
         width: 85vw;
         max-width: 530px;
         font-weight: 400;
-        font-size: 20px;
+        font-size: 1.25rem;
         line-height: 210%;
         word-break: keep-all;
         opacity: ${opacity};
@@ -95,17 +95,11 @@ const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
         text-indent: 10%;
       }
 
-      @media (max-width: 950px) {
-        .content-text {
-          font-size: 20px;
-        }
-      }
-
       @media (max-width: 550px) {
         .content-text {
           width: 85vw;
           font-weight: 400;
-          font-size: 18px;
+          font-size: 1.1rem;
           line-height: 210%;
         }
 
@@ -166,8 +160,8 @@ const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
         background-color: ${bgColor};
       }
 
-      .mobile-middle {
-        font-size: 18px;
+      .mobile-post-date {
+        font-size: 1.1rem;
         color: ${textColor};
         opacity: ${opacity};
       }
