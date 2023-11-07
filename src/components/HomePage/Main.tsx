@@ -1,4 +1,4 @@
-import MobileFooterNav from "../MobileUI/MobileFooterNav";
+import MobileFooter from "../Mobile/MobileFooter";
 import "./Main.css";
 import DivisionMarker from "./Main/DivisionMarker";
 import React from "react";
@@ -17,8 +17,8 @@ const Main = ({ content, ...props }: MainProps) => {
     <div className="main-container">
       <DivisionMarker />
       <div className="content-container">{content}</div>
-      <div className="content-nav-container">
-        <MobileFooterNav {...props} />
+      <div className="mobile-footer-container">
+        <MobileFooter {...props} />
       </div>
       <DivisionMarker />
     </div>

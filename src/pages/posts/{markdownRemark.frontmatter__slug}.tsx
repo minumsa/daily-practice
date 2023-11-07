@@ -89,7 +89,11 @@ export default function BlogPostTemplate({ data }: BlogPostTemplateProps) {
         <HomePage
           content={<div className="content-text" dangerouslySetInnerHTML={{ __html: html }} />}
           title={frontmatter.title}
-          line={<div className="mobile-line"></div>}
+          line={
+            <div className="footer-line-container">
+              <div className="footer-line"></div>
+            </div>
+          }
           prev={PrevPost}
           middle={<div className="mobile-post-date">작성일: {frontmatter.date}</div>}
           next={NextPost}

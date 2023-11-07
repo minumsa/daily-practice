@@ -4,16 +4,12 @@ import Warp from "../components/HomePage/Main/Warp";
 import Layout from "../components/Layout";
 import { PageProps, graphql } from "gatsby";
 import React, { useEffect } from "react";
+import { getRandomPage } from "../lib/modules";
 
 interface WarpPageProps extends PageProps<Queries.AllPagesQuery> {
   page: string;
   info: string;
 }
-
-// 페이지 총 수를 받아서 무작위 페이지 번호를 반환하는 함수
-const getRandomPage = (totalCount: number) => {
-  return Math.floor(Math.random() * (totalCount - 1)) + 1;
-};
 
 const WarpPage = ({ data, page, info }: WarpPageProps) => {
   useEffect(() => {

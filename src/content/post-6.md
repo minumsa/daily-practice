@@ -6,10 +6,10 @@ title: "백광"
 description: "매해 여름마다 광화문 교보문고의 추리소설 섹션을 어슬렁거리다 그중에 한 권을 사서 읽곤 한다."
 ---
 
-<div style="text-align: center;">
-    <div class="post-line" style="display: inline-block; line-height:160%">
+<div style="text-align: center">
+  <span class="post-line">
     백광
-    </div>
+  </span>
 </div>
 
 <br>

@@ -6,10 +6,10 @@ title: "구글 신은 알고 있다"
 description: "우리는 다음 달에나 만날 생각이었다."
 ---
 
-<div style="text-align: center;">
-    <div class="post-line" style="display: inline-block; line-height:160%">
+<div style="text-align: center">
+  <span class="post-line">
     구글 신은 알고 있다
-    </div>
+  </span>
 </div>
 
 <br>

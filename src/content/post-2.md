@@ -6,10 +6,10 @@ title: "고백이라는 회복"
 description: "셈밈님의 질문, 글 쓰는 것이 두렵지 않으려면 어떻게 해야 할까요. 읽힐 것을 두려워하지 않고 글쓰기. 어때요?"
 ---
 
-<div style="text-align: center;">
-    <div class="post-line" style="display: inline-block; line-height:160%">
+<div style="text-align: center">
+  <span class="post-line">
     고백이라는 회복
-    </div>
+  </span>
 </div>
 
 #

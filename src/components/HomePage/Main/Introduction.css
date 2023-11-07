@@ -1,7 +1,7 @@
 .introduction-container {
   width: 290px;
-  font-size: 1.15rem;
-  word-break: keep-all;
+  font-size: 1.2rem;
+  text-align: justify;
 }
 
 @media (max-width: 550px) {

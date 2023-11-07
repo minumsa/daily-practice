@@ -1,7 +1,6 @@
 .title-container {
   display: flex;
   flex-direction: column;
-  justify-content: start;
   width: 60px;
   margin-left: 100px;
   overflow: hidden;

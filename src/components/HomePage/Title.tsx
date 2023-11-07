@@ -1,12 +1,12 @@
-import React     from "react";
-import WebTitle  from "./Title/WebTitle";
+import React from "react";
+import SiteTitle from "./Title/SiteTitle";
 import PostTitle from "./Title/PostTitle";
 import "./Title.css";
 
 const Title = ({ title }: { title: React.ReactNode }) => {
   return (
     <div className="title-container">
-      <WebTitle />
+      <SiteTitle />
       <PostTitle title={title} />
     </div>
   );

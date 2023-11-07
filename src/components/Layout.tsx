@@ -1,7 +1,7 @@
 import GlobalStyle from "../GlobalStyle";
 import { lightTheme, darkTheme } from "../theme";
 import "./Layout.css";
-import Top from "./MobileUI/Top";
+import Top from "./Mobile/MobileHeader";
 import Nav from "./Nav";
 // @ts-ignore
 import { ThemeToggler } from "gatsby-plugin-dark-mode";
@@ -46,7 +46,13 @@ type LayoutInternalProps = {
   toggleTheme: (theme?: string) => void;
 };
 
-const LayoutInternal: React.FC<LayoutInternalProps> = ({ children, page, info, theme, toggleTheme }) => {
+const LayoutInternal: React.FC<LayoutInternalProps> = ({
+  children,
+  page,
+  info,
+  theme,
+  toggleTheme,
+}) => {
   // 현재 스크롤 위치를 저장하는 state를 선언한다.
   const [position, setPosition] = useState(0);
   // 상단바가 보여질지 숨겨질지를 결정하는 state를 선언한다. true면 보이고 false면 숨긴다.
@@ -87,7 +93,7 @@ const LayoutInternal: React.FC<LayoutInternalProps> = ({ children, page, info, t
         <Top
           header={position > 50 ? cls : "visible"}
           // 클릭 이벤트가 발생하면 toggleTheme 함수를 호출한다. toggleTheme 함수는 인자로 받은 테마 값을 theme 변수에 업데이트한다. 테마 값이 "dark"인 경우 "light"로, "light"인 경우 "dark"로 전환된다. 이렇게 전환된 theme 값은 이후 ThemeProvider의 theme prop으로 전달되어 화면 전체의 테마를 변경한다.
-          darkButton={
+          darkmodeButton={
             <div
               className="mode-button"
               onClick={() => {

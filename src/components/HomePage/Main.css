@@ -21,11 +21,12 @@
   display: none;
 }
 
-.content-nav-container {
+.mobile-footer-container {
   display: none;
 }
 @media (max-width: 550px) {
   .content-container {
+    justify-content: center;
     margin-top: 10px;
     margin-bottom: 10px;
   }
@@ -35,7 +36,7 @@
     margin-left: 1vw;
   }
 
-  .content-nav-container {
+  .mobile-footer-container {
     display: flex;
   }
 }

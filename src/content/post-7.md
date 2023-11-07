@@ -6,10 +6,10 @@ title: "소란"
 description: ""
 ---
 
-<div style="text-align: center;">
-    <div class="post-line" style="display: inline-block; line-height:160%">
+<div style="text-align: center">
+  <span class="post-line">
     소란
-    </div>
+  </span>
 </div>
 
 <br>

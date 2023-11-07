@@ -6,10 +6,10 @@ title: "시와 산문 사이를 우왕좌왕하며"
 description: "어떤 사람들의 산문은 감히 산문을 쓰는 일을 감히 거들떠볼 수도 없게 만든다."
 ---
 
-<div style="text-align: center;">
-    <div class="post-line" style="display: inline-block; line-height:160%">
+<div style="text-align: center">
+  <span class="post-line">
     시와 산문 사이를 우왕좌왕하며
-    </div>
+  </span>
 </div>
 
 <br>

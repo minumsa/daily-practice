@@ -57,11 +57,13 @@ const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
       }
 
       .post-line {
+        display: inline-block;
+        line-height: 160%;
         border-top: 1.5px solid ${textColor};
       }
 
       .hamburger,
-      .top-hamburger {
+      .hamburger-mobile {
         background-color: ${textColor};
         box-shadow: 0 7px 0 ${textColor}, 0 14px 0 ${textColor};
         // opacity: ${opacity};
@@ -86,6 +88,13 @@ const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
         opacity: ${opacity};
       }
 
+      .title-items-right {
+        font-weight: 450;
+        font-size: 1.2rem;
+        white-space: nowrap;
+        transform: rotate(0.25turn);
+      }
+
       p:first-of-type {
         text-indent: 0;
       }
@@ -97,7 +106,7 @@ const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
 
       @media (max-width: 550px) {
         .content-text {
-          width: 85vw;
+          width: 94%;
           font-weight: 400;
           font-size: 1.1rem;
           line-height: 210%;
@@ -108,7 +117,8 @@ const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
         }
       }
 
-      p::selection {
+      p::selection,
+      span::selection {
         color: ${categoryColor};
         background-color: ${textColor};
       }
@@ -130,7 +140,9 @@ const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
         text-decoration: wavy underline ${textColor};
       }
 
-      .mobile-line {
+      .footer-line {
+        width: 95%;
+        height: 1px;
         background-color: ${textColor};
         opacity: ${opacity};
       }
@@ -145,7 +157,7 @@ const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
         text-decoration: wavy underline ${textColor};
       }
 
-      .top-title {
+      .header-title {
         color: ${textColor};
         opacity: ${opacity};
       }

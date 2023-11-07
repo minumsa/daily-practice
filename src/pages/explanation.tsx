@@ -5,7 +5,7 @@ import Layout from "../components/Layout";
 import ExplanationTitle from "../components/Nav/ExplanationTitle";
 import React, { FC } from "react";
 
-const IntroPage: FC = () => {
+const ExplanationPage: FC = () => {
   return (
     <>
       <SEO
@@ -21,4 +21,4 @@ const IntroPage: FC = () => {
   );
 };
 
-export default IntroPage;
+export default ExplanationPage;

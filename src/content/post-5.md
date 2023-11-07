@@ -6,10 +6,10 @@ title: "스티그마"
 description: "우리는 대개 눈에 보이는 장애만을 장애로 생각하는 경향이 있다."
 ---
 
-<div style="text-align: center;">
-    <div class="post-line" style="display: inline-block; line-height:160%">
+<div style="text-align: center">
+  <span class="post-line">
     스티그마
-    </div>
+  </span>
 </div>
 
 <br>

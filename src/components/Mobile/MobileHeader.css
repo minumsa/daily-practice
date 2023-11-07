@@ -12,11 +12,11 @@
   display: none;
 }
 
-.top-dark {
+.header-darkmode {
   display: none;
 }
 
-.top-title {
+.header-title {
   display: none;
 }
 
@@ -42,7 +42,7 @@
     display: flex;
   }
 
-  .top-content {
+  .header-content {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -50,20 +50,20 @@
     font-size: 1.1rem;
   }
 
-  .top-title {
+  .header-title {
     display: flex;
     justify-content: center;
     font-size: 1.1rem;
   }
 
-  .top-hamburger-container {
+  .hamburger-mobile-container {
     justify-content: start;
     height: 22.73px;
     margin-left: 20px;
     cursor: pointer;
   }
 
-  .top-hamburger {
+  .hamburger-mobile {
     display: flex;
     justify-content: center;
     width: 21px;
@@ -71,7 +71,7 @@
     margin-top: 3px;
   }
 
-  .top-dark {
+  .header-darkmode {
     display: flex;
     width: 22px;
     margin-right: 20px;
