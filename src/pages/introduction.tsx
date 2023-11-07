@@ -2,7 +2,6 @@ import SEO from "../SEO";
 import HomePage from "../components/HomePage";
 import Introduction from "../components/HomePage/Main/Introduction";
 import Layout from "../components/Layout";
-import ExplainInfo from "../components/Nav/ExplainInfo";
 import React, { FC } from "react";
 
 const ExplainPage: FC = () => {
@@ -14,7 +13,7 @@ const ExplainPage: FC = () => {
         ogType={"website"}
         ogUrl={"https://14461.gatsbyjs.io/introduction"}
       />
-      <Layout info={<ExplainInfo />}>
+      <Layout info={"소개"}>
         <HomePage content={<Introduction />} title={null} />
       </Layout>
     </>

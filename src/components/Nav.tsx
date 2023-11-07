@@ -1,6 +1,6 @@
 import "./Nav.css";
 import DarkMode from "./Nav/DarkMode";
-import Menu from "./Nav/Menu";
+import Menu from "./Nav/Hamburger";
 import React from "react";
 
 interface NavProps {

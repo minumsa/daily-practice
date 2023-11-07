@@ -1,8 +1,7 @@
 .dark-mode {
+  width: 22px;
   display: flex;
   justify-content: center;
-  width: 22px;
-  text-align: center;
   cursor: pointer;
 }
 

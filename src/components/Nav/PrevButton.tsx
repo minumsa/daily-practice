@@ -3,11 +3,9 @@ import React, { FC } from "react";
 
 const PrevButton: FC = () => {
   return (
-    <>
-      <div className="button-container">
-        <div className="prev-button"></div>
-      </div>
-    </>
+    <div className="button-container">
+      <div className="prev-button"></div>
+    </div>
   );
 };
 

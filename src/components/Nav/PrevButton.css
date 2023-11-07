@@ -4,7 +4,6 @@
   width: 10px;
   height: 10px;
   transform: rotate(225deg);
-  content: "";
 }
 
 @media (max-width: 550px) {

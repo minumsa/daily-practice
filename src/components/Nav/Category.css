@@ -16,9 +16,9 @@
   user-select: none;
 }
 
-.category,
-.category-home {
+.category {
   width: 45px;
+  white-space: nowrap;
   height: 21px;
   margin-right: 55px;
   margin-left: 29px;
@@ -27,20 +27,8 @@
   opacity: 0.87;
 }
 
-.category:hover,
-.category-home:hover,
-.category-notice:hover {
+.category:hover {
   text-decoration: underline 3px;
-}
-
-.category-notice {
-  width: 65px;
-  height: 21px;
-  margin-right: 55px;
-  margin-left: 29px;
-  padding: 4px 2px 4px 2px;
-  font-size: 1.1rem;
-  opacity: 0.87;
 }
 
 .close {
@@ -90,8 +78,7 @@
     left: 13px;
   }
 
-  .category,
-  .category-home {
+  .category {
     margin-right: 55px;
     margin-left: 42px;
   }
