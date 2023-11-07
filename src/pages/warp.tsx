@@ -1,6 +1,6 @@
 import SEO from "../SEO";
-import HomePage from "../components/HomePage";
-import Warp from "../components/HomePage/Main/Warp";
+import Home from "../components/Home";
+import Warp from "../components/Home/Main/Warp";
 import Layout from "../components/Layout";
 import { PageProps, graphql } from "gatsby";
 import React, { useEffect } from "react";
@@ -46,7 +46,7 @@ const Page = ({ data, page, info }: WarpPageProps) => {
         ogUrl={"https://14461.gatsbyjs.io/warp/"}
       />
       <Layout page={page} info={info}>
-        <HomePage content={<Warp />} />
+        <Home content={<Warp />} />
       </Layout>
     </>
   );

@@ -1,9 +1,9 @@
-import "./HomePage.css";
-import Main from "./HomePage/Main";
-import Title from "./HomePage/Title";
+import "./Home.css";
+import Main from "./Home/Main";
+import Title from "./Home/Title";
 import React from "react";
 
-interface HomePageProps {
+interface HomeProps {
   content?: React.ReactNode;
   title?: React.ReactNode;
   day?: string;
@@ -13,9 +13,9 @@ interface HomePageProps {
   middle?: React.ReactNode;
 }
 
-const HomePage = ({ content, title, ...props }: HomePageProps) => {
+const Home = ({ content, title, ...props }: HomeProps) => {
   return (
-    <div className="homepage-container">
+    <div className="home-container">
       <div className="body-container">
         <Main content={content} {...props} />
         <Title title={title} />
@@ -24,4 +24,4 @@ const HomePage = ({ content, title, ...props }: HomePageProps) => {
   );
 };
 
-export default HomePage;
+export default Home;

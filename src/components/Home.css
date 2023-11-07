@@ -1,4 +1,4 @@
-.homepage-container {
+.home-container {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
@@ -15,7 +15,7 @@
 }
 
 @media (max-width: 1100px) {
-  .homepage-container {
+  .home-container {
     margin-left: 0;
   }
 }
@@ -27,7 +27,7 @@
 }
 
 @media (max-width: 550px) {
-  .homepage-container {
+  .home-container {
     padding-top: 50px;
   }
 

@@ -1,5 +1,5 @@
 import SEO from "../../SEO";
-import HomePage from "../../components/HomePage";
+import Home from "../../components/Home";
 import Layout from "../../components/Layout";
 import NextButton from "../../components/Nav/NextButton";
 import PageNumber from "../../components/Nav/PageNumber";
@@ -87,7 +87,7 @@ export default function BlogPostTemplate({ data }: BlogPostTemplateProps) {
         page={<PageNumber page={frontmatter.page} />}
         info={<PostInfo date={frontmatter.date} prev={PrevPost} next={NextPost} />}
       >
-        <HomePage
+        <Home
           content={<div className="content-text" dangerouslySetInnerHTML={{ __html: html }} />}
           title={frontmatter.title}
           line={

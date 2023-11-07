@@ -1,5 +1,5 @@
 import SEO from "../SEO";
-import HomePage from "../components/HomePage";
+import Home from "../components/Home";
 import Layout from "../components/Layout";
 import "./index.css";
 import { graphql, Link, PageProps } from "gatsby";
@@ -27,7 +27,7 @@ const Page = ({ data }: PageProps<Queries.AllPagesQuery>) => {
         }
       />
       <Layout info={"마음에 드는 링크를 클릭해주세요"}>
-        <HomePage
+        <Home
           content={
             <div className="list-container">
               <div className="total-post">

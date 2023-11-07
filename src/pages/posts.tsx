@@ -1,4 +1,4 @@
-import HomePage from "../components/HomePage";
+import Home from "../components/Home";
 import Layout from "../components/Layout";
 import PostInfo from "../components/Nav/PostInfo";
 import React, { FC } from "react";
@@ -6,7 +6,7 @@ import React, { FC } from "react";
 const Page: FC = () => {
   return (
     <Layout info={<PostInfo />}>
-      <HomePage />
+      <Home />
     </Layout>
   );
 };

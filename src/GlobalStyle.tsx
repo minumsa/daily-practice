@@ -1,133 +1,111 @@
 import { createGlobalStyle, css } from "styled-components";
 
 interface ThemeType {
-  bgColor: string;
-  textColor: string;
-  categoryColor: string;
-  listBgColor: string;
-  opacity: number;
-  hamburgerColor: string;
+  backgroundColor: string;
+  defaultColor: string;
+  invertedColor: string;
 }
 
 const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
   ${({ theme }) => {
-    const { bgColor, textColor, categoryColor, listBgColor, opacity, hamburgerColor } = theme;
+    const { backgroundColor, defaultColor, invertedColor } = theme;
     return css`
       body {
-        background-color: ${bgColor};
-        color: ${textColor};
+        background-color: ${backgroundColor};
+      }
+
+      body,
+      .list-text,
+      .list-button {
+        color: ${invertedColor};
       }
 
       .marker {
-        background-color: ${textColor};
-        opacity: ${opacity};
+        background-color: ${invertedColor};
       }
 
-      // FIXME: 수정 필요
       .list-text:hover {
-        border: 1px dashed ${textColor};
-        color: #ffffff;
-        background-color: #000000;
+        border: 1px dashed ${invertedColor};
+        color: ${defaultColor};
+        background-color: ${invertedColor};
       }
 
       .list-text,
       .list-button {
-        color: ${textColor};
-        border: 1px solid ${textColor};
+        border: 1px solid ${invertedColor};
       }
 
       .prev-button {
-        border-top: 1.5px solid ${textColor};
-        border-right: 1.5px solid ${textColor};
-        opacity: ${opacity};
+        border-top: 1.5px solid ${invertedColor};
+        border-right: 1.5px solid ${invertedColor};
       }
 
       .next-button {
-        border-top: 1.5px solid ${textColor};
-        border-right: 1.5px solid ${textColor};
-        opacity: ${opacity};
+        border-top: 1.5px solid ${invertedColor};
+        border-right: 1.5px solid ${invertedColor};
       }
 
       .post-line {
         display: inline-block;
         line-height: 160%;
-        border-top: 1.5px solid ${textColor};
+        border-top: 1.5px solid ${invertedColor};
       }
 
       .hamburger,
       .hamburger-mobile {
-        background-color: ${textColor};
-        box-shadow: 0 7px 0 ${textColor}, 0 14px 0 ${textColor};
+        background-color: ${invertedColor};
+        box-shadow: 0 7px 0 ${invertedColor}, 0 14px 0 ${invertedColor};
       }
 
       .category-container {
-        color: ${listBgColor};
-        background-color: ${hamburgerColor};
-        border-color: ${listBgColor};
-      }
-
-      @media (max-width: 550px) {
-        .post-line {
-          border-top-color: ${textColor};
-        }
+        color: ${invertedColor};
+        background-color: ${backgroundColor};
+        border: 1px solid ${invertedColor};
       }
 
       p::selection,
       span::selection {
-        color: ${categoryColor};
-        background-color: ${textColor};
-      }
-
-      .date-created,
-      .button-container,
-      .page-container,
-      .title-container,
-      .info-container,
-      .explanation-container,
-      .introduction-container,
-      .contact-container,
-      .warp-container,
-      .line-color,
-      .content-text {
-        opacity: ${opacity};
+        color: ${invertedColor};
+        background-color: ${invertedColor};
       }
 
       .underline {
-        text-decoration-color: ${textColor};
+        text-decoration-color: ${invertedColor};
       }
 
       .footer-line {
-        background-color: ${textColor};
-        opacity: ${opacity};
+        background-color: ${invertedColor};
       }
 
       .prev-post,
       .next-post {
-        border-color: ${textColor};
-        background-color: ${categoryColor};
+        border-color: ${invertedColor};
+        background-color: ${defaultColor};
       }
       .prev-post-title,
       .next-post-title {
-        text-decoration-color: ${textColor};
+        text-decoration-color: ${invertedColor};
       }
 
       .header-title {
-        color: ${textColor};
-        opacity: ${opacity};
+        color: ${invertedColor};
       }
 
       .mode-button {
-        color: ${textColor};
-        opacity: ${opacity};
+        color: ${invertedColor};
       }
 
       header {
-        background-color: ${bgColor};
+        background-color: ${backgroundColor};
       }
 
       .mobile-post-date {
-        color: ${textColor};
-        opacity: ${opacity};
+        color: ${invertedColor};
+      }
+
+      .highlighted-text {
+        color: ${defaultColor};
+        background-color: ${invertedColor};
       }
     `;
   }}

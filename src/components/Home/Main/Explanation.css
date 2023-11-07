@@ -13,8 +13,6 @@
 
 .highlighted-text {
   font-weight: 500;
-  color: rgb(244, 244, 244);
-  background-color: #000;
 }
 
 @media (max-width: 550px) {

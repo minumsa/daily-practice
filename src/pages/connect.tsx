@@ -1,6 +1,6 @@
 import SEO from "../SEO";
-import HomePage from "../components/HomePage";
-import Contact from "../components/HomePage/Main/Contact";
+import Home from "../components/Home";
+import Contact from "../components/Home/Main/Contact";
 import Layout from "../components/Layout";
 import React, { FC } from "react";
 
@@ -14,7 +14,7 @@ const ConnectPage: FC = () => {
         ogUrl={"https://14461.gatsbyjs.io/connect/"}
       />
       <Layout info={"연결"}>
-        <HomePage content={<Contact />} />
+        <Home content={<Contact />} />
       </Layout>
     </>
   );
