@@ -13,24 +13,21 @@ interface WarpPageProps extends PageProps<Queries.AllPagesQuery> {
 
 const Page = ({ data, page, info }: WarpPageProps) => {
   useEffect(() => {
-    // 페이지 수 가져오기
     const totalPageCount = data.allMarkdownRemark.totalCount;
-    // 마지막 랜덤 페이지 번호 가져오기
-    const lastRandomPage = sessionStorage.getItem("randomPage");
-    // 새로운 랜덤 페이지 번호 만들기
+    const prevRandomPage = Number(sessionStorage.getItem("randomPage"));
     let randomPage = getRandomPage(totalPageCount);
 
-    // 마지막 랜덤 페이지 번호와 새로운 랜덤 페이지 번호가 같을 경우 다시 만들기
-    while (lastRandomPage && randomPage === parseInt(lastRandomPage)) {
+    // 직전 랜덤 페이지 번호, 새로운 랜덤 페이지 번호가 일치하지 않을 때까지 반복
+    while (prevRandomPage && randomPage === prevRandomPage) {
       randomPage = getRandomPage(totalPageCount);
     }
 
-    // 새로운 랜덤 페이지 번호를 sessionStorage에 저장
+    // 반복문을 통과한 랜덤 페이지 번호를 세션스토리지에 저장
     sessionStorage.setItem("randomPage", randomPage.toString());
 
     const newTimer = window.setTimeout(() => {
       window.location.href = `/posts/${randomPage}`;
-    }, 1500);
+    }, 2000);
 
     return () => {
       clearTimeout(newTimer);
