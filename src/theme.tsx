@@ -5,7 +5,8 @@ const defaultColor = {
 
 const invertedColor = {
   light: "#1e1e1e",
-  dark: "#aaa",
+  dark: "#bdc1c6",
+  // dark: "#aaa",
   // dark: "#f4f4f4",
 };
 
