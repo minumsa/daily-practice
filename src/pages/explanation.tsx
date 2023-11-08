@@ -13,7 +13,7 @@ const Page: FC = () => {
         ogType={"website"}
         ogUrl={"https://14461.gatsbyjs.io/explanation/"}
       />
-      <Layout info={"일러두기"}>
+      <Layout footer={"일러두기"}>
         <Home content={<Explanation />} />
       </Layout>
     </>

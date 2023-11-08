@@ -7,7 +7,7 @@ interface postInfo {
   next?: React.ReactNode;
 }
 
-const PostInfo = ({ date, prev, next }: postInfo) => {
+const FooterDesktop = ({ date, prev, next }: postInfo) => {
   return (
     <>
       {prev}
@@ -17,4 +17,4 @@ const PostInfo = ({ date, prev, next }: postInfo) => {
   );
 };
 
-export default PostInfo;
+export default FooterDesktop;

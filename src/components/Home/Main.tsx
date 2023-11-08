@@ -17,7 +17,7 @@ const Main = ({ content, ...props }: MainProps) => {
     <div className="main-container">
       <DivisionMarker />
       <div className="content-container">{content}</div>
-      <div className="mobile-footer-container">
+      <div className="footer-mobile-container">
         <MobileFooter {...props} />
       </div>
       <DivisionMarker />

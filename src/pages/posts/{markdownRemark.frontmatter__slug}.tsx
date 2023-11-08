@@ -3,7 +3,7 @@ import Home from "../../components/Home";
 import Layout from "../../components/Layout";
 import NextButton from "../../components/Nav/NextButton";
 import PageNumber from "../../components/Nav/PageNumber";
-import PostInfo from "../../components/Nav/PostInfo";
+import FooterDesktop from "../../components/Nav/PostInfo";
 import PrevButton from "../../components/Nav/PrevButton";
 import { Link, graphql } from "gatsby";
 import * as React from "react";
@@ -86,7 +86,7 @@ export default function BlogPostTemplate({ data }: BlogPostTemplateProps) {
       />
       <Layout
         page={<PageNumber page={frontmatter.page} />}
-        info={<PostInfo date={frontmatter.date} prev={ArrowLeft} next={ArrowRight} />}
+        footer={<FooterDesktop date={frontmatter.date} prev={ArrowLeft} next={ArrowRight} />}
       >
         <Home
           content={<div className="content-text" dangerouslySetInnerHTML={{ __html: html }} />}

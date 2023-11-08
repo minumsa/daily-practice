@@ -13,7 +13,7 @@ const ConnectPage: FC = () => {
         ogType={"website"}
         ogUrl={"https://14461.gatsbyjs.io/connect/"}
       />
-      <Layout info={"연결"}>
+      <Layout footer={"연결"}>
         <Home content={<Contact />} />
       </Layout>
     </>

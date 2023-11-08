@@ -10,7 +10,7 @@ interface MobileFooterProps {
 
 const MobileFooter = ({ line, prev, next, middle }: MobileFooterProps) => {
   return (
-    <div className="mobile-footer-container">
+    <div className="footer-mobile-container">
       {line}
       <div className="mobile-page-container">
         <div className="mobile-page">
