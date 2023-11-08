@@ -42,20 +42,21 @@ export default function BlogPostTemplate({ data }: BlogPostTemplateProps) {
   const { frontmatter, html } = markdownRemark;
 
   // 모든 포스트를 페이지 번호를 기준으로 정렬
-  const posts = allMarkdownRemark.edges.sort(
+  const sortedDataAscending = allMarkdownRemark.edges.sort(
     (a, b) => a.node.frontmatter.page - b.node.frontmatter.page
   );
-
-  // 현재 포스트의 인덱스를 찾음
-  const currentIndex = posts.findIndex((p: Post) => p.node.frontmatter.slug === frontmatter.slug);
-
-  // 이전 인덱스와 다음 인덱스를 찾음
-  const prevIndex = currentIndex === 0 ? null : posts[currentIndex - 1].node;
-  const nextIndex = currentIndex === posts.length - 1 ? null : posts[currentIndex + 1].node;
+  const currentDataIndex = sortedDataAscending.findIndex(
+    (p: Post) => p.node.frontmatter.slug === frontmatter.slug
+  );
+  const prevData = currentDataIndex === 0 ? null : sortedDataAscending[currentDataIndex - 1].node;
+  const nextData =
+    currentDataIndex === sortedDataAscending.length - 1
+      ? null
+      : sortedDataAscending[currentDataIndex + 1].node;
 
   // 이전 포스트와 다음 포스트를 보여주는 컴포넌트를 생성
-  const PrevPost = prevIndex ? (
-    <Link to={"/posts" + prevIndex.frontmatter.slug}>
+  const ArrowLeft = prevData ? (
+    <Link to={"/posts" + prevData.frontmatter.slug}>
       <PrevButton />
     </Link>
   ) : (
@@ -64,8 +65,8 @@ export default function BlogPostTemplate({ data }: BlogPostTemplateProps) {
     </div>
   );
 
-  const NextPost = nextIndex ? (
-    <Link to={"/posts" + nextIndex.frontmatter.slug}>
+  const ArrowRight = nextData ? (
+    <Link to={"/posts" + nextData.frontmatter.slug}>
       <NextButton />
     </Link>
   ) : (
@@ -85,7 +86,7 @@ export default function BlogPostTemplate({ data }: BlogPostTemplateProps) {
       />
       <Layout
         page={<PageNumber page={frontmatter.page} />}
-        info={<PostInfo date={frontmatter.date} prev={PrevPost} next={NextPost} />}
+        info={<PostInfo date={frontmatter.date} prev={ArrowLeft} next={ArrowRight} />}
       >
         <Home
           content={<div className="content-text" dangerouslySetInnerHTML={{ __html: html }} />}
@@ -95,9 +96,9 @@ export default function BlogPostTemplate({ data }: BlogPostTemplateProps) {
               <div className="footer-line"></div>
             </div>
           }
-          prev={PrevPost}
+          prev={ArrowLeft}
           middle={<div className="mobile-post-date">작성일: {frontmatter.date}</div>}
-          next={NextPost}
+          next={ArrowRight}
         />
       </Layout>
     </>
