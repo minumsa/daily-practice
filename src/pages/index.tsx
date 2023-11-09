@@ -7,14 +7,23 @@ import React from "react";
 import { siteTitle } from "../lib/data";
 
 const Page = ({ data }: PageProps<Queries.AllPagesQuery>) => {
-  const posts = data.allMarkdownRemark.edges.map(({ node }) => ({
+  // md 파일에서 frontmatter, id, page 데이터만 가져와서 새로운 객체로 만들기
+  const newData = data.allMarkdownRemark.edges.map(({ node }) => ({
     ...node.frontmatter!,
     id: node.id,
-    excerpt: node.excerpt,
-    page: Number(node.frontmatter!.page), // node.frontmatter가 null일 가능성을 무시
+    page: Number(node.frontmatter?.page),
   }));
 
-  const sortedPosts = [...posts].sort((a, b) => b.page - a.page);
+  // filteredData를 page를 기준으로 오름차순 정렬
+  const sortedDate = [...newData].sort((a, b) => b.page - a.page);
+  const dataList = sortedDate.map(data => (
+    <Link to={`/posts${data.slug}`} key={data.id}>
+      <div className="list-text">
+        <span style={{ display: "inline-block" }}>{data.title}</span>
+        <sup className="list-sup">{data.page}</sup>
+      </div>
+    </Link>
+  ));
 
   return (
     <>
@@ -34,16 +43,7 @@ const Page = ({ data }: PageProps<Queries.AllPagesQuery>) => {
                 총 <span className="post-count">{data.allMarkdownRemark.totalCount}개</span>의 글이
                 있습니다.
               </div>
-              <div className="list-text-container">
-                {sortedPosts.map(post => (
-                  <Link to={`/posts${post.slug}`} key={post.id}>
-                    <div className="list-text">
-                      <span style={{ display: "inline-block" }}>{post.title}</span>
-                      <sup className="list-sup">{post.page}</sup>
-                    </div>
-                  </Link>
-                ))}
-              </div>
+              <div className="list-text-container">{dataList}</div>
             </div>
           }
         />

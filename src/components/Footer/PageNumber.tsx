@@ -1,11 +1,11 @@
 import "./PageNumber.css";
 import React from "react";
 
-const PageNumber = ({ page }: { page?: React.ReactNode }) => {
+const PageNumber = ({ pageNumber }: { pageNumber?: React.ReactNode }) => {
   return (
     <div className="page-container">
       <span className="brackets">(</span>
-      {page}
+      {pageNumber}
       <span className="brackets">)</span>
     </div>
   );

@@ -29,7 +29,7 @@ interface BlogPostTemplateProps {
         date: string;
         slug: string;
         title: string;
-        page: any;
+        page: string;
         description: string;
       };
     };
@@ -92,7 +92,7 @@ export default function BlogPostTemplate({ data }: BlogPostTemplateProps) {
         ogText={frontmatter.description}
       />
       <Layout
-        page={<PageNumber page={frontmatter.page} />}
+        pageNumber={<PageNumber pageNumber={frontmatter.page} />}
         footerContent={
           <FooterContent
             arrowLeft={<ArrowLeft />}

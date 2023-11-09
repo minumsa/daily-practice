@@ -10,7 +10,7 @@ import styled, { ThemeProvider } from "styled-components";
 
 type Props = {
   children: React.ReactNode;
-  page?: React.ReactNode;
+  pageNumber?: React.ReactNode;
   footerContent?: React.ReactNode;
 };
 
@@ -19,7 +19,7 @@ interface ThemeProps {
   toggleTheme: (theme?: string) => void;
 }
 
-const Layout: React.FC<Props> = ({ children, page, footerContent }) => {
+const Layout: React.FC<Props> = ({ children, pageNumber, footerContent }) => {
   return (
     <ThemeToggler>
       {({ theme, toggleTheme }: ThemeProps) => {
@@ -28,7 +28,7 @@ const Layout: React.FC<Props> = ({ children, page, footerContent }) => {
         }
         return (
           <LayoutInternal
-            pageNumber={page}
+            pageNumber={pageNumber}
             footerContent={footerContent}
             theme={theme}
             toggleTheme={toggleTheme}

@@ -42,7 +42,7 @@ const Page = ({ data, pageNumber, footerContent }: WarpPageProps) => {
         ogType={"website"}
         ogURL={"https://14461.gatsbyjs.io/warp/"}
       />
-      <Layout page={pageNumber} footerContent={footerContent}>
+      <Layout pageNumber={pageNumber} footerContent={footerContent}>
         <Home content={<Warp />} />
       </Layout>
     </>
