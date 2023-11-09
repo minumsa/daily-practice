@@ -14,9 +14,7 @@ const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
         background-color: ${backgroundColor};
       }
 
-      body,
-      .list-text,
-      .list-button {
+      body {
         color: ${invertedColor};
       }
 
@@ -58,7 +56,6 @@ const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
       }
 
       .category-container {
-        color: ${invertedColor};
         background-color: ${backgroundColor};
         border: 1px solid ${invertedColor};
       }
@@ -87,24 +84,11 @@ const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
         text-decoration-color: ${invertedColor};
       }
 
-      .header-title {
-        color: ${invertedColor};
-      }
-
-      .mode-button {
-        color: ${invertedColor};
-      }
-
       header {
         background-color: ${backgroundColor};
       }
 
-      .create-date-mobile {
-        color: ${invertedColor};
-      }
-
       .highlighted-text {
-        color: ${defaultColor};
         background-color: ${invertedColor};
       }
     `;
