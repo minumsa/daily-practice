@@ -9,6 +9,7 @@ import { Link, graphql } from "gatsby";
 import * as React from "react";
 import "./{markdownRemark.frontmatter__slug}.css";
 import { siteTitle } from "../../lib/data";
+import * as DOMPurify from "dompurify";
 
 interface Post {
   node: {
@@ -41,6 +42,8 @@ interface BlogPostTemplateProps {
 export default function BlogPostTemplate({ data }: BlogPostTemplateProps) {
   const { markdownRemark, allMarkdownRemark } = data;
   const { frontmatter, html } = markdownRemark;
+  // DOMPurify - XSS 공격 방지
+  const sanitizer = DOMPurify.sanitize;
 
   // 모든 포스트를 페이지 번호를 기준으로 정렬
   const sortedDataAscending = allMarkdownRemark.edges.sort(
@@ -99,7 +102,9 @@ export default function BlogPostTemplate({ data }: BlogPostTemplateProps) {
         }
       >
         <Home
-          content={<div className="content-text" dangerouslySetInnerHTML={{ __html: html }} />}
+          content={
+            <div className="content-text" dangerouslySetInnerHTML={{ __html: sanitizer(html) }} />
+          }
           title={frontmatter.title}
           footerLineMobile={
             <div className="footer-line-mobile-container">

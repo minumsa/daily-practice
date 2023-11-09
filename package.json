@@ -18,6 +18,7 @@
   "dependencies": {
     "@mdx-js/react": "^2.3.0",
     "@types/styled-components": "^5.1.26",
+    "dompurify": "^3.0.6",
     "gatsby": "^5.8.1",
     "gatsby-plugin-dark-mode": "^1.1.2",
     "gatsby-plugin-manifest": "^5.9.0",
