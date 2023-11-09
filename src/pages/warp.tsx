@@ -8,11 +8,11 @@ import { getRandomPage } from "../lib/modules";
 import { siteTitle } from "../lib/data";
 
 interface WarpPageProps extends PageProps<Queries.AllPagesQuery> {
-  page: string;
-  info: string;
+  pageNumber: string;
+  footerContent: string;
 }
 
-const Page = ({ data, page, info }: WarpPageProps) => {
+const Page = ({ data, pageNumber, footerContent }: WarpPageProps) => {
   useEffect(() => {
     const totalPageCount = data.allMarkdownRemark.totalCount;
     const prevRandomPage = Number(sessionStorage.getItem("randomPage"));
@@ -42,7 +42,7 @@ const Page = ({ data, page, info }: WarpPageProps) => {
         ogType={"website"}
         ogURL={"https://14461.gatsbyjs.io/warp/"}
       />
-      <Layout page={page} footerContent={info}>
+      <Layout page={pageNumber} footerContent={footerContent}>
         <Home content={<Warp />} />
       </Layout>
     </>

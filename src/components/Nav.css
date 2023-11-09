@@ -23,7 +23,7 @@
   width: 60px;
 }
 
-.info-container {
+.footer-content-container {
   display: flex;
   flex-direction: row;
   flex-grow: 1;

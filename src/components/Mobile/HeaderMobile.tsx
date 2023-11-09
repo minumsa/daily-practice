@@ -8,7 +8,7 @@ interface HeaderMobileProps {
   header?: string;
 }
 
-const Top = ({ darkmodeButton, header }: HeaderMobileProps) => {
+const HeaderMobile = ({ darkmodeButton, header }: HeaderMobileProps) => {
   const [showCategory, setShowCategory] = useState(false);
 
   return (
@@ -31,4 +31,4 @@ const Top = ({ darkmodeButton, header }: HeaderMobileProps) => {
   );
 };
 
-export default Top;
+export default HeaderMobile;

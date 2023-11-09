@@ -1,8 +1,8 @@
 import "./DarkMode.css";
 import React from "react";
 
-const DarkMode = ({ dark }: { dark: React.ReactNode }) => {
-  return <div className="dark-mode">{dark}</div>;
+const DarkMode = ({ darkModeButton }: { darkModeButton: React.ReactNode }) => {
+  return <div className="dark-mode">{darkModeButton}</div>;
 };
 
 export default DarkMode;

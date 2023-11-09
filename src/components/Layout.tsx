@@ -1,8 +1,8 @@
 import GlobalStyle from "../GlobalStyle";
 import { lightTheme, darkTheme } from "../theme";
 import "./Layout.css";
-import Top from "./Mobile/HeaderMobile";
-import Nav from "./Nav";
+import HeaderMobile from "./Mobile/HeaderMobile";
+import Footer from "./Nav";
 // @ts-ignore
 import { ThemeToggler } from "gatsby-plugin-dark-mode";
 import React, { useEffect, useState } from "react";
@@ -28,7 +28,7 @@ const Layout: React.FC<Props> = ({ children, page, footerContent }) => {
         }
         return (
           <LayoutInternal
-            page={page}
+            pageNumber={page}
             footerContent={footerContent}
             theme={theme}
             toggleTheme={toggleTheme}
@@ -43,7 +43,7 @@ const Layout: React.FC<Props> = ({ children, page, footerContent }) => {
 
 type LayoutInternalProps = {
   children: React.ReactNode;
-  page?: React.ReactNode;
+  pageNumber?: React.ReactNode;
   footerContent?: React.ReactNode;
   theme: string | null;
   toggleTheme: (theme?: string) => void;
@@ -51,7 +51,7 @@ type LayoutInternalProps = {
 
 const LayoutInternal: React.FC<LayoutInternalProps> = ({
   children,
-  page,
+  pageNumber,
   footerContent,
   theme,
   toggleTheme,
@@ -79,7 +79,7 @@ const LayoutInternal: React.FC<LayoutInternalProps> = ({
     <ThemeProvider theme={isDarkMode ? darkTheme : lightTheme}>
       <GlobalStyle />
       <div className="layout-container">
-        <Top
+        <HeaderMobile
           header={currentPosition > 50 ? showHeader : "visible"}
           darkmodeButton={
             <div
@@ -93,10 +93,10 @@ const LayoutInternal: React.FC<LayoutInternalProps> = ({
           }
         />
         {children}
-        <Nav
-          page={page}
-          info={footerContent}
-          dark={
+        <Footer
+          pageNumber={pageNumber}
+          footerContent={footerContent}
+          darkModeButton={
             <div
               className="mode-button"
               onClick={() => {
