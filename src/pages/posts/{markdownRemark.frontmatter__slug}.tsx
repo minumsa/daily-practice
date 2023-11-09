@@ -86,19 +86,25 @@ export default function BlogPostTemplate({ data }: BlogPostTemplateProps) {
       />
       <Layout
         page={<PageNumber page={frontmatter.page} />}
-        footer={<FooterDesktop date={frontmatter.date} prev={ArrowLeft} next={ArrowRight} />}
+        footer={
+          <FooterDesktop
+            createDate={frontmatter.date}
+            arrowLeft={ArrowLeft}
+            arrowRight={ArrowRight}
+          />
+        }
       >
         <Home
           content={<div className="content-text" dangerouslySetInnerHTML={{ __html: html }} />}
           title={frontmatter.title}
-          line={
+          footerLineMobile={
             <div className="footer-line-container">
               <div className="footer-line"></div>
             </div>
           }
-          prev={ArrowLeft}
-          middle={<div className="mobile-post-date">작성일: {frontmatter.date}</div>}
-          next={ArrowRight}
+          arrowLeft={ArrowLeft}
+          createDate={<div className="create-date-mobile">작성일: {frontmatter.date}</div>}
+          arrowRight={ArrowRight}
         />
       </Layout>
     </>

@@ -1,7 +1,7 @@
 import GlobalStyle from "../GlobalStyle";
 import { lightTheme, darkTheme } from "../theme";
 import "./Layout.css";
-import Top from "./Mobile/MobileHeader";
+import Top from "./Mobile/HeaderMobile";
 import Nav from "./Nav";
 // @ts-ignore
 import { ThemeToggler } from "gatsby-plugin-dark-mode";

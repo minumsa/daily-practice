@@ -7,10 +7,10 @@ interface HomeProps {
   content?: React.ReactNode;
   title?: React.ReactNode;
   day?: string;
-  line?: React.ReactNode;
-  prev?: React.ReactNode;
-  next?: React.ReactNode;
-  middle?: React.ReactNode;
+  footerLineMobile?: React.ReactNode;
+  arrowLeft?: React.ReactNode;
+  createDate?: React.ReactNode;
+  arrowRight?: React.ReactNode;
 }
 
 const Home = ({ content, title, ...props }: HomeProps) => {

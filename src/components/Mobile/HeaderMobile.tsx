@@ -1,14 +1,14 @@
 import Category from "../Nav/Category";
-import "./MobileHeader.css";
+import "./HeaderMobile.css";
 import { Link } from "gatsby";
 import React, { useState } from "react";
 
-interface MobileHeaderProps {
+interface HeaderMobileProps {
   darkmodeButton?: React.ReactNode;
   header?: string;
 }
 
-const Top = ({ darkmodeButton, header }: MobileHeaderProps) => {
+const Top = ({ darkmodeButton, header }: HeaderMobileProps) => {
   const [showCategory, setShowCategory] = useState(false);
 
   return (

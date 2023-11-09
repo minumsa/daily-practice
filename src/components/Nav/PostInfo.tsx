@@ -2,17 +2,17 @@ import "./PostInfo.css";
 import React from "react";
 
 interface postInfo {
-  date?: React.ReactNode;
-  prev?: React.ReactNode;
-  next?: React.ReactNode;
+  createDate?: React.ReactNode;
+  arrowLeft?: React.ReactNode;
+  arrowRight?: React.ReactNode;
 }
 
-const FooterDesktop = ({ date, prev, next }: postInfo) => {
+const FooterDesktop = ({ createDate, arrowLeft, arrowRight }: postInfo) => {
   return (
     <>
-      {prev}
-      <div className="date-created">작성일: {date}</div>
-      {next}
+      {arrowLeft}
+      <div className="date-created">작성일: {createDate}</div>
+      {arrowRight}
     </>
   );
 };

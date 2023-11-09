@@ -99,7 +99,7 @@ const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
         background-color: ${backgroundColor};
       }
 
-      .mobile-post-date {
+      .create-date-mobile {
         color: ${invertedColor};
       }
 

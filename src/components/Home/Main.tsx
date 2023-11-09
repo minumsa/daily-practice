@@ -1,4 +1,4 @@
-import MobileFooter from "../Mobile/MobileFooter";
+import FooterMobile from "../Mobile/FooterMobile";
 import "./Main.css";
 import DivisionMarker from "./Main/DivisionMarker";
 import React from "react";
@@ -6,10 +6,10 @@ import React from "react";
 interface MainProps {
   content?: React.ReactNode;
   day?: string;
-  line?: React.ReactNode;
-  prev?: React.ReactNode;
-  next?: React.ReactNode;
-  middle?: React.ReactNode;
+  footerLineMobile?: React.ReactNode;
+  arrowLeft?: React.ReactNode;
+  createDate?: React.ReactNode;
+  arrowRight?: React.ReactNode;
 }
 
 const Main = ({ content, ...props }: MainProps) => {
@@ -18,7 +18,7 @@ const Main = ({ content, ...props }: MainProps) => {
       <DivisionMarker />
       <div className="content-container">{content}</div>
       <div className="footer-mobile-container">
-        <MobileFooter {...props} />
+        <FooterMobile {...props} />
       </div>
       <DivisionMarker />
     </div>
