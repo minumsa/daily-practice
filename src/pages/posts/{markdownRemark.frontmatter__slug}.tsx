@@ -9,7 +9,7 @@ import { Link, graphql } from "gatsby";
 import * as React from "react";
 import "./{markdownRemark.frontmatter__slug}.css";
 import { siteTitle } from "../../lib/data";
-import DOMPurify from "dompurify";
+import DOMPurify from "isomorphic-dompurify";
 
 interface Post {
   node: {
