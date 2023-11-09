@@ -82,6 +82,7 @@ a {
   .total-post {
     display: flex;
     justify-content: center;
+    margin-bottom: 5px;
   }
 
   .post-count {

@@ -16,6 +16,7 @@ const Page = ({ data }: PageProps<Queries.AllPagesQuery>) => {
 
   // filteredData를 page를 기준으로 오름차순 정렬
   const sortedDate = [...newData].sort((a, b) => b.page - a.page);
+
   const dataList = sortedDate.map(data => (
     <Link to={`/posts${data.slug}`} key={data.id}>
       <div className="list-text">
@@ -40,8 +41,7 @@ const Page = ({ data }: PageProps<Queries.AllPagesQuery>) => {
           content={
             <div className="list-container">
               <div className="total-post">
-                총 <span className="post-count">{data.allMarkdownRemark.totalCount}개</span>의 글이
-                있습니다.
+                총 <span className="post-count">{newData.length}개</span>의 글이 있습니다.
               </div>
               <div className="list-text-container">{dataList}</div>
             </div>
