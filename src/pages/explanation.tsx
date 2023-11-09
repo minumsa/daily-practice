@@ -11,7 +11,7 @@ const Page: FC = () => {
         title={"일상연습"}
         ogTitle={"일러두기 — 일상연습"}
         ogType={"website"}
-        ogUrl={"https://14461.gatsbyjs.io/explanation/"}
+        ogURL={"https://14461.gatsbyjs.io/explanation/"}
       />
       <Layout footer={"일러두기"}>
         <Home content={<Explanation />} />

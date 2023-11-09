@@ -11,7 +11,7 @@ const ConnectPage: FC = () => {
         title={"일상연습"}
         ogTitle={"연결 — 일상연습"}
         ogType={"website"}
-        ogUrl={"https://14461.gatsbyjs.io/connect/"}
+        ogURL={"https://14461.gatsbyjs.io/connect/"}
       />
       <Layout footer={"연결"}>
         <Home content={<Contact />} />

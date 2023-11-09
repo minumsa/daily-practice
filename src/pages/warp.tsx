@@ -40,7 +40,7 @@ const Page = ({ data, page, info }: WarpPageProps) => {
         title={`일상연습`}
         ogTitle={`워프 — 일상연습`}
         ogType={"website"}
-        ogUrl={"https://14461.gatsbyjs.io/warp/"}
+        ogURL={"https://14461.gatsbyjs.io/warp/"}
       />
       <Layout page={page} footer={info}>
         <Home content={<Warp />} />

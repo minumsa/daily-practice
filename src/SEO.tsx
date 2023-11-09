@@ -5,11 +5,11 @@ interface SEOProps {
   title?: string;
   ogTitle?: string;
   ogType?: string;
-  ogUrl?: string;
+  ogURL?: string;
   ogText?: string;
 }
 
-const SEO = ({ title, ogTitle, ogType, ogUrl, ogText }: SEOProps) => {
+const SEO = ({ title, ogTitle, ogType, ogURL, ogText }: SEOProps) => {
   return (
     <Helmet
       title={title}
@@ -28,7 +28,7 @@ const SEO = ({ title, ogTitle, ogType, ogUrl, ogText }: SEOProps) => {
         },
         {
           property: `og:url`,
-          content: ogUrl,
+          content: ogURL,
         },
         {
           property: `og:image`,

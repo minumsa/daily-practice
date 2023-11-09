@@ -55,25 +55,29 @@ export default function BlogPostTemplate({ data }: BlogPostTemplateProps) {
       : sortedDataAscending[currentDataIndex + 1].node;
 
   // 이전 포스트와 다음 포스트를 보여주는 컴포넌트를 생성
-  const ArrowLeft = prevData ? (
-    <Link to={"/posts" + prevData.frontmatter.slug}>
-      <PrevButton />
-    </Link>
-  ) : (
-    <div onClick={() => alert("첫 번째 게시물입니다.")}>
-      <PrevButton />
-    </div>
-  );
+  const ArrowLeft = () => {
+    return prevData ? (
+      <Link to={"/posts" + prevData.frontmatter.slug}>
+        <PrevButton />
+      </Link>
+    ) : (
+      <div onClick={() => alert("첫 번째 게시물입니다.")}>
+        <PrevButton />
+      </div>
+    );
+  };
 
-  const ArrowRight = nextData ? (
-    <Link to={"/posts" + nextData.frontmatter.slug}>
-      <NextButton />
-    </Link>
-  ) : (
-    <div onClick={() => alert("마지막 게시물입니다.")}>
-      <NextButton />
-    </div>
-  );
+  const ArrowRight = () => {
+    return nextData ? (
+      <Link to={"/posts" + nextData.frontmatter.slug}>
+        <NextButton />
+      </Link>
+    ) : (
+      <div onClick={() => alert("마지막 게시물입니다.")}>
+        <NextButton />
+      </div>
+    );
+  };
 
   return (
     <>
@@ -81,7 +85,7 @@ export default function BlogPostTemplate({ data }: BlogPostTemplateProps) {
         title={`${frontmatter.title} — 일상연습`}
         ogTitle={`${frontmatter.title} — 일상연습`}
         ogType={"article"}
-        ogUrl={"https://14461.gatsbyjs.io/posts" + frontmatter.slug}
+        ogURL={"https://14461.gatsbyjs.io/posts" + frontmatter.slug}
         ogText={frontmatter.description}
       />
       <Layout
@@ -89,8 +93,8 @@ export default function BlogPostTemplate({ data }: BlogPostTemplateProps) {
         footer={
           <FooterDesktop
             createDate={frontmatter.date}
-            arrowLeft={ArrowLeft}
-            arrowRight={ArrowRight}
+            arrowLeft={<ArrowLeft />}
+            arrowRight={<ArrowRight />}
           />
         }
       >
@@ -102,9 +106,9 @@ export default function BlogPostTemplate({ data }: BlogPostTemplateProps) {
               <div className="footer-line"></div>
             </div>
           }
-          arrowLeft={ArrowLeft}
-          createDate={<div className="create-date-mobile">작성일: {frontmatter.date}</div>}
-          arrowRight={ArrowRight}
+          arrowLeftMobile={<ArrowLeft />}
+          createDateMobile={<div className="create-date-mobile">작성일: {frontmatter.date}</div>}
+          arrowRightMobile={<ArrowRight />}
         />
       </Layout>
     </>

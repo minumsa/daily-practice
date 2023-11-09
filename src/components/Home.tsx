@@ -6,11 +6,10 @@ import React from "react";
 interface HomeProps {
   content?: React.ReactNode;
   title?: React.ReactNode;
-  day?: string;
   footerLineMobile?: React.ReactNode;
-  arrowLeft?: React.ReactNode;
-  createDate?: React.ReactNode;
-  arrowRight?: React.ReactNode;
+  arrowLeftMobile?: React.ReactNode;
+  createDateMobile?: React.ReactNode;
+  arrowRightMobile?: React.ReactNode;
 }
 
 const Home = ({ content, title, ...props }: HomeProps) => {

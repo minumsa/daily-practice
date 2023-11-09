@@ -3,25 +3,25 @@ import React from "react";
 
 interface FooterMobileProps {
   footerLineMobile?: React.ReactNode;
-  arrowLeft?: React.ReactNode;
-  createDate?: React.ReactNode;
-  arrowRight?: React.ReactNode;
+  arrowLeftMobile?: React.ReactNode;
+  createDateMobile?: React.ReactNode;
+  arrowRightMobile?: React.ReactNode;
 }
 
 const FooterMobile = ({
   footerLineMobile,
-  arrowLeft,
-  arrowRight,
-  createDate,
+  arrowLeftMobile,
+  arrowRightMobile,
+  createDateMobile,
 }: FooterMobileProps) => {
   return (
     <div className="footer-mobile-container">
       {footerLineMobile}
       <div className="mobile-page-container">
         <div className="mobile-page">
-          <div>{arrowLeft}</div>
-          <div>{createDate}</div>
-          <div>{arrowRight}</div>
+          <div>{arrowLeftMobile}</div>
+          <div>{createDateMobile}</div>
+          <div>{arrowRightMobile}</div>
         </div>
       </div>
     </div>

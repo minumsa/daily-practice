@@ -5,11 +5,10 @@ import React from "react";
 
 interface MainProps {
   content?: React.ReactNode;
-  day?: string;
   footerLineMobile?: React.ReactNode;
-  arrowLeft?: React.ReactNode;
-  createDate?: React.ReactNode;
-  arrowRight?: React.ReactNode;
+  arrowLeftMobile?: React.ReactNode;
+  createDateMobile?: React.ReactNode;
+  arrowRightMobile?: React.ReactNode;
 }
 
 const Main = ({ content, ...props }: MainProps) => {
