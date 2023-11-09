@@ -5,6 +5,7 @@ import Layout from "../components/Layout";
 import { PageProps, graphql } from "gatsby";
 import React, { useEffect } from "react";
 import { getRandomPage } from "../lib/modules";
+import { siteTitle } from "../lib/data";
 
 interface WarpPageProps extends PageProps<Queries.AllPagesQuery> {
   page: string;
@@ -37,8 +38,7 @@ const Page = ({ data, page, info }: WarpPageProps) => {
   return (
     <>
       <SEO
-        title={`일상연습`}
-        ogTitle={`워프 — 일상연습`}
+        ogTitle={`워프 — ${siteTitle}`}
         ogType={"website"}
         ogURL={"https://14461.gatsbyjs.io/warp/"}
       />

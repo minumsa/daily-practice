@@ -4,6 +4,7 @@ import Layout from "../components/Layout";
 import "./index.css";
 import { graphql, Link, PageProps } from "gatsby";
 import React from "react";
+import { siteTitle } from "../lib/data";
 
 const Page = ({ data }: PageProps<Queries.AllPagesQuery>) => {
   const posts = data.allMarkdownRemark.edges.map(({ node }) => ({
@@ -18,8 +19,7 @@ const Page = ({ data }: PageProps<Queries.AllPagesQuery>) => {
   return (
     <>
       <SEO
-        title={"일상연습"}
-        ogTitle={"소개 — 일상연습"}
+        ogTitle={`소개 — ${siteTitle}`}
         ogType={"website"}
         ogURL={"https://14461.gatsbyjs.io/"}
         ogText={

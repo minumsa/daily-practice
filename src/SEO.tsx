@@ -1,22 +1,22 @@
 import React from "react";
 import { Helmet } from "react-helmet";
+import { siteTitle } from "./lib/data";
 
 interface SEOProps {
-  title?: string;
   ogTitle?: string;
   ogType?: string;
   ogURL?: string;
   ogText?: string;
 }
 
-const SEO = ({ title, ogTitle, ogType, ogURL, ogText }: SEOProps) => {
+const SEO = ({ ogTitle, ogType, ogURL, ogText }: SEOProps) => {
   return (
     <Helmet
-      title={title}
+      title={siteTitle}
       meta={[
         {
           property: `og:site_name`,
-          content: "일상연습",
+          content: siteTitle,
         },
         {
           property: `og:title`,

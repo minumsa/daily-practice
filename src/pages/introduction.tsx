@@ -3,13 +3,13 @@ import Home from "../components/Home";
 import Introduction from "../components/Home/Main/Introduction";
 import Layout from "../components/Layout";
 import React, { FC } from "react";
+import { siteTitle } from "../lib/data";
 
 const Page: FC = () => {
   return (
     <>
       <SEO
-        title={"일상연습"}
-        ogTitle={"소개 — 일상연습"}
+        ogTitle={`소개 — ${siteTitle}`}
         ogType={"website"}
         ogURL={"https://14461.gatsbyjs.io/introduction"}
       />

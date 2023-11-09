@@ -3,11 +3,12 @@ import Home from "../../components/Home";
 import Layout from "../../components/Layout";
 import NextButton from "../../components/Nav/NextButton";
 import PageNumber from "../../components/Nav/PageNumber";
-import FooterDesktop from "../../components/Nav/PostInfo";
+import Footer from "../../components/Nav/PostInfo";
 import PrevButton from "../../components/Nav/PrevButton";
 import { Link, graphql } from "gatsby";
 import * as React from "react";
 import "./{markdownRemark.frontmatter__slug}.css";
+import { siteTitle } from "../../lib/data";
 
 interface Post {
   node: {
@@ -82,8 +83,7 @@ export default function BlogPostTemplate({ data }: BlogPostTemplateProps) {
   return (
     <>
       <SEO
-        title={`${frontmatter.title} — 일상연습`}
-        ogTitle={`${frontmatter.title} — 일상연습`}
+        ogTitle={`${frontmatter.title} — ${siteTitle}`}
         ogType={"article"}
         ogURL={"https://14461.gatsbyjs.io/posts" + frontmatter.slug}
         ogText={frontmatter.description}
@@ -91,7 +91,7 @@ export default function BlogPostTemplate({ data }: BlogPostTemplateProps) {
       <Layout
         page={<PageNumber page={frontmatter.page} />}
         footer={
-          <FooterDesktop
+          <Footer
             createDate={frontmatter.date}
             arrowLeft={<ArrowLeft />}
             arrowRight={<ArrowRight />}

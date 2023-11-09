@@ -7,14 +7,14 @@ interface postInfo {
   arrowRight?: React.ReactNode;
 }
 
-const FooterDesktop = ({ createDate, arrowLeft, arrowRight }: postInfo) => {
+const Footer = ({ createDate, arrowLeft, arrowRight }: postInfo) => {
   return (
     <>
       {arrowLeft}
-      <div className="date-created">작성일: {createDate}</div>
+      <div className="create-date">작성일: {createDate}</div>
       {arrowRight}
     </>
   );
 };
 
-export default FooterDesktop;
+export default Footer;
