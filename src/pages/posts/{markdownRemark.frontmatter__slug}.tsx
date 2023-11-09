@@ -1,15 +1,15 @@
 import SEO from "../../SEO";
 import Home from "../../components/Home";
 import Layout from "../../components/Layout";
-import NextButton from "../../components/Nav/NextButton";
-import PageNumber from "../../components/Nav/PageNumber";
-import FooterContent from "../../components/Nav/PostInfo";
-import PrevButton from "../../components/Nav/PrevButton";
+import NextButton from "../../components/Footer/NextButton";
+import PageNumber from "../../components/Footer/PageNumber";
+import FooterContent from "../../components/Footer/PostInfo";
+import PrevButton from "../../components/Footer/PrevButton";
 import { Link, graphql } from "gatsby";
 import * as React from "react";
 import "./{markdownRemark.frontmatter__slug}.css";
 import { siteTitle } from "../../lib/data";
-import * as DOMPurify from "dompurify";
+import DOMPurify from "dompurify";
 
 interface Post {
   node: {

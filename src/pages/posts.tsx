@@ -1,6 +1,6 @@
 import Home from "../components/Home";
 import Layout from "../components/Layout";
-import FooterContent from "../components/Nav/PostInfo";
+import FooterContent from "../components/Footer/PostInfo";
 import React, { FC } from "react";
 
 const Page: FC = () => {
