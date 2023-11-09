@@ -1,13 +1,13 @@
 const defaultColor = {
-  light: "#fff",
-  dark: "#1e1e1e",
-};
-
-const invertedColor = {
   light: "#1e1e1e",
   dark: "#bdc1c6",
   // dark: "#aaa",
   // dark: "#f4f4f4",
+};
+
+const invertedColor = {
+  light: "#fff",
+  dark: "#1e1e1e",
 };
 
 const backgroundColor = {
@@ -17,14 +17,14 @@ const backgroundColor = {
 
 export const lightTheme = {
   backgroundColor: backgroundColor.light,
-  defaultColor: defaultColor.light,
   invertedColor: invertedColor.light,
+  defaultColor: defaultColor.light,
 };
 
 export const darkTheme = {
   backgroundColor: backgroundColor.dark,
-  defaultColor: defaultColor.dark,
   invertedColor: invertedColor.dark,
+  defaultColor: defaultColor.dark,
 };
 
 const theme = {

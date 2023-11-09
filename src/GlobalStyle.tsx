@@ -2,94 +2,88 @@ import { createGlobalStyle, css } from "styled-components";
 
 interface ThemeType {
   backgroundColor: string;
-  defaultColor: string;
   invertedColor: string;
+  defaultColor: string;
 }
 
 const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
   ${({ theme }) => {
-    const { backgroundColor, defaultColor, invertedColor } = theme;
+    const { backgroundColor, invertedColor, defaultColor } = theme;
     return css`
-      body {
+      body,
+      header {
         background-color: ${backgroundColor};
       }
 
       body {
-        color: ${invertedColor};
+        color: ${defaultColor};
       }
 
       .marker {
-        background-color: ${invertedColor};
-      }
-
-      .list-text:hover {
-        border: 1px dashed ${invertedColor};
-        color: ${defaultColor};
-        background-color: ${invertedColor};
+        background-color: ${defaultColor};
       }
 
       .list-text,
       .list-button {
-        border: 1px solid ${invertedColor};
+        border: 1px solid ${defaultColor};
       }
 
-      .prev-button {
-        border-top: 1.5px solid ${invertedColor};
-        border-right: 1.5px solid ${invertedColor};
+      .list-text:hover {
+        color: ${invertedColor};
+        background-color: ${defaultColor};
       }
 
+      .prev-button,
       .next-button {
-        border-top: 1.5px solid ${invertedColor};
-        border-right: 1.5px solid ${invertedColor};
+        border-top: 1.5px solid ${defaultColor};
+        border-right: 1.5px solid ${defaultColor};
       }
 
       .post-line {
         display: inline-block;
         line-height: 160%;
-        border-top: 1.5px solid ${invertedColor};
+        border-top: 1.5px solid ${defaultColor};
       }
 
       .hamburger,
       .hamburger-mobile {
-        background-color: ${invertedColor};
-        box-shadow: 0 7px 0 ${invertedColor}, 0 14px 0 ${invertedColor};
+        background-color: ${defaultColor};
+        box-shadow: 0 7px 0 ${defaultColor}, 0 14px 0 ${defaultColor};
       }
 
       .category-container {
         background-color: ${backgroundColor};
-        border: 1px solid ${invertedColor};
+        border: 1px solid ${defaultColor};
       }
 
       p::selection,
       span::selection {
-        color: ${invertedColor};
-        background-color: ${invertedColor};
+        color: ${defaultColor};
+        background-color: ${defaultColor};
       }
 
       .underline {
-        text-decoration-color: ${invertedColor};
+        text-decoration-color: ${defaultColor};
       }
 
       .footer-line-mobile {
-        background-color: ${invertedColor};
+        background-color: ${defaultColor};
       }
 
       .prev-post,
       .next-post {
-        border-color: ${invertedColor};
-        background-color: ${defaultColor};
-      }
-      .prev-post-title,
-      .next-post-title {
-        text-decoration-color: ${invertedColor};
+        border-color: ${defaultColor};
+        background-color: ${invertedColor};
       }
 
-      header {
-        background-color: ${backgroundColor};
+      .prev-post-title,
+      .next-post-title {
+        text-decoration-color: ${defaultColor};
       }
 
       .highlighted-text {
-        background-color: ${invertedColor};
+        color: ${invertedColor};
+        background-color: ${defaultColor};
       }
     `;
   }}
