@@ -73,7 +73,7 @@ const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
         text-decoration-color: ${invertedColor};
       }
 
-      .footer-line {
+      .footer-line-mobile {
         background-color: ${invertedColor};
       }
 

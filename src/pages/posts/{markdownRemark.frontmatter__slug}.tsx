@@ -3,7 +3,7 @@ import Home from "../../components/Home";
 import Layout from "../../components/Layout";
 import NextButton from "../../components/Nav/NextButton";
 import PageNumber from "../../components/Nav/PageNumber";
-import Footer from "../../components/Nav/PostInfo";
+import FooterContent from "../../components/Nav/PostInfo";
 import PrevButton from "../../components/Nav/PrevButton";
 import { Link, graphql } from "gatsby";
 import * as React from "react";
@@ -90,10 +90,10 @@ export default function BlogPostTemplate({ data }: BlogPostTemplateProps) {
       />
       <Layout
         page={<PageNumber page={frontmatter.page} />}
-        footer={
-          <Footer
-            createDate={frontmatter.date}
+        footerContent={
+          <FooterContent
             arrowLeft={<ArrowLeft />}
+            createDate={frontmatter.date}
             arrowRight={<ArrowRight />}
           />
         }
@@ -102,8 +102,8 @@ export default function BlogPostTemplate({ data }: BlogPostTemplateProps) {
           content={<div className="content-text" dangerouslySetInnerHTML={{ __html: html }} />}
           title={frontmatter.title}
           footerLineMobile={
-            <div className="footer-line-container">
-              <div className="footer-line"></div>
+            <div className="footer-line-mobile-container">
+              <div className="footer-line-mobile"></div>
             </div>
           }
           arrowLeftMobile={<ArrowLeft />}

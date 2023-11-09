@@ -11,7 +11,7 @@ import styled, { ThemeProvider } from "styled-components";
 type Props = {
   children: React.ReactNode;
   page?: React.ReactNode;
-  footer?: React.ReactNode;
+  footerContent?: React.ReactNode;
 };
 
 interface ThemeProps {
@@ -19,7 +19,7 @@ interface ThemeProps {
   toggleTheme: (theme?: string) => void;
 }
 
-const Layout: React.FC<Props> = ({ children, page, footer }) => {
+const Layout: React.FC<Props> = ({ children, page, footerContent }) => {
   return (
     <ThemeToggler>
       {({ theme, toggleTheme }: ThemeProps) => {
@@ -27,7 +27,12 @@ const Layout: React.FC<Props> = ({ children, page, footer }) => {
           return null;
         }
         return (
-          <LayoutInternal page={page} footer={footer} theme={theme} toggleTheme={toggleTheme}>
+          <LayoutInternal
+            page={page}
+            footerContent={footerContent}
+            theme={theme}
+            toggleTheme={toggleTheme}
+          >
             {children}
           </LayoutInternal>
         );
@@ -39,7 +44,7 @@ const Layout: React.FC<Props> = ({ children, page, footer }) => {
 type LayoutInternalProps = {
   children: React.ReactNode;
   page?: React.ReactNode;
-  footer?: React.ReactNode;
+  footerContent?: React.ReactNode;
   theme: string | null;
   toggleTheme: (theme?: string) => void;
 };
@@ -47,7 +52,7 @@ type LayoutInternalProps = {
 const LayoutInternal: React.FC<LayoutInternalProps> = ({
   children,
   page,
-  footer,
+  footerContent,
   theme,
   toggleTheme,
 }) => {
@@ -90,7 +95,7 @@ const LayoutInternal: React.FC<LayoutInternalProps> = ({
         {children}
         <Nav
           page={page}
-          info={footer}
+          info={footerContent}
           dark={
             <div
               className="mode-button"

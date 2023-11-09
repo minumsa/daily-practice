@@ -7,7 +7,7 @@ interface postInfo {
   arrowRight?: React.ReactNode;
 }
 
-const Footer = ({ createDate, arrowLeft, arrowRight }: postInfo) => {
+const FooterContent = ({ createDate, arrowLeft, arrowRight }: postInfo) => {
   return (
     <>
       {arrowLeft}
@@ -17,4 +17,4 @@ const Footer = ({ createDate, arrowLeft, arrowRight }: postInfo) => {
   );
 };
 
-export default Footer;
+export default FooterContent;

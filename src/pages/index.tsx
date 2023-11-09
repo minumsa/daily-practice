@@ -26,7 +26,7 @@ const Page = ({ data }: PageProps<Queries.AllPagesQuery>) => {
           "이 사이트는 개인적인 글을 아카이빙하는 공간이다. 사이트 이름이 『일상연습』인 이유는 이곳에 주로 일기 형식의 에세이들을 올릴 계획이기 때문이다. 물질적으로 책에 가까운 사이트를 만들기 위해 노력했다."
         }
       />
-      <Layout footer={"마음에 드는 링크를 클릭해주세요"}>
+      <Layout footerContent={"마음에 드는 링크를 클릭해주세요"}>
         <Home
           content={
             <div className="list-container">
