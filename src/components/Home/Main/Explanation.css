@@ -7,7 +7,7 @@
 }
 
 .explanation {
-  width: 400px;
+  width: 100%;
   font-size: 1.15rem;
 }
 
@@ -16,8 +16,12 @@
 }
 
 @media (max-width: 550px) {
+  .explanation-container {
+    width: 100%;
+  }
+
   .explanation {
-    width: 80%;
+    width: 85%;
     font-size: 1.1rem;
   }
 }
