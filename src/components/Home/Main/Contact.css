@@ -13,9 +13,55 @@
   margin-top: 1.5rem;
 }
 
+.cotact-email {
+  cursor: pointer;
+  margin-top: 3px;
+}
+
+.copied-message {
+  /* Styles for the copied message */
+  font-size: 14px;
+  color: #fff;
+  /* margin-top: 5px; */
+  position: absolute;
+  right: 0;
+  top: 0;
+  white-space: nowrap; /* Prevent the message from wrapping */
+  /* animation: fadeInOut 100s ease-in-out; */
+  background-color: #000;
+  border-radius: 5px;
+  padding: 0 4px;
+  animation: fadeInOut 1.55s linear;
+}
+
+.copied-message:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 0;
+  height: 0;
+  border: 5px solid transparent;
+  border-right-color: #000;
+  border-left: 0;
+  margin-top: -5px;
+  margin-left: -5px;
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
 @media (max-width: 550px) {
   .contact-container {
-    font-size: 16px;
     font-size: 1.1rem;
   }
 }
