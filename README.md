@@ -1,28 +1,40 @@
-#### ✅ 프로젝트 사이트
+## ✍🏻 Daily Practice
 
-<a href="https://14461.gatsbyjs.io/">`홈페이지`로 이동</a>
+[일상연습](https://blog.divdivdiv.com)은 텍스트 중심의 블로그 사이트입니다.
 
-#### ✅ 프로젝트 소개
+## 🧚‍♂️ Overview
 
-`리액트`와 `타입스크립트`, `개츠비`의 여러 기술을 혼합해 포스트를 올릴 수 있는 블로그를 만들었습니다.
+- CSS flexbox로 전자책 형태의 레이아웃 구축
+- 메인 화면의 아이템 블록을 클릭하면 해당 글로 이동
+- 워프 카테고리 클릭 시 랜덤 글로 이동
+- 폴더에 마크다운 파일을 생성하면 새로운 글 업로드
+- 다크모드 기능
+- 모바일에서 스크롤 상태에 따라 헤더를 숨기거나 표시
 
-#### ✅ 구현 기능 목록
+## ⚙️ How to use
 
-1. `업로드`: 코드 에디터에서 마크업을 통해 포스트 추가
-2. `메인 페이지`: 포스트 제목을 기준으로 최신순으로 열거
-3. `카테고리`: 일러두기, 소개, 연결 페이지로 이동
-4. `워프`: 클릭 시 랜덤 포스트로 이동
-5. `다크 모드`: 사용자 설정에 따라 다크/라이트 테마 설정
+사용한 `npm` 버전은 9.2.0이며, `Node.js` 버전은 v19.4.0입니다.
 
-#### ✅ 사용 언어 및 툴
+```bash
+npm install
+npm run dev
+```
 
-1. `Front-end`: <img alt="HTML5" src="https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white"/> <img alt="CSS3" src="https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white"/> <img alt="JavaScript" src="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E"/> <img alt="React" src="https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB"/>
-2. `Back-end`: <img alt="Node.js" src="https://img.shields.io/badge/Node.js-339933.svg?style=for-the-badge&logo=Node.js&logoColor=white"/> <img alt="Gatsby" src="https://img.shields.io/badge/Gatsby-%23663399.svg?style=for-the-badge&logo=gatsby&logoColor=white"/>
-3. `IDE`: <img alt="VisualStudioCode" src="https://img.shields.io/badge/VisualStudioCode-007ACC.svg?style=for-the-badge&logo=VisualStudioCode&logoColor=white"/>
+content 폴더에 새로운 마크다운 파일을 생성하고 커밋하면 새로운 글이 업로드됩니다.
+<img width="959" alt="blog" src="https://github.com/minumsa/gatsby-blog/assets/83910706/e362dc61-f443-493a-9778-8d3edba1e128">
 
-#### ✅ 프로필
 
-1. `희망 직종`: 웹 개발, 프론트엔드
-2. `깃허브`: https://github.com/minumsa
-3. `블로그`: https://icycyi.tistory.com
-4. `이메일`: carver1014@kakao.com
+## ⚒️ Tech stack
+
+- HTML/CSS
+- TypeScript
+- React
+- GatsbyJS
+
+## 🗄️ Reference
+
+- [isomorphic-dompurify](https://www.npmjs.com/package/isomorphic-dompurify)
+
+## 👨‍💻 Developer
+
+- [carver](https://github.com/minumsa)
