@@ -1,18 +1,23 @@
 const defaultColor = {
-  light: "#1e1e1e",
-  dark: "#bdc1c6",
+  // light: "#1e1e1e",
+  light: "#2a2a2a",
+  dark: "#bfbfbf",
   // dark: "#aaa",
   // dark: "#f4f4f4",
 };
 
 const invertedColor = {
-  light: "#fff",
-  dark: "#1e1e1e",
+  // light: "#fff",
+  light: "#dcdcdc",
+  // dark: "#1e1e1e",
+  dark: "#2a2a2a",
 };
 
 const backgroundColor = {
-  light: "#f4f4f4",
-  dark: "#1e1e1e",
+  // light: "#f4f4f4",
+  light: "#dcdcdc",
+  // dark: "#1e1e1e",
+  dark: "#2a2a2a",
 };
 
 export const lightTheme = {
