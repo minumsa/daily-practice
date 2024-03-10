@@ -87,18 +87,22 @@ const LayoutInternal: React.FC<LayoutInternalProps> = ({
     <ThemeProvider theme={isDarkMode ? darkTheme : lightTheme}>
       <GlobalStyle />
       <div className="layout-container">
+        {/* 모바일 Header */}
         <HeaderMobile
           header={currentPosition > 50 ? showHeader : "visible"}
-          darkmodeButton={
-            <div
-              className="mode-button"
-              onClick={() => {
-                toggleTheme(theme === "dark" ? "light" : "dark");
-              }}
-            >
-              {darkModeToggleButton}
-            </div>
-          }
+          theme={theme}
+          toggleTheme={toggleTheme}
+          darkModeToggleButton={darkModeToggleButton}
+          // darkmodeButton={
+          //   <div
+          //     className="mode-button"
+          //     onClick={() => {
+          //       toggleTheme(theme === "dark" ? "light" : "dark");
+          //     }}
+          //   >
+          //     {darkModeToggleButton}
+          //   </div>
+          // }
         />
         <div className="home-container">
           <div className="body-container">
@@ -106,9 +110,9 @@ const LayoutInternal: React.FC<LayoutInternalProps> = ({
               <DivisionMarker />
               <div className="content-container">{children}</div>
               {/* 모바일 Footer */}
-              <div className="footer-mobile-container">
+              {/* <div className="footer-mobile-container">
                 <FooterMobile footerContent={footerContent} />
-              </div>
+              </div> */}
               <DivisionMarker />
             </div>
             <Title title={title} />

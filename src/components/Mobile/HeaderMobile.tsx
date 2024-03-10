@@ -4,11 +4,13 @@ import { Link } from "gatsby";
 import React, { useState } from "react";
 
 interface HeaderMobileProps {
-  darkmodeButton?: React.ReactNode;
-  header?: string;
+  header: string;
+  theme: any;
+  toggleTheme: any;
+  darkModeToggleButton: any;
 }
 
-const HeaderMobile = ({ darkmodeButton, header }: HeaderMobileProps) => {
+const HeaderMobile = ({ header, theme, toggleTheme, darkModeToggleButton }: HeaderMobileProps) => {
   const [showCategory, setShowCategory] = useState(false);
 
   return (
@@ -25,7 +27,16 @@ const HeaderMobile = ({ darkmodeButton, header }: HeaderMobileProps) => {
         <div className="header-title">
           <Link to="/">일상연습</Link>
         </div>
-        <div className="header-darkmode">{darkmodeButton}</div>
+        <div className="header-darkmode">
+          <div
+            className="mode-button"
+            onClick={() => {
+              toggleTheme(theme === "dark" ? "light" : "dark");
+            }}
+          >
+            {darkModeToggleButton}
+          </div>
+        </div>
       </div>
     </header>
   );

@@ -7,12 +7,18 @@
   word-break: keep-all;
 }
 
+.footer-mobile-container {
+  display: none;
+}
+
 @media (max-width: 550px) {
   .content-text {
-    width: 94%;
+    width: 100%;
     font-weight: 400;
     font-size: 1.1rem;
     line-height: 210%;
+    padding: 0 20px;
+    box-sizing: border-box;
   }
 
   .footer-line-mobile {
@@ -22,5 +28,13 @@
 
   .create-date-mobile {
     font-size: 1.1rem;
+  }
+
+  .footer-mobile-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 15px;
+    box-sizing: border-box;
   }
 }

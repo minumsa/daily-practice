@@ -36,12 +36,12 @@ const FooterNav = ({ createDate, prevItemSlug, nextItemSlug }: FooterNavProps) =
   };
 
   return (
-    <>
+    <div className="footer-container">
       {/* 데스크톱 */}
       <ArrowLeft />
       <div className="create-date">작성일: {createDate}</div>
       <ArrowRight />
-    </>
+    </div>
   );
 };
 

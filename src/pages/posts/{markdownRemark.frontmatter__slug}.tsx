@@ -10,6 +10,7 @@ import * as React from "react";
 import "./{markdownRemark.frontmatter__slug}.css";
 import { siteTitle } from "../../lib/data";
 import DOMPurify from "isomorphic-dompurify";
+import FooterMobile from "../../components/Mobile/FooterMobile";
 
 interface Post {
   node: {
@@ -80,19 +81,24 @@ export default function BlogPostTemplate({ data }: BlogPostTemplateProps) {
         }
       >
         <div className="content-text" dangerouslySetInnerHTML={{ __html: sanitizer(html) }} />
-        {/* title={frontmatter.title}
-          footerLineMobile={
-             <div className="footer-line-mobile-container">
-               <div className="footer-line-mobile"></div>
-             </div>
-           }
-           arrowLeftMobile={<ArrowLeft />}
-           createDateMobile={<div className="create-date-mobile">작성일: {frontmatter.date}</div>}
-           arrowRightMobile={<ArrowRight />} */}
+        <FooterMobile
+          createDate={frontmatter.date}
+          prevItemSlug={prevItemSlug}
+          nextItemSlug={nextItemSlug}
+        />
       </Layout>
     </>
   );
 }
+
+// <div className="footer-line-mobile-container">
+// <div className="footer-line-mobile"></div>
+// </div>
+// <div className="footer-mobile-container">
+// <div className="mobile-page-container">
+//   <div className="mobile-page">{footerContent}</div>
+// </div>
+// </div>
 
 export const pageQuery = graphql`
   query ($id: String!) {
