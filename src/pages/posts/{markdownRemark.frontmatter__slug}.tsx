@@ -91,15 +91,6 @@ export default function BlogPostTemplate({ data }: BlogPostTemplateProps) {
   );
 }
 
-// <div className="footer-line-mobile-container">
-// <div className="footer-line-mobile"></div>
-// </div>
-// <div className="footer-mobile-container">
-// <div className="mobile-page-container">
-//   <div className="mobile-page">{footerContent}</div>
-// </div>
-// </div>
-
 export const pageQuery = graphql`
   query ($id: String!) {
     markdownRemark(id: { eq: $id }) {

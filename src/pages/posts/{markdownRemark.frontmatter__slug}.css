@@ -21,11 +21,6 @@
     box-sizing: border-box;
   }
 
-  .footer-line-mobile {
-    width: 95%;
-    height: 1px;
-  }
-
   .create-date-mobile {
     font-size: 1.1rem;
   }

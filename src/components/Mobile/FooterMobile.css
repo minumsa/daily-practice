@@ -1,14 +1,21 @@
 @media (max-width: 550px) {
+  .footer-line-mobile-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 15px;
+  }
+
   .footer-mobile-container {
     display: flex;
     flex-direction: column;
   }
 
   .footer-mobile-line-container {
-    padding: 20px 0 0 0;
+    padding: 15px 0 0 0;
   }
 
-  .footer-mobile-line {
+  .footer-line-mobile {
     width: 100%;
     height: 1px;
     background-color: #000;

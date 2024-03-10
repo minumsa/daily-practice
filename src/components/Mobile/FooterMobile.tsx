@@ -36,8 +36,8 @@ const FooterMobile = ({ createDate, prevItemSlug, nextItemSlug }: FooterMobilePr
   };
   return (
     <div className="footer-mobile-container">
-      <div className="footer-mobile-line-container">
-        <div className="footer-mobile-line"></div>
+      <div className="footer-line-mobile-container">
+        <div className="footer-line-mobile"></div>
       </div>
       <div className="footer-content-container">
         <ArrowLeft />
