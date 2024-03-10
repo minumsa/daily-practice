@@ -3,7 +3,7 @@ import Home from "../../components/Home";
 import Layout from "../../components/Layout";
 import NextButton from "../../components/Footer/NextButton";
 import PageNumber from "../../components/Footer/PageNumber";
-import FooterContent from "../../components/Footer/PostInfo";
+import FooterNav from "../../components/Footer/FooterNav";
 import PrevButton from "../../components/Footer/PrevButton";
 import { Link, graphql } from "gatsby";
 import * as React from "react";
@@ -58,30 +58,8 @@ export default function BlogPostTemplate({ data }: BlogPostTemplateProps) {
       ? null
       : sortedDataAscending[currentDataIndex + 1].node;
 
-  // 이전 포스트와 다음 포스트를 보여주는 컴포넌트를 생성
-  const ArrowLeft = () => {
-    return prevData ? (
-      <Link to={"/posts" + prevData.frontmatter.slug}>
-        <PrevButton />
-      </Link>
-    ) : (
-      <div onClick={() => alert("첫 번째 게시물입니다.")}>
-        <PrevButton />
-      </div>
-    );
-  };
-
-  const ArrowRight = () => {
-    return nextData ? (
-      <Link to={"/posts" + nextData.frontmatter.slug}>
-        <NextButton />
-      </Link>
-    ) : (
-      <div onClick={() => alert("마지막 게시물입니다.")}>
-        <NextButton />
-      </div>
-    );
-  };
+  const prevItemSlug = prevData?.frontmatter.slug;
+  const nextItemSlug = nextData?.frontmatter.slug;
 
   return (
     <>
@@ -92,29 +70,25 @@ export default function BlogPostTemplate({ data }: BlogPostTemplateProps) {
         ogText={frontmatter.description}
       />
       <Layout
-        pageNumber={<PageNumber pageNumber={frontmatter.page} />}
-        footerText={
-          <FooterContent
-            arrowLeft={<ArrowLeft />}
+        pageNumber={frontmatter.page}
+        footerContent={
+          <FooterNav
             createDate={frontmatter.date}
-            arrowRight={<ArrowRight />}
+            prevItemSlug={prevItemSlug}
+            nextItemSlug={nextItemSlug}
           />
         }
       >
-        <Home
-          content={
-            <div className="content-text" dangerouslySetInnerHTML={{ __html: sanitizer(html) }} />
-          }
-          title={frontmatter.title}
+        <div className="content-text" dangerouslySetInnerHTML={{ __html: sanitizer(html) }} />
+        {/* title={frontmatter.title}
           footerLineMobile={
-            <div className="footer-line-mobile-container">
-              <div className="footer-line-mobile"></div>
-            </div>
-          }
-          arrowLeftMobile={<ArrowLeft />}
-          createDateMobile={<div className="create-date-mobile">작성일: {frontmatter.date}</div>}
-          arrowRightMobile={<ArrowRight />}
-        />
+             <div className="footer-line-mobile-container">
+               <div className="footer-line-mobile"></div>
+             </div>
+           }
+           arrowLeftMobile={<ArrowLeft />}
+           createDateMobile={<div className="create-date-mobile">작성일: {frontmatter.date}</div>}
+           arrowRightMobile={<ArrowRight />} */}
       </Layout>
     </>
   );

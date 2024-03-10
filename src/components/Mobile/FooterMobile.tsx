@@ -2,29 +2,21 @@ import "./FooterMobile.css";
 import React from "react";
 
 interface FooterMobileProps {
-  footerLineMobile?: React.ReactNode;
-  arrowLeftMobile?: React.ReactNode;
-  createDateMobile?: React.ReactNode;
-  arrowRightMobile?: React.ReactNode;
+  footerContent: React.ReactNode;
 }
 
-const FooterMobile = ({
-  footerLineMobile,
-  arrowLeftMobile,
-  arrowRightMobile,
-  createDateMobile,
-}: FooterMobileProps) => {
+const FooterMobile = ({ footerContent }: FooterMobileProps) => {
   return (
-    <div className="footer-mobile-container">
-      {footerLineMobile}
-      <div className="mobile-page-container">
-        <div className="mobile-page">
-          <div>{arrowLeftMobile}</div>
-          <div>{createDateMobile}</div>
-          <div>{arrowRightMobile}</div>
+    <>
+      <div className="footer-line-mobile-container">
+        <div className="footer-line-mobile"></div>
+      </div>
+      <div className="footer-mobile-container">
+        <div className="mobile-page-container">
+          <div className="mobile-page">{footerContent}</div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

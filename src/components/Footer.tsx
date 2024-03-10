@@ -11,15 +11,17 @@ interface NavProps {
 
 const Footer = ({ pageNumber, footerContent, darkModeButton }: NavProps) => {
   return (
-    <div className="nav-container">
-      <div className="middle">
-        <Hamburger />
-        <div className="footer-content-container">{footerContent}</div>
-        <DarkMode darkModeButton={darkModeButton} />
+    <>
+      <div className="nav-container">
+        <div className="middle">
+          <Hamburger />
+          <div className="footer-content-container">{footerContent}</div>
+          <DarkMode darkModeButton={darkModeButton} />
+        </div>
+        <div className="blank-space" />
+        <div className="page-number">{pageNumber && `(${pageNumber})`}</div>
       </div>
-      <div className="blank-space" />
-      <div className="page-number">{pageNumber}</div>
-    </div>
+    </>
   );
 };
 

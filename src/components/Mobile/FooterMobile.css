@@ -10,6 +10,11 @@
     user-select: none;
   }
 
+  .footer-line-mobile {
+    width: 95%;
+    height: 1px;
+  }
+
   .mobile-page-container {
     display: flex;
     justify-content: center;

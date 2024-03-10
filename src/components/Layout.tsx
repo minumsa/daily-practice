@@ -7,7 +7,6 @@ import Footer from "./Footer";
 import { ThemeToggler } from "gatsby-plugin-dark-mode";
 import React, { useEffect, useState } from "react";
 import styled, { ThemeProvider } from "styled-components";
-import Main from "./Home/Main";
 import Title from "./Home/Title";
 import DivisionMarker from "./Home/Main/DivisionMarker";
 import FooterMobile from "./Mobile/FooterMobile";
@@ -16,7 +15,7 @@ type Props = {
   children: React.ReactNode;
   title?: string;
   pageNumber?: React.ReactNode;
-  footerText?: React.ReactNode;
+  footerContent?: React.ReactNode;
 };
 
 interface ThemeProps {
@@ -24,7 +23,7 @@ interface ThemeProps {
   toggleTheme: (theme?: string) => void;
 }
 
-const Layout: React.FC<Props> = ({ children, title, pageNumber, footerText }) => {
+const Layout: React.FC<Props> = ({ children, title, pageNumber, footerContent }) => {
   return (
     <ThemeToggler>
       {({ theme, toggleTheme }: ThemeProps) => {
@@ -35,7 +34,7 @@ const Layout: React.FC<Props> = ({ children, title, pageNumber, footerText }) =>
           <LayoutInternal
             title={title}
             pageNumber={pageNumber}
-            footerText={footerText}
+            footerContent={footerContent}
             theme={theme}
             toggleTheme={toggleTheme}
           >
@@ -51,7 +50,7 @@ type LayoutInternalProps = {
   children: React.ReactNode;
   title?: string;
   pageNumber?: React.ReactNode;
-  footerText?: React.ReactNode;
+  footerContent?: React.ReactNode;
   theme: string | null;
   toggleTheme: (theme?: string) => void;
 };
@@ -60,7 +59,7 @@ const LayoutInternal: React.FC<LayoutInternalProps> = ({
   children,
   title,
   pageNumber,
-  footerText,
+  footerContent,
   theme,
   toggleTheme,
 }) => {
@@ -106,19 +105,19 @@ const LayoutInternal: React.FC<LayoutInternalProps> = ({
             <div className="main-container">
               <DivisionMarker />
               <div className="content-container">{children}</div>
+              {/* 모바일 Footer */}
               <div className="footer-mobile-container">
-                {/* FIXME: 나중에 살리기 */}
-                {/* <FooterMobile {...props} /> */}
+                <FooterMobile footerContent={footerContent} />
               </div>
               <DivisionMarker />
             </div>
-            {/* FIXME: 나중에 살리기 */}
             <Title title={title} />
           </div>
         </div>
+        {/* 데스크톱 Footer */}
         <Footer
           pageNumber={pageNumber}
-          footerContent={footerText}
+          footerContent={footerContent}
           darkModeButton={
             <div
               className="mode-button"

@@ -1,5 +1,4 @@
 import SEO from "../SEO";
-import Home from "../components/Home";
 import Explanation from "../components/Home/Main/Explanation";
 import Layout from "../components/Layout";
 import React, { FC } from "react";
@@ -13,8 +12,8 @@ const Page: FC = () => {
         ogType={"website"}
         ogURL={"https://14461.gatsbyjs.io/explanation/"}
       />
-      <Layout footerText={"일러두기"}>
-        <Home content={<Explanation />} />
+      <Layout footerContent={"일러두기"}>
+        <Explanation />
       </Layout>
     </>
   );
