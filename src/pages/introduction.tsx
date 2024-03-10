@@ -7,16 +7,14 @@ import { siteTitle } from "../lib/data";
 
 const Page: FC = () => {
   return (
-    <>
+    <Layout footerContent={"소개"}>
       <SEO
         ogTitle={`소개 — ${siteTitle}`}
         ogType={"website"}
         ogURL={"https://14461.gatsbyjs.io/introduction"}
       />
-      <Layout footerContent={"소개"}>
-        <Home content={<Introduction />} title={null} />
-      </Layout>
-    </>
+      <Home content={<Introduction />} />
+    </Layout>
   );
 };
 

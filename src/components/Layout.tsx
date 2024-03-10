@@ -57,12 +57,12 @@ const LayoutInternal: React.FC<LayoutInternalProps> = ({
   toggleTheme,
 }) => {
   const [currentPosition, setCurrentPosition] = useState(0);
-  const [isScrollingUp, setIsScrollingUp] = useState(true);
+  const [isScrollUp, setIsScrollUp] = useState(true);
 
   useEffect(() => {
     const handleScroll = () => {
       const position = window.pageYOffset;
-      setIsScrollingUp(currentPosition > position);
+      setIsScrollUp(currentPosition > position);
       setCurrentPosition(position);
     };
 
@@ -72,8 +72,9 @@ const LayoutInternal: React.FC<LayoutInternalProps> = ({
     };
   }, [currentPosition]);
 
-  const showHeader = isScrollingUp ? "visible" : "hidden";
+  const showHeader = isScrollUp ? "visible" : "hidden";
   const isDarkMode = theme === "dark";
+  const darkModeToggleButton = isDarkMode ? "밤" : "낮";
 
   return (
     <ThemeProvider theme={isDarkMode ? darkTheme : lightTheme}>
@@ -88,7 +89,7 @@ const LayoutInternal: React.FC<LayoutInternalProps> = ({
                 toggleTheme(theme === "dark" ? "light" : "dark");
               }}
             >
-              {isDarkMode ? "밤" : "낮"}
+              {darkModeToggleButton}
             </div>
           }
         />
@@ -103,7 +104,7 @@ const LayoutInternal: React.FC<LayoutInternalProps> = ({
                 toggleTheme(theme === "dark" ? "light" : "dark");
               }}
             >
-              {isDarkMode ? "밤" : "낮"}
+              {darkModeToggleButton}
             </div>
           }
         />
