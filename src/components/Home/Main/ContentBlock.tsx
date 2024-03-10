@@ -18,8 +18,8 @@ interface ContentBlockProps {
 export const ContentBlock = ({ totalDataCount, sortedData }: ContentBlockProps) => {
   const contentList = sortedData.map((item: BlockItem) => (
     <Link to={`/posts${item.slug}`} key={item.id}>
-      <div className="list-text">
-        <span style={{ display: "inline-block" }}>{item.title}</span>
+      <div className="list-text-wrapper">
+        <span className="list-title">{item.title}</span>
         <sup className="list-sup">{item.page}</sup>
       </div>
     </Link>

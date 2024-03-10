@@ -35,6 +35,13 @@
   user-select: none;
 }
 
+.dark-mode {
+  width: 22px;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+}
+
 @media (max-width: 1100px) {
   .nav-container {
     width: 890px;
@@ -84,5 +91,9 @@
     align-items: center;
     justify-content: space-between;
     width: 97%;
+  }
+
+  .dark-mode {
+    display: none;
   }
 }

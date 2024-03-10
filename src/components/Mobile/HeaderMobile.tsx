@@ -7,10 +7,10 @@ interface HeaderMobileProps {
   header: string;
   theme: any;
   toggleTheme: any;
-  darkModeToggleButton: any;
+  darkModeButton: any;
 }
 
-const HeaderMobile = ({ header, theme, toggleTheme, darkModeToggleButton }: HeaderMobileProps) => {
+const HeaderMobile = ({ header, theme, toggleTheme, darkModeButton }: HeaderMobileProps) => {
   const [showCategory, setShowCategory] = useState(false);
 
   return (
@@ -34,7 +34,7 @@ const HeaderMobile = ({ header, theme, toggleTheme, darkModeToggleButton }: Head
               toggleTheme(theme === "dark" ? "light" : "dark");
             }}
           >
-            {darkModeToggleButton}
+            {darkModeButton}
           </div>
         </div>
       </div>

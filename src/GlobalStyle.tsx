@@ -23,12 +23,12 @@ const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
         background-color: ${defaultColor};
       }
 
-      .list-text,
+      .list-text-wrapper,
       .list-button {
         border: 1px solid ${defaultColor};
       }
 
-      .list-text:hover {
+      .list-text-wrapper:hover {
         color: ${invertedColor};
         background-color: ${defaultColor};
       }

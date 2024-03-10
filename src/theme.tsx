@@ -9,15 +9,15 @@ const defaultColor = {
 const invertedColor = {
   // light: "#fff",
   light: "#dcdcdc",
-  // dark: "#1e1e1e",
-  dark: "#2a2a2a",
+  dark: "#1e1e1e",
+  // dark: "#2a2a2a",
 };
 
 const backgroundColor = {
   // light: "#f4f4f4",
   light: "#dcdcdc",
-  // dark: "#1e1e1e",
-  dark: "#2a2a2a",
+  dark: "#1e1e1e",
+  // dark: "#2a2a2a",
 };
 
 export const lightTheme = {

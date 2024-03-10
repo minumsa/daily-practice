@@ -17,8 +17,10 @@ type Props = {
   footerContent?: React.ReactNode;
 };
 
+type Theme = "dark" | "light";
+
 interface ThemeProps {
-  theme: string | null;
+  theme: Theme;
   toggleTheme: (theme?: string) => void;
 }
 
@@ -50,7 +52,7 @@ type LayoutInternalProps = {
   title?: string;
   pageNumber?: React.ReactNode;
   footerContent?: React.ReactNode;
-  theme: string | null;
+  theme: Theme;
   toggleTheme: (theme?: string) => void;
 };
 
@@ -80,7 +82,7 @@ const LayoutInternal: React.FC<LayoutInternalProps> = ({
 
   const showHeader = isScrollUp ? "visible" : "hidden";
   const isDarkMode = theme === "dark";
-  const darkModeToggleButton = isDarkMode ? "밤" : "낮";
+  const darkModeButton = isDarkMode ? "밤" : "낮";
 
   return (
     <ThemeProvider theme={isDarkMode ? darkTheme : lightTheme}>
@@ -91,7 +93,7 @@ const LayoutInternal: React.FC<LayoutInternalProps> = ({
           header={currentPosition > 50 ? showHeader : "visible"}
           theme={theme}
           toggleTheme={toggleTheme}
-          darkModeToggleButton={darkModeToggleButton}
+          darkModeButton={darkModeButton}
         />
         <div className="home-container">
           <div className="body-container">
@@ -107,16 +109,9 @@ const LayoutInternal: React.FC<LayoutInternalProps> = ({
         <Footer
           pageNumber={pageNumber}
           footerContent={footerContent}
-          darkModeButton={
-            <div
-              className="mode-button"
-              onClick={() => {
-                toggleTheme(theme === "dark" ? "light" : "dark");
-              }}
-            >
-              {darkModeToggleButton}
-            </div>
-          }
+          darkModeButton={darkModeButton}
+          theme={theme}
+          toggleTheme={toggleTheme}
         />
       </div>
     </ThemeProvider>
