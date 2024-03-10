@@ -10,7 +10,7 @@ const Page: FC = () => {
       <SEO
         ogTitle={`일러두기 — ${siteTitle}`}
         ogType={"website"}
-        ogURL={"https://14461.gatsbyjs.io/explanation/"}
+        ogURL={"https://blog.divdivdiv.com/explanation/"}
       />
       <Layout footerContent={"일러두기"}>
         <Explanation />

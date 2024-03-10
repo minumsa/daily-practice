@@ -11,7 +11,7 @@ const Page: FC = () => {
       <SEO
         ogTitle={`소개 — ${siteTitle}`}
         ogType={"website"}
-        ogURL={"https://14461.gatsbyjs.io/introduction"}
+        ogURL={"https://blog.divdivdiv.com/introduction"}
       />
       <Layout footerContent={"소개"}>
         <Introduction />

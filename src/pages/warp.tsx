@@ -1,10 +1,8 @@
 import SEO from "../SEO";
-import Home from "../components/Home";
 import Warp from "../components/Home/Main/Warp";
 import Layout from "../components/Layout";
 import { PageProps, graphql } from "gatsby";
 import React, { useEffect } from "react";
-import { getRandomPage } from "../lib/modules";
 import { siteTitle } from "../lib/data";
 
 interface WarpPageProps extends PageProps<Queries.AllPagesQuery> {
@@ -13,6 +11,10 @@ interface WarpPageProps extends PageProps<Queries.AllPagesQuery> {
 }
 
 const Page = ({ data, pageNumber, footerContent }: WarpPageProps) => {
+  const getRandomPage = (totalCount: number) => {
+    return Math.floor(Math.random() * (totalCount - 1)) + 1;
+  };
+
   useEffect(() => {
     const totalPageCount = data.allMarkdownRemark.totalCount;
     const prevRandomPage = Number(sessionStorage.getItem("randomPage"));
@@ -40,7 +42,7 @@ const Page = ({ data, pageNumber, footerContent }: WarpPageProps) => {
       <SEO
         ogTitle={`워프 — ${siteTitle}`}
         ogType={"website"}
-        ogURL={"https://14461.gatsbyjs.io/warp/"}
+        ogURL={"https://blog.divdivdiv.com/warp/"}
       />
       <Layout pageNumber={pageNumber} footerContent={footerContent}>
         <Warp />

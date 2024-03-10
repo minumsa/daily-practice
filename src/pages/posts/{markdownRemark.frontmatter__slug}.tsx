@@ -1,11 +1,7 @@
 import SEO from "../../SEO";
-import Home from "../../components/Home";
 import Layout from "../../components/Layout";
-import NextButton from "../../components/Footer/NextButton";
-import PageNumber from "../../components/Footer/PageNumber";
 import FooterNav from "../../components/Footer/FooterNav";
-import PrevButton from "../../components/Footer/PrevButton";
-import { Link, graphql } from "gatsby";
+import { graphql } from "gatsby";
 import * as React from "react";
 import "./{markdownRemark.frontmatter__slug}.css";
 import { siteTitle } from "../../lib/data";
@@ -47,17 +43,18 @@ export default function BlogPostTemplate({ data }: BlogPostTemplateProps) {
   const sanitizer = DOMPurify.sanitize;
 
   // 모든 포스트를 페이지 번호를 기준으로 정렬
-  const sortedDataAscending = allMarkdownRemark.edges.sort(
+  const sortedDataByPage = allMarkdownRemark.edges.sort(
     (a, b) => a.node.frontmatter.page - b.node.frontmatter.page
   );
-  const currentDataIndex = sortedDataAscending.findIndex(
+
+  const currentDataIndex = sortedDataByPage.findIndex(
     (p: Post) => p.node.frontmatter.slug === frontmatter.slug
   );
-  const prevData = currentDataIndex === 0 ? null : sortedDataAscending[currentDataIndex - 1].node;
+  const prevData = currentDataIndex === 0 ? null : sortedDataByPage[currentDataIndex - 1].node;
   const nextData =
-    currentDataIndex === sortedDataAscending.length - 1
+    currentDataIndex === sortedDataByPage.length - 1
       ? null
-      : sortedDataAscending[currentDataIndex + 1].node;
+      : sortedDataByPage[currentDataIndex + 1].node;
 
   const prevItemSlug = prevData?.frontmatter.slug;
   const nextItemSlug = nextData?.frontmatter.slug;
@@ -67,7 +64,7 @@ export default function BlogPostTemplate({ data }: BlogPostTemplateProps) {
       <SEO
         ogTitle={`${frontmatter.title} — ${siteTitle}`}
         ogType={"article"}
-        ogURL={"https://14461.gatsbyjs.io/posts" + frontmatter.slug}
+        ogURL={"https://blog.divdivdiv.com/posts" + frontmatter.slug}
         ogText={frontmatter.description}
       />
       <Layout

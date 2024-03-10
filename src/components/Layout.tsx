@@ -9,7 +9,6 @@ import React, { useEffect, useState } from "react";
 import styled, { ThemeProvider } from "styled-components";
 import Title from "./Home/Title";
 import DivisionMarker from "./Home/Main/DivisionMarker";
-import FooterMobile from "./Mobile/FooterMobile";
 
 type Props = {
   children: React.ReactNode;

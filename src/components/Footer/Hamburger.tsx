@@ -6,11 +6,8 @@ const Hamburger: FC = () => {
   const [showCategory, setShowCategory] = useState(false);
 
   return (
-    <div
-      className="hamburger-container"
-      onClick={() => setShowCategory(prevVisible => !prevVisible)}
-    >
-      <div className="hamburger">{showCategory ? <Category /> : null}</div>
+    <div className="hamburger-container" onClick={() => setShowCategory(!showCategory)}>
+      <div className="hamburger">{showCategory && <Category />}</div>
     </div>
   );
 };

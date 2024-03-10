@@ -10,7 +10,7 @@ const ConnectPage: FC = () => {
       <SEO
         ogTitle={`연결 — ${siteTitle}`}
         ogType={"website"}
-        ogURL={"https://14461.gatsbyjs.io/connect/"}
+        ogURL={"https://blog.divdivdiv.com/connect/"}
       />
       <Layout footerContent={"연결"}>
         <Contact />
