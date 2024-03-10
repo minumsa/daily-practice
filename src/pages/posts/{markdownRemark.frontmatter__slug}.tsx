@@ -93,7 +93,7 @@ export default function BlogPostTemplate({ data }: BlogPostTemplateProps) {
       />
       <Layout
         pageNumber={<PageNumber pageNumber={frontmatter.page} />}
-        footerContent={
+        footerText={
           <FooterContent
             arrowLeft={<ArrowLeft />}
             createDate={frontmatter.date}

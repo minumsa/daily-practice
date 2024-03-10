@@ -5,7 +5,7 @@ import React, { FC } from "react";
 
 const Page: FC = () => {
   return (
-    <Layout footerContent={<FooterContent />}>
+    <Layout footerText={<FooterContent />}>
       <Home />
     </Layout>
   );

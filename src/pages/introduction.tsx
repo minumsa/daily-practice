@@ -7,7 +7,7 @@ import { siteTitle } from "../lib/data";
 
 const Page: FC = () => {
   return (
-    <Layout footerContent={"소개"}>
+    <Layout footerText={"소개"}>
       <SEO
         ogTitle={`소개 — ${siteTitle}`}
         ogType={"website"}

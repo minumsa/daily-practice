@@ -7,14 +7,16 @@ import { siteTitle } from "../lib/data";
 
 const ConnectPage: FC = () => {
   return (
-    <Layout footerContent={"연결"}>
+    <>
       <SEO
         ogTitle={`연결 — ${siteTitle}`}
         ogType={"website"}
         ogURL={"https://14461.gatsbyjs.io/connect/"}
       />
-      <Home content={<Contact />} />
-    </Layout>
+      <Layout footerText={"연결"}>
+        <Home content={<Contact />} />
+      </Layout>
+    </>
   );
 };
 
