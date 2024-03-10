@@ -93,26 +93,12 @@ const LayoutInternal: React.FC<LayoutInternalProps> = ({
           theme={theme}
           toggleTheme={toggleTheme}
           darkModeToggleButton={darkModeToggleButton}
-          // darkmodeButton={
-          //   <div
-          //     className="mode-button"
-          //     onClick={() => {
-          //       toggleTheme(theme === "dark" ? "light" : "dark");
-          //     }}
-          //   >
-          //     {darkModeToggleButton}
-          //   </div>
-          // }
         />
         <div className="home-container">
           <div className="body-container">
             <div className="main-container">
               <DivisionMarker />
               <div className="content-container">{children}</div>
-              {/* 모바일 Footer */}
-              {/* <div className="footer-mobile-container">
-                <FooterMobile footerContent={footerContent} />
-              </div> */}
               <DivisionMarker />
             </div>
             <Title title={title} />
