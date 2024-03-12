@@ -58,6 +58,7 @@ export default function BlogPostTemplate({ data }: BlogPostTemplateProps) {
 
   const prevItemSlug = prevData?.frontmatter.slug;
   const nextItemSlug = nextData?.frontmatter.slug;
+  const currentPostTitle = frontmatter.title;
 
   return (
     <>
@@ -69,6 +70,7 @@ export default function BlogPostTemplate({ data }: BlogPostTemplateProps) {
       />
       <Layout
         pageNumber={frontmatter.page}
+        title={currentPostTitle}
         footerContent={
           <FooterNav
             createDate={frontmatter.date}
