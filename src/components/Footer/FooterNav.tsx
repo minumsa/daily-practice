@@ -1,5 +1,5 @@
 import { Link } from "gatsby";
-import "./FooterNav.css";
+import * as styles from "./FooterNav.module.css";
 import React from "react";
 import PrevButton from "./PrevButton";
 import NextButton from "./NextButton";
@@ -25,9 +25,9 @@ const FooterNav = ({ createDate, prevItemSlug, nextItemSlug }: FooterNavProps) =
   };
 
   return (
-    <div className="footer-container">
+    <div className={styles.container}>
       {ArrowButton(prevItemSlug)}
-      <div className="create-date">작성일: {createDate}</div>
+      <div className={styles.createDate}>작성일: {createDate}</div>
       {ArrowButton(nextItemSlug)}
     </div>
   );

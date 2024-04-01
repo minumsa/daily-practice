@@ -16,18 +16,6 @@ const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
         --inverted-color: ${invertedColor};
       }
 
-      .post-line {
-        display: inline-block;
-        line-height: 160%;
-        border-top: 1.5px solid ${textColor};
-      }
-
-      .hamburger,
-      .hamburger-mobile {
-        background-color: ${textColor};
-        box-shadow: 0 7px 0 ${textColor}, 0 14px 0 ${textColor};
-      }
-
       p::selection,
       span::selection {
         color: ${textColor};
@@ -38,24 +26,15 @@ const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
         text-decoration-color: ${textColor};
       }
 
-      .footer-line-mobile {
-        background-color: ${textColor};
-      }
-
-      .prev-post,
-      .next-post {
-        border-color: ${textColor};
-        background-color: ${invertedColor};
-      }
-
-      .prev-post-title,
-      .next-post-title {
-        text-decoration-color: ${textColor};
-      }
-
-      .highlighted-text {
+      .highlight {
         color: ${invertedColor};
         background-color: ${textColor};
+      }
+
+      .post-line {
+        display: inline-block;
+        line-height: 160%;
+        border-top: 1.5px solid ${textColor};
       }
     `;
   }}

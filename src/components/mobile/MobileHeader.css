@@ -69,6 +69,8 @@
     width: 21px;
     height: 1.5px;
     margin-top: 3px;
+    background-color: var(--text-color);
+    box-shadow: 0 7px 0 var(--text-color), 0 14px 0 var(--text-color);
   }
 
   .header-darkmode {

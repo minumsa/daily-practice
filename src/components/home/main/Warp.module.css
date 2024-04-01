@@ -1,4 +1,4 @@
-.warp-container {
+.container {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -9,7 +9,7 @@
 }
 
 @media (max-width: 550px) {
-  .warp-container {
+  .container {
     width: 350px;
     margin-bottom: 20px;
     font-size: 1.1rem;

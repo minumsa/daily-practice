@@ -1,4 +1,4 @@
-.explanation-container {
+.container {
   display: flex;
   justify-content: center;
   width: 400px;
@@ -11,14 +11,16 @@
   font-size: 1.15rem;
 }
 
-.highlighted-text {
+.highlight {
   font-weight: 350;
   line-height: 100%;
   padding: 1.5px 0;
+  color: var(--inverted-color);
+  background-color: var(--text-color);
 }
 
 @media (max-width: 550px) {
-  .explanation-container {
+  .container {
     width: 100%;
   }
 

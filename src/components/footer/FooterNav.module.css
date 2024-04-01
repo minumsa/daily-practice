@@ -1,0 +1,28 @@
+.container {
+  display: flex;
+}
+
+.createDate {
+  display: flex;
+  justify-content: center;
+  width: 300px;
+  margin-right: 10px;
+  font-size: 1.25rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+@media (max-width: 550px) {
+  .createDate {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 470px) {
+  .createDate {
+    width: auto;
+    font-size: 1.1rem;
+  }
+}

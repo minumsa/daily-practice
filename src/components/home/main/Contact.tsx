@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./Contact.css";
+import * as styles from "./Contact.module.css";
 
 const Contact = () => {
   const [isCopied, setIsCopied] = useState(false);
@@ -14,12 +14,12 @@ const Contact = () => {
   };
 
   return (
-    <div className="contact-container">
-      <div className="contact-title">이메일</div>
+    <div className={styles.container}>
+      <div className={styles.blockTitle}>이메일</div>
       <div style={{ position: "relative", width: "270px" }}>
         <div>
           <span
-            className="cotact-email highlighted-text"
+            className={`${styles.email} ${styles.highlight}`}
             onClick={() => {
               handleCopy();
             }}
@@ -27,11 +27,11 @@ const Contact = () => {
             icycyi@naver.com
           </span>
         </div>
-        {isCopied && <span className="copied-message">Copied!</span>}
+        {isCopied && <span className={styles.copied}>Copied!</span>}
       </div>
-      <div className="contact-title">SNS</div>
+      <div className={styles.blockTitle}>SNS</div>
       <div>
-        <span className="highlighted-text">
+        <span className={styles.highlight}>
           <a href="https://www.instagram.com/yoon.o" target="_blank">
             Instagram
           </a>

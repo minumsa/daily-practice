@@ -1,4 +1,4 @@
-.hamburger-container {
+.container {
   height: 22.73px;
   cursor: pointer;
 }
@@ -9,6 +9,8 @@
   width: 22px;
   height: 1.5px;
   margin-top: 4px;
+  background-color: var(--text-color);
+  box-shadow: 0 7px 0 var(--text-color), 0 14px 0 var(--text-color);
 }
 
 @media (max-width: 550px) {

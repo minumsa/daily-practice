@@ -1,13 +1,13 @@
 import { Category } from "./Category";
-import "./Hamburger.css";
+import * as styles from "./Hamburger.module.css";
 import React, { useState } from "react";
 
 const Hamburger = () => {
   const [showCategory, setShowCategory] = useState(false);
 
   return (
-    <div className="hamburger-container" onClick={() => setShowCategory(!showCategory)}>
-      <div className="hamburger">{showCategory && <Category />}</div>
+    <div className={styles.container} onClick={() => setShowCategory(!showCategory)}>
+      <div className={styles.hamburger}>{showCategory && <Category />}</div>
     </div>
   );
 };
