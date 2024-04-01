@@ -1,13 +1,15 @@
-.prev-button {
+.prevButton {
   display: inline-block;
   justify-content: center;
   width: 10px;
   height: 10px;
   transform: rotate(225deg);
+  border-top: 1.5px solid var(--text-color);
+  border-right: 1.5px solid var(--text-color);
 }
 
 @media (max-width: 550px) {
-  .prev-button {
+  .prevButton {
     margin-left: 10px;
   }
 }

@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "gatsby";
-import "./ContentBlock.css";
+import * as styles from "./ContentBlock.module.css";
 
 interface BlockItem {
   date: string;
@@ -18,19 +18,19 @@ interface ContentBlockProps {
 export const ContentBlock = ({ totalDataCount, sortedData }: ContentBlockProps) => {
   const contentList = sortedData.map((item: BlockItem) => (
     <Link to={`/posts${item.slug}`} key={item.id}>
-      <div className="list-text-wrapper">
-        <span className="list-title">{item.title}</span>
-        <sup className="list-sup">{item.page}</sup>
+      <div className={styles.textWrapper}>
+        <span className={styles.title}>{item.title}</span>
+        <sup className={styles.titleSup}>{item.page}</sup>
       </div>
     </Link>
   ));
 
   return (
-    <div className="list-container">
-      <div className="total-post">
-        총 <span className="post-count">{totalDataCount}개</span>의 글이 있습니다.
+    <div className={styles.container}>
+      <div className={styles.totalPost}>
+        총 <span className={styles.postCount}>{totalDataCount}개</span>의 글이 있습니다.
       </div>
-      <div className="list-text-container">{contentList}</div>
+      <div className={styles.listTextContainer}>{contentList}</div>
     </div>
   );
 };

@@ -1,14 +1,14 @@
-.list-container {
+.container {
   width: 700px;
   font-weight: 400;
   font-size: 1.1rem;
 }
 
-.list-text-container {
+.listTextContainer {
   display: inline-block;
 }
 
-.list-text-wrapper {
+.textWrapper {
   display: inline-block;
   margin: 3px 1px;
   padding: 1.5px 8px;
@@ -17,18 +17,21 @@
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  border: 1px solid var(--text-color);
 }
 
-.list-title {
+.title {
   display: inline-block;
 }
 
-.list-text-wrapper:hover {
+.textWrapper:hover {
   border-radius: 0;
   font-weight: 600;
+  color: var(--inverted-color);
+  background-color: var(--text-color);
 }
 
-.list-sup {
+.titleSup {
   line-height: 0;
   margin-left: 3px;
 }
@@ -42,35 +45,35 @@ a {
   display: none;
 }
 
-.total-post {
+.totalPost {
   display: none;
 }
 
 @media (max-width: 950px) {
-  .list-container {
+  .container {
     width: 85vw;
     max-width: 560px;
   }
 }
 
 @media (max-width: 550px) {
-  .list-container {
+  .container {
     width: 90vw;
   }
 
-  .list-text-container {
+  .listTextContainer {
     display: flex;
     flex-direction: column;
   }
 
-  .list-text-wrapper {
+  .textWrapper {
     display: flex;
     justify-content: center;
     flex-grow: 1;
     border-radius: 100px;
   }
 
-  .list-sup {
+  .titleSup {
     margin-top: 12px;
   }
 
@@ -81,15 +84,16 @@ a {
     margin: 2px 2px 2px 2px;
     padding: 6px 24px 6px 24px;
     border-radius: 19px;
+    border: 1px solid var(--text-color);
   }
 
-  .total-post {
+  .totalPost {
     display: flex;
     justify-content: center;
     margin-bottom: 5px;
   }
 
-  .post-count {
+  .postCount {
     margin-left: 3px;
     text-decoration: wavy underline;
   }

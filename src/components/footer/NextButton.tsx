@@ -1,12 +1,8 @@
-import "./NextButton.css";
+import * as styles from "./NextButton.module.css";
 import React from "react";
 
 const NextButton = () => {
-  return (
-    <div className="button-container">
-      <div className="next-button"></div>
-    </div>
-  );
+  return <div className={styles.nextButton}></div>;
 };
 
 export default NextButton;

@@ -1,11 +1,11 @@
 import React from "react";
-import "./DivisionMarker.css";
+import * as styles from "./DivisionMarker.module.css";
 
 const DivisionMarker = () => {
   return (
-    <div className="division-container">
-      <div className="marker"></div>
-      <div className="marker"></div>
+    <div className={styles.container}>
+      <div className={styles.marker}></div>
+      <div className={styles.marker}></div>
     </div>
   );
 };

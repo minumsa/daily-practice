@@ -1,12 +1,8 @@
-import "./PrevButton.css";
+import * as styles from "./PrevButton.module.css";
 import React from "react";
 
 const PrevButton = () => {
-  return (
-    <div className="button-container">
-      <div className="prev-button"></div>
-    </div>
-  );
+  return <div className={styles.prevButton}></div>;
 };
 
 export default PrevButton;

@@ -1,4 +1,4 @@
-const defaultColor = {
+const textColor = {
   // light: "#1e1e1e",
   light: "#2a2a2a",
   dark: "#bfbfbf",
@@ -23,13 +23,13 @@ const backgroundColor = {
 export const lightTheme = {
   backgroundColor: backgroundColor.light,
   invertedColor: invertedColor.light,
-  defaultColor: defaultColor.light,
+  textColor: textColor.light,
 };
 
 export const darkTheme = {
   backgroundColor: backgroundColor.dark,
   invertedColor: invertedColor.dark,
-  defaultColor: defaultColor.dark,
+  textColor: textColor.dark,
 };
 
 const theme = {

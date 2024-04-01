@@ -1,8 +1,10 @@
-.next-button {
+.nextButton {
   display: inline-block;
   justify-content: center;
   width: 10px;
   height: 10px;
   margin-bottom: 1px;
   transform: rotate(45deg);
+  border-top: 1.5px solid var(--text-color);
+  border-right: 1.5px solid var(--text-color);
 }

@@ -3,92 +3,59 @@ import { createGlobalStyle, css } from "styled-components";
 interface ThemeType {
   backgroundColor: string;
   invertedColor: string;
-  defaultColor: string;
+  textColor: string;
 }
 
 const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
   ${({ theme }) => {
-    const { backgroundColor, invertedColor, defaultColor } = theme;
+    const { backgroundColor, invertedColor, textColor } = theme;
     return css`
       :root {
         --background-color: ${backgroundColor};
-        --text-color: ${defaultColor};
-      }
-
-      body,
-      header {
-        background-color: ${backgroundColor};
-      }
-
-      body {
-        color: ${defaultColor};
-      }
-
-      .marker {
-        background-color: ${defaultColor};
-      }
-
-      .list-text-wrapper,
-      .list-button {
-        border: 1px solid ${defaultColor};
-      }
-
-      .list-text-wrapper:hover {
-        color: ${invertedColor};
-        background-color: ${defaultColor};
-      }
-
-      .prev-button,
-      .next-button {
-        border-top: 1.5px solid ${defaultColor};
-        border-right: 1.5px solid ${defaultColor};
+        --text-color: ${textColor};
+        --inverted-color: ${invertedColor};
       }
 
       .post-line {
         display: inline-block;
         line-height: 160%;
-        border-top: 1.5px solid ${defaultColor};
+        border-top: 1.5px solid ${textColor};
       }
 
       .hamburger,
       .hamburger-mobile {
-        background-color: ${defaultColor};
-        box-shadow: 0 7px 0 ${defaultColor}, 0 14px 0 ${defaultColor};
-      }
-
-      .category-container {
-        background-color: ${backgroundColor};
-        border: 1px solid ${defaultColor};
+        background-color: ${textColor};
+        box-shadow: 0 7px 0 ${textColor}, 0 14px 0 ${textColor};
       }
 
       p::selection,
       span::selection {
-        color: ${defaultColor};
-        background-color: ${defaultColor};
+        color: ${textColor};
+        background-color: ${textColor};
       }
 
       .underline {
-        text-decoration-color: ${defaultColor};
+        text-decoration-color: ${textColor};
       }
 
       .footer-line-mobile {
-        background-color: ${defaultColor};
+        background-color: ${textColor};
       }
 
       .prev-post,
       .next-post {
-        border-color: ${defaultColor};
+        border-color: ${textColor};
         background-color: ${invertedColor};
       }
 
       .prev-post-title,
       .next-post-title {
-        text-decoration-color: ${defaultColor};
+        text-decoration-color: ${textColor};
       }
 
       .highlighted-text {
         color: ${invertedColor};
-        background-color: ${defaultColor};
+        background-color: ${textColor};
       }
     `;
   }}
