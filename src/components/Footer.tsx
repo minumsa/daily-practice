@@ -1,4 +1,4 @@
-import "./Footer.css";
+import * as styles from "./Footer.module.css";
 import React from "react";
 import Hamburger from "./footer/Hamburger";
 
@@ -15,13 +15,13 @@ interface NavProps {
 
 const Footer = ({ pageNumber, footerContent, darkModeButton, theme, toggleTheme }: NavProps) => {
   return (
-    <div className="nav-container">
-      <div className="middle">
+    <div className={styles.container}>
+      <div className={styles.middle}>
         <Hamburger />
-        <div className="footer-content-container">{footerContent}</div>
-        <div className="dark-mode">
+        <div className={styles.footerContentContainer}>{footerContent}</div>
+        <div className={styles.darkMode}>
           <div
-            className="mode-button"
+            className={styles.toggleButton}
             onClick={() => {
               toggleTheme(theme === "dark" ? "light" : "dark");
             }}
@@ -30,8 +30,8 @@ const Footer = ({ pageNumber, footerContent, darkModeButton, theme, toggleTheme 
           </div>
         </div>
       </div>
-      <div className="blank-space" />
-      <div className="page-number">{pageNumber && `(${pageNumber})`}</div>
+      <div className={styles.blankSpace} />
+      <div className={styles.pageNumber}>{pageNumber && `(${pageNumber})`}</div>
     </div>
   );
 };

@@ -1,10 +1,7 @@
-.title-items-right {
+.siteTitle {
   font-weight: 450;
   font-size: 1.2rem;
   white-space: nowrap;
   transform: rotate(0.25turn);
-}
-
-.site-title {
   margin-top: calc(100% + 5px);
 }

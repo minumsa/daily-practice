@@ -1,8 +1,8 @@
 import React from "react";
-import "./PostTitle.css";
+import * as styles from "./PostTitle.module.css";
 
-const PostTitle = ({ title }: { title?: React.ReactNode }) => {
-  return <div className="title-items-right post-title">{title}</div>;
+const PostTitle = ({ title }: { title: React.ReactNode }) => {
+  return <div className={styles.postTitle}>{title}</div>;
 };
 
 export default PostTitle;

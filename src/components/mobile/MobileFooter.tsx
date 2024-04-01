@@ -1,5 +1,5 @@
 import { Link } from "gatsby";
-import "./MobileFooter.css";
+import * as styles from "./MobileFooter.module.css";
 import React from "react";
 import NextButton from "../footer/NextButton";
 import PrevButton from "../footer/PrevButton";
@@ -35,13 +35,13 @@ const MobileFooter = ({ createDate, prevItemSlug, nextItemSlug }: FooterMobilePr
     );
   };
   return (
-    <div className="footer-mobile-container">
-      <div className="footer-line-mobile-container">
-        <div className="footer-line-mobile" />
+    <div className={styles.container}>
+      <div className={styles.footerLineMobileContainer}>
+        <div className={styles.footerLineMobile} />
       </div>
-      <div className="footer-content-container">
+      <div className={styles.footerContentContainer}>
         <ArrowLeft />
-        <div className="create-date">작성일: {createDate}</div>
+        <div className={styles.createDate}>작성일: {createDate}</div>
         <ArrowRight />
       </div>
     </div>

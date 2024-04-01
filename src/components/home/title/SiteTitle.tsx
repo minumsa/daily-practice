@@ -1,11 +1,11 @@
 import React from "react";
-import "./SiteTitle.css";
+import * as styles from "./SiteTitle.module.css";
 import { Link } from "gatsby";
 
 const SiteTitle = () => {
   return (
     <Link to="/">
-      <div className="title-items-right site-title">일상연습</div>
+      <div className={styles.siteTitle}>일상연습</div>
     </Link>
   );
 };

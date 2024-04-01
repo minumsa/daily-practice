@@ -1,11 +1,11 @@
 import React from "react";
-import "./Title.css";
+import * as styles from "./Title.module.css";
 import SiteTitle from "./SiteTitle";
 import PostTitle from "./PostTitle";
 
 const Title = ({ title }: { title: React.ReactNode }) => {
   return (
-    <div className="title-container">
+    <div className={styles.title}>
       <SiteTitle />
       <PostTitle title={title} />
     </div>

@@ -8,7 +8,7 @@ import React, { useEffect, useState } from "react";
 import styled, { ThemeProvider } from "styled-components";
 import DivisionMarker from "./home/main/DivisionMarker";
 import Title from "./home/title/Title";
-import MobileHeader from "./mobile/MobileHeader";
+import MobileHamburger from "./mobile/MobileHamburger";
 
 type LayoutProps = {
   children: React.ReactNode;
@@ -89,7 +89,7 @@ const LayoutInternal = ({
       <GlobalStyle />
       <div className="layout-container">
         {/* 모바일 Header */}
-        <MobileHeader
+        <MobileHamburger
           header={currentPosition > 50 ? showHeader : "visible"}
           theme={theme}
           toggleTheme={toggleTheme}
