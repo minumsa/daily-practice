@@ -1,9 +1,9 @@
 import SEO from "../SEO";
-import Warp from "../components/Home/Main/Warp";
+import Warp from "../components/home/main/Warp";
 import Layout from "../components/Layout";
 import { PageProps, graphql } from "gatsby";
 import React, { useEffect } from "react";
-import { siteTitle } from "../lib/data";
+import { siteTitle } from "../lib/constants";
 
 interface WarpPageProps extends PageProps<Queries.AllPagesQuery> {
   pageNumber: string;

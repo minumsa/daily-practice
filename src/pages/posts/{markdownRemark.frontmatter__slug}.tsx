@@ -1,12 +1,12 @@
 import SEO from "../../SEO";
 import Layout from "../../components/Layout";
-import FooterNav from "../../components/Footer/FooterNav";
 import { graphql } from "gatsby";
 import * as React from "react";
 import "./{markdownRemark.frontmatter__slug}.css";
-import { siteTitle } from "../../lib/data";
+import { siteTitle } from "../../lib/constants";
 import DOMPurify from "isomorphic-dompurify";
-import FooterMobile from "../../components/Mobile/FooterMobile";
+import FooterNav from "../../components/footer/FooterNav";
+import FooterMobile from "../../components/mobile/FooterMobile";
 
 interface Post {
   node: {

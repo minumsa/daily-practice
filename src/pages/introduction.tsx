@@ -1,9 +1,8 @@
 import SEO from "../SEO";
-import Home from "../components/Home";
-import Introduction from "../components/Home/Main/Introduction";
+import Introduction from "../components/home/main/Introduction";
 import Layout from "../components/Layout";
 import React, { FC } from "react";
-import { siteTitle } from "../lib/data";
+import { siteTitle } from "../lib/constants";
 
 const Page: FC = () => {
   return (

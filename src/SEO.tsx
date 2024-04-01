@@ -1,6 +1,6 @@
 import React from "react";
 import { Helmet } from "react-helmet";
-import { siteTitle } from "./lib/data";
+import { siteTitle } from "./lib/constants";
 
 interface SEOProps {
   ogTitle?: string;

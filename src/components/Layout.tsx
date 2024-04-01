@@ -1,14 +1,14 @@
 import GlobalStyle from "../GlobalStyle";
 import { lightTheme, darkTheme } from "../theme";
 import "./Layout.css";
-import HeaderMobile from "./Mobile/HeaderMobile";
 import Footer from "./Footer";
 // @ts-ignore
 import { ThemeToggler } from "gatsby-plugin-dark-mode";
 import React, { useEffect, useState } from "react";
 import styled, { ThemeProvider } from "styled-components";
-import Title from "./Home/Title";
-import DivisionMarker from "./Home/Main/DivisionMarker";
+import DivisionMarker from "./home/main/DivisionMarker";
+import Title from "./home/title/Title";
+import HeaderMobile from "./mobile/HeaderMobile";
 
 type Props = {
   children: React.ReactNode;

@@ -1,8 +1,8 @@
 import { Link } from "gatsby";
 import "./FooterMobile.css";
 import React from "react";
-import PrevButton from "../Footer/PrevButton";
-import NextButton from "../Footer/NextButton";
+import PrevButton from "../footer/PrevButton";
+import NextButton from "../footer/NextButton";
 
 interface FooterMobileProps {
   createDate?: React.ReactNode;

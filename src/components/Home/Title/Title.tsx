@@ -1,7 +1,7 @@
 import React from "react";
-import SiteTitle from "./Title/SiteTitle";
-import PostTitle from "./Title/PostTitle";
 import "./Title.css";
+import SiteTitle from "./SiteTitle";
+import PostTitle from "./PostTitle";
 
 const Title = ({ title }: { title: React.ReactNode }) => {
   return (

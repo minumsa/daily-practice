@@ -1,6 +1,6 @@
 import "./Footer.css";
-import Hamburger from "./Footer/Hamburger";
 import React from "react";
+import Hamburger from "./footer/Hamburger";
 
 type DarkModeToggleButton = "밤" | "낮";
 type Theme = "dark" | "light";

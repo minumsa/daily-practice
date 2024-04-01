@@ -1,8 +1,8 @@
 import SEO from "../SEO";
-import Contact from "../components/Home/Main/Contact";
+import Contact from "../components/home/main/Contact";
 import Layout from "../components/Layout";
 import React, { FC } from "react";
-import { siteTitle } from "../lib/data";
+import { siteTitle } from "../lib/constants";
 
 const ConnectPage: FC = () => {
   return (

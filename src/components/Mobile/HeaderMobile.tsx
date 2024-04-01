@@ -1,7 +1,7 @@
-import Category from "../Footer/Category";
 import "./HeaderMobile.css";
 import { Link } from "gatsby";
 import React, { useState } from "react";
+import Category from "../footer/Category";
 
 interface HeaderMobileProps {
   header: string;
