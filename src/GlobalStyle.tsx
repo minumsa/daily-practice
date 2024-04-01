@@ -10,6 +10,11 @@ const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
   ${({ theme }) => {
     const { backgroundColor, invertedColor, defaultColor } = theme;
     return css`
+      :root {
+        --background-color: ${backgroundColor};
+        --text-color: ${defaultColor};
+      }
+
       body,
       header {
         background-color: ${backgroundColor};
