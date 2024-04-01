@@ -1,5 +1,5 @@
 import SEO from "../SEO";
-import Warp from "../components/home/main/Warp";
+import Warp from "../components/Home/Main/Warp";
 import Layout from "../components/Layout";
 import { PageProps, graphql } from "gatsby";
 import React, { useEffect } from "react";

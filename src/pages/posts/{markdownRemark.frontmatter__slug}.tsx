@@ -5,8 +5,8 @@ import * as React from "react";
 import "./{markdownRemark.frontmatter__slug}.css";
 import { siteTitle } from "../../lib/constants";
 import DOMPurify from "isomorphic-dompurify";
-import FooterNav from "../../components/footer/FooterNav";
-import MobileFooter from "../../components/mobile/MobileFooter";
+import FooterNav from "../../components/Footer/FooterNav";
+import MobileFooter from "../../components/Mobile/MobileFooter";
 
 interface Post {
   node: {

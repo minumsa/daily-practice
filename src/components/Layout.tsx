@@ -6,9 +6,9 @@ import Footer from "./Footer";
 import { ThemeToggler } from "gatsby-plugin-dark-mode";
 import React, { useEffect, useState } from "react";
 import styled, { ThemeProvider } from "styled-components";
-import DivisionMarker from "./home/main/DivisionMarker";
-import Title from "./home/title/Title";
-import MobileHeader from "./mobile/MobileHeader";
+import DivisionMarker from "./Home/Main/DivisionMarker";
+import Title from "./Home/Title/Title";
+import MobileHeader from "./Mobile/MobileHeader";
 
 type LayoutProps = {
   children: React.ReactNode;

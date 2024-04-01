@@ -1,5 +1,5 @@
 import SEO from "../SEO";
-import Explanation from "../components/home/main/Explanation";
+import Explanation from "../components/Home/Main/Explanation";
 import Layout from "../components/Layout";
 import React from "react";
 import { siteTitle } from "../lib/constants";
