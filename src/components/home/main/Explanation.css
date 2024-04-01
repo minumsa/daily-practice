@@ -1,0 +1,29 @@
+.explanation-container {
+  display: flex;
+  justify-content: center;
+  width: 400px;
+  font-size: 1.15rem;
+  text-align: justify;
+}
+
+.explanation {
+  width: 100%;
+  font-size: 1.15rem;
+}
+
+.highlighted-text {
+  font-weight: 350;
+  line-height: 100%;
+  padding: 1.5px 0;
+}
+
+@media (max-width: 550px) {
+  .explanation-container {
+    width: 100%;
+  }
+
+  .explanation {
+    width: 85%;
+    font-size: 1.1rem;
+  }
+}

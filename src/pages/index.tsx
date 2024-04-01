@@ -4,7 +4,7 @@ import "./index.css";
 import { graphql, PageProps } from "gatsby";
 import React from "react";
 import { siteTitle } from "../lib/constants";
-import { ContentBlock } from "../components/Home/Main/ContentBlock";
+import { ContentBlock } from "../components/home/main/ContentBlock";
 
 interface BlockItem {
   date: string;
