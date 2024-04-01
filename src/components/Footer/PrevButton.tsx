@@ -1,7 +1,7 @@
 import "./PrevButton.css";
-import React, { FC } from "react";
+import React from "react";
 
-const PrevButton: FC = () => {
+const PrevButton = () => {
   return (
     <div className="button-container">
       <div className="prev-button"></div>

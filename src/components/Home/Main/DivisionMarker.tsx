@@ -1,7 +1,7 @@
-import React, { FC } from "react";
+import React from "react";
 import "./DivisionMarker.css";
 
-const DivisionMarker: FC = () => {
+const DivisionMarker = () => {
   return (
     <div className="division-container">
       <div className="marker"></div>

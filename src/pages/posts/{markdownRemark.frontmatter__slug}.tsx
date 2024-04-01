@@ -6,7 +6,7 @@ import "./{markdownRemark.frontmatter__slug}.css";
 import { siteTitle } from "../../lib/constants";
 import DOMPurify from "isomorphic-dompurify";
 import FooterNav from "../../components/footer/FooterNav";
-import FooterMobile from "../../components/mobile/FooterMobile";
+import MobileFooter from "../../components/mobile/MobileFooter";
 
 interface Post {
   node: {
@@ -80,7 +80,7 @@ export default function BlogPostTemplate({ data }: BlogPostTemplateProps) {
         }
       >
         <div className="content-text" dangerouslySetInnerHTML={{ __html: sanitizer(html) }} />
-        <FooterMobile
+        <MobileFooter
           createDate={frontmatter.date}
           prevItemSlug={prevItemSlug}
           nextItemSlug={nextItemSlug}

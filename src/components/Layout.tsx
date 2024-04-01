@@ -8,9 +8,9 @@ import React, { useEffect, useState } from "react";
 import styled, { ThemeProvider } from "styled-components";
 import DivisionMarker from "./home/main/DivisionMarker";
 import Title from "./home/title/Title";
-import HeaderMobile from "./mobile/HeaderMobile";
+import MobileHeader from "./mobile/MobileHeader";
 
-type Props = {
+type LayoutProps = {
   children: React.ReactNode;
   title?: string;
   pageNumber?: React.ReactNode;
@@ -24,7 +24,7 @@ interface ThemeProps {
   toggleTheme: (theme?: string) => void;
 }
 
-const Layout: React.FC<Props> = ({ children, title, pageNumber, footerContent }) => {
+const Layout = ({ children, title, pageNumber, footerContent }: LayoutProps) => {
   return (
     <ThemeToggler>
       {({ theme, toggleTheme }: ThemeProps) => {
@@ -56,14 +56,14 @@ type LayoutInternalProps = {
   toggleTheme: (theme?: string) => void;
 };
 
-const LayoutInternal: React.FC<LayoutInternalProps> = ({
+const LayoutInternal = ({
   children,
   title,
   pageNumber,
   footerContent,
   theme,
   toggleTheme,
-}) => {
+}: LayoutInternalProps) => {
   const [currentPosition, setCurrentPosition] = useState(0);
   const [isScrollUp, setIsScrollUp] = useState(true);
 
@@ -89,7 +89,7 @@ const LayoutInternal: React.FC<LayoutInternalProps> = ({
       <GlobalStyle />
       <div className="layout-container">
         {/* 모바일 Header */}
-        <HeaderMobile
+        <MobileHeader
           header={currentPosition > 50 ? showHeader : "visible"}
           theme={theme}
           toggleTheme={toggleTheme}

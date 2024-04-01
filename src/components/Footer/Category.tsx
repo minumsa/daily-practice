@@ -1,8 +1,8 @@
+import React from "react";
 import "./Category.css";
 import { Link } from "gatsby";
-import React, { FC } from "react";
 
-const Category: FC = () => {
+export const Category = () => {
   return (
     <div className="category-container">
       <Link to="/" className="category category-home">
@@ -24,5 +24,3 @@ const Category: FC = () => {
     </div>
   );
 };
-
-export default Category;

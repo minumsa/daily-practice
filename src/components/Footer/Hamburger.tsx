@@ -1,8 +1,8 @@
-import Category from "./Category";
+import { Category } from "./Category";
 import "./Hamburger.css";
-import React, { FC, useState } from "react";
+import React, { useState } from "react";
 
-const Hamburger: FC = () => {
+const Hamburger = () => {
   const [showCategory, setShowCategory] = useState(false);
 
   return (

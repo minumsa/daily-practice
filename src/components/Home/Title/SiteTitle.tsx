@@ -1,8 +1,8 @@
-import React, { FC } from "react";
+import React from "react";
 import "./SiteTitle.css";
 import { Link } from "gatsby";
 
-const SiteTitle: FC = () => {
+const SiteTitle = () => {
   return (
     <Link to="/">
       <div className="title-items-right site-title">일상연습</div>

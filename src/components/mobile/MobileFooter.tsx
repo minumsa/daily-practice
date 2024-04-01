@@ -1,5 +1,5 @@
 import { Link } from "gatsby";
-import "./FooterMobile.css";
+import "./MobileFooter.css";
 import React from "react";
 import PrevButton from "../footer/PrevButton";
 import NextButton from "../footer/NextButton";
@@ -10,7 +10,7 @@ interface FooterMobileProps {
   nextItemSlug: string | undefined;
 }
 
-const FooterMobile = ({ createDate, prevItemSlug, nextItemSlug }: FooterMobileProps) => {
+const MobileFooter = ({ createDate, prevItemSlug, nextItemSlug }: FooterMobileProps) => {
   const ArrowLeft = () => {
     return prevItemSlug ? (
       <Link to={"/posts" + prevItemSlug}>
@@ -48,4 +48,4 @@ const FooterMobile = ({ createDate, prevItemSlug, nextItemSlug }: FooterMobilePr
   );
 };
 
-export default FooterMobile;
+export default MobileFooter;

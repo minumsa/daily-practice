@@ -1,7 +1,7 @@
-import "./HeaderMobile.css";
+import "./MobileHeader.css";
 import { Link } from "gatsby";
 import React, { useState } from "react";
-import Category from "../footer/Category";
+import { Category } from "../footer/Category";
 
 interface HeaderMobileProps {
   header: string;
@@ -10,7 +10,7 @@ interface HeaderMobileProps {
   darkModeButton: any;
 }
 
-const HeaderMobile = ({ header, theme, toggleTheme, darkModeButton }: HeaderMobileProps) => {
+const MobileHeader = ({ header, theme, toggleTheme, darkModeButton }: HeaderMobileProps) => {
   const [showCategory, setShowCategory] = useState(false);
 
   return (
@@ -42,4 +42,4 @@ const HeaderMobile = ({ header, theme, toggleTheme, darkModeButton }: HeaderMobi
   );
 };
 
-export default HeaderMobile;
+export default MobileHeader;

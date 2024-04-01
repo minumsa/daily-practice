@@ -1,7 +1,7 @@
 import "./NextButton.css";
-import React, { FC } from "react";
+import React from "react";
 
-const NextButton: FC = () => {
+const NextButton = () => {
   return (
     <div className="button-container">
       <div className="next-button"></div>

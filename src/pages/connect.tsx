@@ -1,10 +1,10 @@
 import SEO from "../SEO";
 import Contact from "../components/home/main/Contact";
 import Layout from "../components/Layout";
-import React, { FC } from "react";
+import React from "react";
 import { siteTitle } from "../lib/constants";
 
-const ConnectPage: FC = () => {
+const ConnectPage = () => {
   return (
     <>
       <SEO

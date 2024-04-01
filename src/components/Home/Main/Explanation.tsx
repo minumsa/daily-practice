@@ -1,7 +1,7 @@
-import React, { FC } from "react";
+import React from "react";
 import "./Explanation.css";
 
-const Explanation: FC = () => {
+const Explanation = () => {
   return (
     <div className="explanation-container">
       <div className="explanation">

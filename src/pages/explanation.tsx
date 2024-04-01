@@ -1,10 +1,10 @@
 import SEO from "../SEO";
 import Explanation from "../components/home/main/Explanation";
 import Layout from "../components/Layout";
-import React, { FC } from "react";
+import React from "react";
 import { siteTitle } from "../lib/constants";
 
-const Page: FC = () => {
+const Page = () => {
   return (
     <>
       <SEO

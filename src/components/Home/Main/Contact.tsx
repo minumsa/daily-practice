@@ -1,7 +1,7 @@
-import React, { FC, useState, useEffect } from "react";
+import React, { useState } from "react";
 import "./Contact.css";
 
-const Contact: FC = () => {
+const Contact = () => {
   const [isCopied, setIsCopied] = useState(false);
 
   const handleCopy = () => {

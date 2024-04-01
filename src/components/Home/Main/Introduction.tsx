@@ -1,7 +1,7 @@
-import React, { FC } from "react";
+import React from "react";
 import "./Introduction.css";
 
-const Introduction: FC = () => {
+const Introduction = () => {
   return (
     <div className="introduction-container">
       이 사이트는 개인적인 글을 아카이빙하기 위해 기획된 공간이다. 주로 일기 형식의 에세이를 올릴
