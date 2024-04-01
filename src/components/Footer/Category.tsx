@@ -2,8 +2,6 @@ import React from "react";
 import "./Category.css";
 import { Link } from "gatsby";
 
-// test
-
 export const Category = () => {
   return (
     <div className="category-container">
