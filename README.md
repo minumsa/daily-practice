@@ -30,10 +30,11 @@ content 폴더에 새로운 마크다운 파일을 생성하고 커밋하면 새
 - TypeScript
 - React
 - GatsbyJS
+- Netlify
 
-## 🗄️ Reference
+## 🗄️ Trouble Shooting
 
-- [isomorphic-dompurify](https://www.npmjs.com/package/isomorphic-dompurify)
+- [일상연습 트러블 슈팅 모음](https://medium.com/@icycyi92/%EC%9D%BC%EC%83%81%EC%97%B0%EC%8A%B5-%ED%8A%B8%EB%9F%AC%EB%B8%94-%EC%8A%88%ED%8C%85-%EB%AA%A8%EC%9D%8C-535425533c82)
 
 ## 👨‍💻 Developer
 
