@@ -16,14 +16,25 @@ interface ContentBlockProps {
 }
 
 export const ContentBlock = ({ totalDataCount, sortedData }: ContentBlockProps) => {
-  const contentList = sortedData.map((item: BlockItem) => (
-    <Link to={`/posts${item.slug}`} key={item.id}>
-      <div className={styles.textWrapper}>
-        <span className={styles.title}>{item.title}</span>
-        <sup className={styles.titleSup}>{item.page}</sup>
-      </div>
-    </Link>
-  ));
+  function formattedDate(date: string) {
+    const newDate = new Date(date);
+    return `${newDate.getFullYear().toString().slice(-2)}${(newDate.getMonth() + 1)
+      .toString()
+      .padStart(2, "0")}${newDate.getDate().toString().padStart(2, "0")}`;
+  }
+
+  const contentList = sortedData.map((item: BlockItem) => {
+    const { id, title, date } = item;
+
+    return (
+      <Link to={`/posts${item.slug}`} key={id}>
+        <div className={styles.textWrapper}>
+          <span className={styles.title}>{title}</span>
+          <sup className={styles.titleSup}>{formattedDate(date)}</sup>
+        </div>
+      </Link>
+    );
+  });
 
   return (
     <div className={styles.container}>
