@@ -1,6 +1,6 @@
 import GlobalStyle from "../GlobalStyle";
 import { lightTheme, darkTheme } from "../theme";
-import "./Layout.css";
+import "./globals.css";
 import Footer from "./Footer";
 // @ts-ignore
 import { ThemeToggler } from "gatsby-plugin-dark-mode";

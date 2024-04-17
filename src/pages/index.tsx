@@ -1,9 +1,6 @@
-import SEO from "../SEO";
 import Layout from "../components/Layout";
-import "./index.css";
 import { graphql, PageProps } from "gatsby";
 import React from "react";
-import { siteTitle } from "../lib/constants";
 import { ContentBlock } from "../components/home/main/ContentBlock";
 
 interface BlockItem {
