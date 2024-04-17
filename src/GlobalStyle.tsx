@@ -19,7 +19,7 @@ const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
       html {
         width: 100vw;
         height: 100vh;
-        background-color: ${backgroundColor};
+        background-color: ${backgroundColor ?? "#dcdcdc"};
       }
 
       body {
