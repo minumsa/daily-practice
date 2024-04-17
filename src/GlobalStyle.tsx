@@ -16,6 +16,11 @@ const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
         --inverted-color: ${invertedColor};
       }
 
+      html,
+      body {
+        background-color: ${backgroundColor};
+      }
+
       p::selection,
       span::selection {
         color: ${textColor};
