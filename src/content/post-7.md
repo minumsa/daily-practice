@@ -1,6 +1,6 @@
 ---
 slug: "/7"
-date: "2023-09-12"
+date: "2024-02-12"
 page: "7"
 title: "소란"
 description: ""
