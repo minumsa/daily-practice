@@ -83,8 +83,8 @@ npm start
 
 ## 신경 쓴 부분
 
-- [레이아웃 컴포넌트 활용](https://github.com/minumsa/carver-music/wiki/%EC%8B%A0%EA%B2%BD-%EC%93%B4-%EB%B6%80%EB%B6%84:-API-%EB%AA%A8%EB%93%88%ED%99%94)
-- [폴더 구조화](https://github.com/minumsa/carver-music/wiki/%EC%8B%A0%EA%B2%BD-%EC%93%B4-%EB%B6%80%EB%B6%84:-API-%EB%AA%A8%EB%93%88%ED%99%94)
+- [레이아웃 컴포넌트 활용](https://github.com/minumsa/daily-practice/wiki/%EC%8B%A0%EA%B2%BD-%EC%93%B4-%EB%B6%80%EB%B6%84:-%EB%A0%88%EC%9D%B4%EC%95%84%EC%9B%83-%EC%BB%B4%ED%8F%AC%EB%84%8C%ED%8A%B8-%ED%99%9C%EC%9A%A9)
+- [폴더 구조화](https://github.com/minumsa/daily-practice/wiki/%EC%8B%A0%EA%B2%BD-%EC%93%B4-%EB%B6%80%EB%B6%84:-%ED%8F%B4%EB%8D%94-%EA%B5%AC%EC%A1%B0%ED%99%94)
 
 ## 페이지별 기능
 
