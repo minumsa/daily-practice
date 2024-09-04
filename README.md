@@ -66,23 +66,11 @@ npm start
     │   │   └── title
     │   └── mobile
     ├── content
-    │   ├── artist
-    │   ├── auth
-    │   ├── aws
-    │   ├── calendar
-    │   ├── genre
-    │   ├── post
-    │   ├── randomPost
-    │   ├── search
-    │   ├── spotify
-    │   └── tag
     ├── images
     │   └── readme
     ├── lib
     └── pages
         └── posts
-
-
 ```
 
 ## 개발 기간
