@@ -81,7 +81,7 @@ npm start
 
 - [최유일 포트폴리오](https://rust-ocicat-1b0.notion.site/f61c9cea780144819507bf0616d3bd70?pvs=4)
 
-## 신경 쓴 부분
+## 트러블 슈팅
 
 - [레이아웃 컴포넌트 활용](https://github.com/minumsa/daily-practice/wiki/%EC%8B%A0%EA%B2%BD-%EC%93%B4-%EB%B6%80%EB%B6%84:-%EB%A0%88%EC%9D%B4%EC%95%84%EC%9B%83-%EC%BB%B4%ED%8F%AC%EB%84%8C%ED%8A%B8-%ED%99%9C%EC%9A%A9)
 - [폴더 구조화](https://github.com/minumsa/daily-practice/wiki/%EC%8B%A0%EA%B2%BD-%EC%93%B4-%EB%B6%80%EB%B6%84:-%ED%8F%B4%EB%8D%94-%EA%B5%AC%EC%A1%B0%ED%99%94)
