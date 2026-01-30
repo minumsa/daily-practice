@@ -34,7 +34,6 @@ const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
       .post-line {
         display: inline-block;
         line-height: 160%;
-        border-top: 1.5px solid ${textColor};
       }
     `;
   }}
