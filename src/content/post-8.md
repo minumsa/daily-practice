@@ -12,12 +12,6 @@ description: "현재 상황. 공항에 고립되었다. 비행기를 놓쳤기 �
   </span>
 </div>
 
-#
-
-<img src="https://postfiles.pstatic.net/MjAxODA4MTdfMTYw/MDAxNTM0NDY3MzAzMzc3.5dsuSAl6fCBCntJGhXVhOMRn47yYiWwDHrV8T65AlnAg.aC9PXGLPnTaqi23geZLX0f4NFDdcbujb6uoFDB-TAzsg.JPEG.icycyi/IMG_6159.jpg?type=w580" alt="confess" width="100%" height="auto" />
-
-#
-
 현재 상황. 공항에 고립되었다. 비행기를 놓쳤기 때문이다. 새벽 3시 20분에 알람을 맞춰 정확히 일어났고, 역에서 공항버스 첫차를 타고 인천공항에 도착했다. 여기까진 좋았다.
 
 여유롭게 티켓 발권하고 탑승수속하러 가는 길. 볼빨간사춘기의 ‘여행’을 들으며 발걸음도 가볍게 포켓 와이파이를 수령하러 갔다. 그런데 대기 인원이 자그마치 30명. 그럼에도 인터넷 없이 여행할 순 없으니 기다렸다. 아직 한 시간이나 남았으니 괜찮겠지?
